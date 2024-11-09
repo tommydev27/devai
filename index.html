@@ -3,282 +3,960 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100;400;700&display=swap" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>tommy.developer</title>
     <style>
+   /* Mengatur font keluarga global */
+
         body {
-            font-family: Arial, sans-serif;
-            justify-content: center;
-            height: 95vh;
-            background-color: white;
-            color: #333;
-             padding: 2px 0px;
-            text-align: center;
-            box-shadow: 0 0px 5px rgb(119, 136, 153);
-            border-radius: 5px
+    font-family: 'Arial', 'Helvetica', sans-serif
         }
+
+   /* Gaya untuk profile-name */
         .profile-name {
-            font-size: 16px;
+            font-size: 15px;
+            margin: 0px 100px 0;
             font-weight: bold;
             color: #333;
-            margin-top: 5px; /* Atur sesuai keinginan */
-            margin-bottom: 5px; /
-            
         }
+
+   /* Gaya untuk icon material */
         .profile-name .material-symbols-outlined {
-            font-size: 15px;
-            color: white;
-            margin-left: 0px;
-            background-color: #007bff; 
-            border-radius: 50%;
-        }
-        input[type="file"] {
-            display: block;
-            margin: 20px;
-            color: black;
-            width: 88%;
-            padding: 6px 20px;
-            border-radius: 50px;
-            box-shadow: 0 1px 5px rgb(119, 136, 153);
-            background-color: #fff;
-            text-align: center;
-            position: relative;
-            box-sizing: border-box;
-        }
-        .slider-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 6px 0;
-        }
-        .slider-button {
-            padding: 5px;
-            background-color: white;
-            color: black;
-            border: none;
-            border-radius: 50%;
-            width: 25px;
-            height: 25px;
-            font-size: 15px;
-            cursor: pointer;
-            margin: 0 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .slider-label {
-            position: absolute;
-            top: -4px;
-            text-align: center;
-            font-size: 10px;
-            color: black;
-            width: 100%;
-            left: 0;
-        }
-        input[type="range"] {
-            width: 230px;
-            height: 5px;
-            background: #ddd;
-            outline: none;
-            border-radius: 100px;
-            overflow: hidden;
-        }
-        input[type="range"]::-moz-range-thumb:hover {
-            background-color: #21a1f1;
-        }
-        #ascii-output {
-            margin: 10px;
-            white-space: pre-wrap;
-            font-family: monospace;
-            line-height: 0.3;
-            background-color: white;
-            padding: 0;
-            border-radius: 0;
-            overflow: hidden;
-            height: 38vh;
-            width: 90vw;
-            color: black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: calc(1vh);
-            box-shadow: 0 1px 5px rgb(119, 136, 153);
-        }
-        button {
-            padding: 5px 100px;
-            margin-top: 10px;
-            font-size: 1em;
+            font-size: 13px;
             color: white;
             background-color: #007bff;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 1px 3px rgb(119, 136, 153);
+            border-radius: 50%;
+
         }
-        .copy-button,
-        .screenshot-button {
-            padding: 5px 135px;
-            margin-top: 10px;
-            font-size: 1empx;
+
+    #memo {
+        border: 1px solid #007bff; /* Garis border biru */
+        border-radius: 15px; /* Menambahkan sudut melengkung untuk lingkaran */
+        padding: 10px;
+        width: 93%; /* Lebar penuh */
+        min-height: 125px; /* Tinggi minimum untuk kenyamanan mengetik */
+          margin-bottom: 10px;
+          font-size: 14px;
+        }
+
+  /* Gaya saat area teks aktif (fokus) */
+    #memo:focus {
+        outline: none; /* Menghapus outline default */
+        border-color: darkblue; /* Ubah warna border saat fokus */
+    }
+
+
+  /* Gaya untuk footer */
+  footer {
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    font-size: 8px; 
+    color: #007bff; 
+    transition: color 0.3s ease; 
+    z-index: 1000;
+    padding: 12px
+         }
+
+/* Gaya untuk tombol 1*/
+    div button {
+    color: black; /* Warna teks tombol */
+    border: 2px solid #778899; /* Border warna */
+    border-radius: 5px; 
+    /* Sudut border melengkung */
+    padding: 4px 5px; 
+    /* Padding untuk tombol */
+    font-size: 11px; 
+    /* Ukuran font tombol */
+    cursor: pointer; 
+    /* Mengubah cursor menjadi pointer */
+    margin: 0px; /* Jarak antar tombol */
+    margin-bottom: 5px; 
+    /* Jarak antar tombol secara vertikal */
+ 
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Efek transisi saat hover */
+    min-width: 0px; /* Lebar minimum tombol */
+    position: relative;         /* Mengaktifkan positioning relatif */
+    top: 3px;
+        }
+
+/* Efek mode klik  tombol */
+    div button:hover {
+    background-color: blue; /* Mengubah warna latar belakang saat hover */
+    border-color: white; /* Mengubah
+     warna border saat hover */
+      }
+
+h4 {
+    font-size: 50px;
+    color: red;
+
+    margin-top: -10px; /* Mengurangi jarak atas */
+    margin-bottom: 10px; /* Mengurangi jarak bawah */
+    margin-left: 0; /* Mengatur margin kiri */
+    margin-right: 0; /* Mengatur margin kanan */
+    
+    font-weight: 100; /* Membuat font lebih tipis (nilai 100 adalah yang paling tipis) */
+    letter-spacing: -5px; /* Mengurangi jarak antar huruf (merapatkan) */
+    line-height: 1.0;
+
+}
+
+h3 {
+    font-size: 19px;
+    color: #2F4F4F;
+    margin-top: 0px; /* Mengurangi jarak atas */
+    margin-bottom: 0px; /* Mengurangi jarak bawah */
+    margin-left: 0px; /* Mengatur margin kiri */
+    margin-right: 0; /* Mengatur margin kanan */
+    
+    font-weight: 80; /* Membuat font lebih tipis (nilai 100 adalah yang paling tipis) */
+    letter-spacing: 0px; /* Mengurangi jarak antar huruf (merapatkan) */
+    line-height: 1.0;
+
+}
+
+  h2 {
+    font-size: 10px;
+    background-color: #f0f2f4;
+    margin-left: 0px;
+    color: black;
+    font-weight: bold;
+    text-align: 0px;
+    margin-top: 6px;
+    margin-bottom: 2px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0px 1px rgba(0, 0, 255, 0.6);
+    
+
+    background-color: #2f88e1; /* Mengubah warna latar belakang saat hover */
+    color: white; 
+    border-radius: 3px ;
+    }
+    input, textarea {
+    background-color: white;
+      }
+
+  <div class="button-container">
+    <button class="custom-button">OK</button>
+  </div>
+
+  <div class="button-container">
+    <button class="custom-button">OK</button>
+  </div>
+
+  /* tombol bagian spasi 1*/
+      div button:active {
+      background-color: #0056b3; 
+       }
+       
+    /* tombol 1*/
+   /* Gaya untuk container tombol 1*/
+    .button-container {
+     max-height: 65px;
+     overflow-y: auto;
+     
+     
+  /* tombol 2*/
+     border-radius: 5px ;
+     box-shadow: 0 0px 3px rgba(0, 0, 255, 0.6);
+           
+  /* Warna biru saat diklik 1*/
+    div button:hover {
+    background-color: #2f88e1; /* Mengubah warna latar belakang saat hover */
+    color: white; /* Mengubah warna teks menjadi kuning saat hover */
+    box-shadow: 0 1px 1px rgba(0, 0, 255, 0.6); /* Menambahkan bayangan biru saat hover */
+          }
+
+       display: flex;
+       flex-wrap: wrap;
+        }
+ /* tombol 2*/
+   .custom-container {
+    border: 3px ; /* Border untuk container khusus */
+    padding: 0px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 255, 0.6);
+
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    
+  /* tombol 2*/
+    /* Agar container bisa diperbesar atau diperkecil */
+    resize: both; /* Membuat container bisa diubah ukurannya */
+    overflow: auto; /* Menambahkan scrollbar jika konten terlalu banyak */
+    max-width: 100%; /* Agar container tidak melebihi layar */
+    max-height: 115px; /* Membatasi tinggi container */
+    width: auto; /* Lebar awal yang disesuaikan */
+    height: auto; /* Tinggi awal yang disesuaikan */
+        }
+
+/* tombol 2 */
+.custom-button {
+    width: 33px;
+    height: 33px;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid #778899;
+    box-shadow: 0 0 2px rgb(119, 136, 153); /* Bayangan lebih besar saat tombol diklik */
+    border-radius: 45px;
+    color: black;
+    background: #f0f2f4;
+    margin: 0; /* Menghilangkan margin auto untuk pemusatan */
+    margin-left: 5px;
+
+    display: inline-block; /* Menjadikan tombol bersifat inline-block, sehingga bisa rata kiri */
+}
+
+
+    /* Gaya tombol tab 2*/
+     .custom-button:hover {
+      background-color: #2f88e1;
+      color: white;
+     box-shadow: 0 2px 1px rgba(0, 0, 255, 0.6); 
+          }
+        
+   /* Gaya untuk mode gelap */
+        .dark-mode .profile-name,
+        .dark-mode footer {
+            color: #5DFC0A;
+        }
+
+    .dark-mode {
+            background: black;
             color: white;
-            background-color: red;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 1px 3px rgb(119, 136, 153);
         }
-        .copy-button:hover,
-        .screenshot-button:hover {
-            background-color: #007bff;
+
+    #toggle-dark-mode {
+    position: absolute;
+    top: 0px;    /* Posisikan di bagian atas */
+    right: 0px;  /* Posisikan di pojok kanan */
+    color: black; /* Warna teks default */
+    padding: 8px;
+    background: none; /* Tidak ada latar belakang default */
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode #toggle-dark-mode {
+    color: #5DFC0A; /* Warna teks saat mode gelap */
+    background: none; /* Tidak ada latar belakang untuk mode gelap */
+}
+
+/* Menyembunyikan halaman pengaturan pada awalnya */
+.settings-card {
+    display: none;
+}
+
+/* icon hider */
+   .header-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    padding: 1px;
+    box-shadow: 0 0px 2px rgb(197, 204, 211);
+    border-radius: 50px;
+}
+
+.header-icons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    color: #f0f2f4;
+    cursor: pointer;
+
+}
+
+.header-icons button:hover {
+    color: white;
+    background-color: #0040ff;
+    box-shadow: 0 0px 8px rgb(197, 204, 211);
+    border: 1px solid #a6a6a6; /* Border hijau */
+    border-radius: 50%; /* Membuat lingkaran */
+    padding: 10px; /* Menyesuaikan padding agar tombol berbentuk lingkaran */
+}
+
+
+
+     /* Menyembunyikan halaman pada awalnya */
+        .page {
+            display: none;
         }
-        footer {
-            margin-top: 15px;
-            font-size: 10px;
-            color: #007bff;
-        }
+
+/* CSS untuk styling kolom teks dengan scroll */
+.note-box {
+    width: 321px; /* Lebar tetap */
+    height: 97px; /* Tinggi tetap */
+    padding: 10px;
+
+    border-radius: 5px;
+    overflow-y: auto; /* Scroll vertikal jika konten lebih tinggi */
+    white-space: pre-wrap;
+}
+
+
+
+.copy-button:hover {
+    background-color: #4178d0; /* Warna saat tombol di-hover */
+}
+
+.note-box {
+    font-size: 1.5em; /* Sesuaikan ukuran font */
+    line-height: 1.3; /* Jarak antar baris agar tetap rapi */
+    text-left: center; /* Posisikan teks di tengah */
+    padding: 10px;
+    overflow-wrap: break-word; /* Pecah kata jika terlalu panjang */
+    word-wrap: break-word;
+    white-space: normal; /* Membiarkan teks turun ke baris berikutnya */
+}
+
+
+/* Gaya tambahan untuk memperindah */
+.page h2 {
+    font-size: 1em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: 𝗐𝗁𝗂𝗍𝖾;
+}
+
+#note1 {
+    font-family: 'Segoe UI', sans-serif; /* Gunakan font yang rapi */
+    font-weight: bold;
+    color: #555; /* Sesuaikan warna teks */
+}
+
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
+
     <p class="profile-name">Tommy Developer
         <span class="material-symbols-outlined">check_circle</span>
     </p>
-    <hr>
-    <pre id="ascii-output"></pre>
-    <input type="file" id="image-input" accept="image/*" />
-    
-    <!-- Slider untuk mengatur lebar -->
-    <div class="slider-container">
-        <div class="slider-label">
-            <label for="width-slider">Width: <span id="width-value">50%</span></label>
-        </div>
-        <button class="slider-button" onclick="adjustSlider('width-slider', -5)">-</button>
-        <input type="range" id="width-slider" min="1" max="100" value="50" oninput="updateASCII()" />
-        <button class="slider-button" onclick="adjustSlider('width-slider', 5)">+</button>
-    </div>
-
-    <!-- Slider untuk mengatur tinggi -->
-    <div class="slider-container">
-        <div class="slider-label">
-            <label for="height-slider">Height: <span id="height-value">50%</span></label>
-        </div>
-        <button class="slider-button" onclick="adjustSlider('height-slider', -5)">-</button>
-        <input type="range" id="height-slider" min="1" max="100" value="50" oninput="updateASCII()" />
-        <button class="slider-button" onclick="adjustSlider('height-slider', 5)">+</button>
-    </div>
-
-    <!-- Slider untuk mengatur skala -->
-    <div class="slider-container">
-        <div class="slider-label">
-            <label for="scale-slider">Scale: <span id="scale-value">50%</span></label>
-        </div>
-        <button class="slider-button" onclick="adjustSlider('scale-slider', -5)">-</button>
-        <input type="range" id="scale-slider" min="50" max="200" value="50" oninput="updateASCII()" />
-        <button class="slider-button" onclick="adjustSlider('scale-slider', 5)">+</button>
-    </div>
-  <footer>klik generate dan atur ukuran</footer>
-    
-    <button onclick="generateASCII()">Generate ASCII</button>
-    <button class="copy-button" onclick="copyText()">Copy</button>
-    <button onclick="takeScreenshot()">Ambil Gambar</button>
-
-    <canvas id="canvas" style="display:none;"></canvas>
-
     <footer>Design Tommy | Versi 1.0</footer>
- <script>
-    const asciiChars = "@%#*+=-:. ";
+    <hr>
 
-    function adjustSlider(sliderId, change) {
-        const slider = document.getElementById(sliderId);
-        let newValue = parseInt(slider.value) + change;
-        if (newValue >= slider.min && newValue <= slider.max) {
-            slider.value = newValue;
-            document.getElementById(sliderId === 'width-slider' ? 'width-value' : sliderId === 'height-slider' ? 'height-value' : 'scale-value').textContent = newValue + "%";
-            updateASCII(); // Memperbarui ASCII langsung saat slider diubah
-        }
-    }
+    <textarea id="memo" placeholder="Tulis catatan Anda di sini..."></textarea>
+    
+   <div style="border-radius: 8px; 
+       margin-top: -8px;
+    margin-bottom: -4px;
+   display: flex; gap: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+ flex-wrap: wrap;">
+    <button style="background-color: #28a745; margin-bottom: 8px; color: white; border-radius: 8px; padding: 2px 15px; font-size: 13px; cursor: pointer; transition: background-color 0.3s ease;" onclick="addSpace()">Spasi</button>
+    <button style="background-color: #007bff; margin-bottom: 8px; color: white; border-radius: 8px; padding: 0px 15px; font-size: 12px; cursor: pointer; transition: background-color 0.3s ease;" onclick="addEnter()">Enter</button>
+    <button style="background-color: #ffc107; margin-bottom: 8px; color: white; border-radius: 8px; padding: 0px 15px; font-size: 12px; cursor: pointer; transition: background-color 0.3s ease;" onclick="copyText()">Salin</button>
+    <button style="background-color: #dc3545; margin-bottom: 8px; color: white;  border-radius: 8px; padding: 0px 50px; font-size: 12px; cursor: pointer; transition: background-color 0.3s ease;" onclick="clearText()">Hapus</button>
+    
+    
+</div>
 
-    function updateASCII() {
-        const fileInput = document.getElementById('image-input').files[0];
-        if (!fileInput) {
-            alert("Please upload an image first.");
-            return;
-        }
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
-        const asciiOutput = document.getElementById('ascii-output');
-        const img = new Image();
-        img.src = URL.createObjectURL(fileInput);
 
-        img.onload = () => {
-            const widthPercent = document.getElementById('width-slider').value;
-            const heightPercent = document.getElementById('height-slider').value;
-            const scaleValue = document.getElementById('scale-slider').value; // Ambil nilai skala
+    <h2>Tambah Huruf　</h2>
+    <div class="button-container">
+<div id="character-buttons">
+    <button onclick="addCharacter('Ａ')">Ａ</button>
+    <button onclick="addCharacter('Ｂ')">Ｂ</button>
+    <button onclick="addCharacter('Ｃ')">Ｃ</button>
+    <button onclick="addCharacter('Ｄ')">Ｄ</button>
+    <button onclick="addCharacter('Ｅ')">Ｅ</button>
+    <button onclick="addCharacter('Ｆ')">Ｆ</button>
+    <button onclick="addCharacter('Ｇ')">Ｇ</button>
+    <button onclick="addCharacter('Ｈ')">Ｈ</button>
+    <button onclick="addCharacter('Ｉ')">Ｉ</button>
+    <button onclick="addCharacter('Ｊ')">Ｊ</button>
+    <button onclick="addCharacter('Ｋ')">Ｋ</button>
+    <button onclick="addCharacter('Ｌ')">Ｌ</button>
+    <button onclick="addCharacter('Ｍ')">Ｍ</button>
+    <button onclick="addCharacter('Ｎ')">Ｎ</button>
+    <button onclick="addCharacter('Ｏ')">Ｏ</button>
+    <button onclick="addCharacter('Ｐ')">Ｐ</button>
+    <button onclick="addCharacter('Ｑ')">Ｑ</button>
+    <button onclick="addCharacter('Ｒ')">Ｒ</button>
+    <button onclick="addCharacter('Ｓ')">Ｓ</button>
+    <button onclick="addCharacter('Ｔ')">Ｔ</button>
+    <button onclick="addCharacter('Ｕ')">Ｕ</button>
+    <button onclick="addCharacter('Ｖ')">Ｖ</button>
+    <button onclick="addCharacter('Ｗ')">Ｗ</button>
+    <button onclick="addCharacter('Ｘ')">Ｘ</button>
+    <button onclick="addCharacter('Ｙ')">Ｙ</button>
+    <button onclick="addCharacter('Ｚ')">Ｚ</button>
+    <button onclick="addCharacter('ａ')">ａ</button>
+    <button onclick="addCharacter('ｂ')">ｂ</button>
+    <button onclick="addCharacter('ｃ')">ｃ</button>
+    <button onclick="addCharacter('ｄ')">ｄ</button>
+    <button onclick="addCharacter('ｅ')">ｅ</button>
+    <button onclick="addCharacter('ｆ')">ｆ</button>
+    <button onclick="addCharacter('ｇ')">ｇ</button>
+    <button onclick="addCharacter('ｈ')">ｈ</button>
+    <button onclick="addCharacter('ｉ')">ｉ</button>
+    <button onclick="addCharacter('ｊ')">ｊ</button>
+    <button onclick="addCharacter('ｋ')">ｋ</button>
+    <button onclick="addCharacter('ｌ')">ｌ</button>
+    <button onclick="addCharacter('ｍ')">ｍ</button>
+    <button onclick="addCharacter('ｎ')">ｎ</button>
+    <button onclick="addCharacter('ｏ')">ｏ</button>
+    <button onclick="addCharacter('ｐ')">ｐ</button>
+    <button onclick="addCharacter('ｑ')">ｑ</button>
+    <button onclick="addCharacter('ｒ')">ｒ</button>
+    <button onclick="addCharacter('ｓ')">ｓ</button>
+    <button onclick="addCharacter('ｔ')">ｔ</button>
+    <button onclick="addCharacter('ｕ')">ｕ</button>
+    <button onclick="addCharacter('ｖ')">ｖ</button>
+    <button onclick="addCharacter('ｗ')">ｗ</button>
+    <button onclick="addCharacter('ｘ')">ｘ</button>
+    <button onclick="addCharacter('ｙ')">ｙ</button>
+    <button onclick="addCharacter('ｚ')">ｚ</button>
+    
+</div>
 
-            const originalWidth = img.width;
-            const originalHeight = img.height;
-            const aspectRatio = originalWidth / originalHeight;
+        <!-- Tambahkan tombol lainnya sesuai kebutuhan -->
+    </div>
 
-            const width = Math.floor((widthPercent / 100) * originalWidth);
-            const height = Math.floor((heightPercent / 100) * originalWidth / aspectRatio);
+<h2>Tambah Karakter Khusus　　　　　　　　　　　 ⇵ Geser untuk pilihan</h2>
+<div class="custom-container">
 
-            canvas.width = width;
-            canvas.height = height;
+    <!-- Tombol untuk menambah karakter ╭ -->
+    <button class="custom-button" onclick="addCharacter('ᜆ')">ᜆ</button>
+    <!-- Tombol untuk menambah karakter ╮ -->
+    <button class="custom-button" onclick="addCharacter('ヽ')">ヽ</button>
+    <!-- Tombol untuk menambah karakter ╰ -->
+    <button class="custom-button" onclick="addCharacter('乀')">乀</button>
+    <!-- Tombol untuk menambah karakter ╯ -->
+    <button class="custom-button" onclick="addCharacter('ノ')">ノ</button>
+    <button class="custom-button" onclick="addCharacter('＼')">＼</button>
+    <button class="custom-button" onclick="addCharacter('᜵')">᜵</button>
+    <button class="custom-button" onclick="addCharacter('／')">／</button>
+    <button class="custom-button" onclick="addCharacter('﹋')">﹋</button>
+    <button class="custom-button" onclick="addCharacter('﹏')">﹏</button>
+    <button class="custom-button" onclick="addCharacter('﹉')">﹉</button>
+    <button class="custom-button" onclick="addCharacter('﹎')">﹎</button>
+    <button class="custom-button" onclick="addCharacter('ꣻ')">ꣻ</button>
+    <button class="custom-button" onclick="addCharacter('＿')">＿</button>
+    <button class="custom-button" onclick="addCharacter('ᆖ')">ᆖ</button>
+    <button class="custom-button" onclick="addCharacter('一')">一</button>
+    <button class="custom-button" onclick="addCharacter('｜')">｜</button>
+    <button class="custom-button" onclick="addCharacter('︳')">︳</button>
+    <button class="custom-button" onclick="addCharacter('།')">།</button>
+    <button class="custom-button" onclick="addCharacter('༈')">༈</button>
+    <button class="custom-button" onclick="addCharacter('％')">％</button>
+    <button class="custom-button" onclick="addCharacter('｡')">｡</button>
+    <button class="custom-button" onclick="addCharacter('︻')">︻</button>
+    <button class="custom-button" onclick="addCharacter('｛')">｛</button>
+<button class="custom-button" onclick="addCharacter('　')">　</button>
+<button class="custom-button" onclick="addCharacter('｝')">｝</button>
+<button class="custom-button" onclick="addCharacter('（')">（</button>
+<button class="custom-button" onclick="addCharacter('）')">）</button>
+<button class="custom-button" onclick="addCharacter('〘')">〘</button>
+<button class="custom-button" onclick="addCharacter('〙')">〙</button>
+<button class="custom-button" onclick="addCharacter('［')">［</button>
+<button class="custom-button" onclick="addCharacter('］')">］</button>
+<button class="custom-button" onclick="addCharacter('卝')">卝</button>
+<button class="custom-button" onclick="addCharacter('｢')">｢</button>
+<button class="custom-button" onclick="addCharacter('｣')">｣</button>
+<button class="custom-button" onclick="addCharacter('〈')">〈</button>
+<button class="custom-button" onclick="addCharacter('〉')">〉</button>
 
-            ctx.drawImage(img, 0, 0, width, height);
+<button class="custom-button" onclick="addCharacter('㈥')">㈥</button>
+<button class="custom-button" onclick="addCharacter('㈦')">㈦</button>
+<button class="custom-button" onclick="addCharacter('㈧')">㈧</button>
+<button class="custom-button" onclick="addCharacter('㈨')">㈨</button>
+<button class="custom-button" onclick="addCharacter('㈩')">㈩</button>
+<button class="custom-button" onclick="addCharacter('㊀')">㊀</button>
+<button class="custom-button" onclick="addCharacter('㊁')">㊁</button>
+<button class="custom-button" onclick="addCharacter('㊂')">㊂</button>
+<button class="custom-button" onclick="addCharacter('㊃')">㊃</button>
+<button class="custom-button" onclick="addCharacter('㊄')">㊄</button>
+<button class="custom-button" onclick="addCharacter('㊅')">㊅</button>
+<button class="custom-button" onclick="addCharacter('㊆')">㊆</button>
+<button class="custom-button" onclick="addCharacter('㊇')">㊇</button>
+<button class="custom-button" onclick="addCharacter('㊈')">㊈</button>
+<button class="custom-button" onclick="addCharacter('㊉')">㊉</button>
 
-            const imgData = ctx.getImageData(0, 0, width, height);
-            const pixels = imgData.data;
-            let asciiArt = '';
+<button class="custom-button" onclick="addCharacter('ꕢ')">ꕢ</button>
+<button class="custom-button" onclick="addCharacter('ꕤ')">ꕤ</button>
+<button class="custom-button" onclick="addCharacter('߷')">߷</button>
+<button class="custom-button" onclick="addCharacter('፨')">፨</button>
+<button class="custom-button" onclick="addCharacter('ꗴ')">ꗴ</button>
+<button class="custom-button" onclick="addCharacter('＊')">＊</button>
+<button class="custom-button" onclick="addCharacter('﹅')">﹅</button>
+<button class="custom-button" onclick="addCharacter('༺')">༺</button>
+<button class="custom-button" onclick="addCharacter('༒')">༒</button>
+<button class="custom-button" onclick="addCharacter('༻')">༻</button>
+<button class="custom-button" onclick="addCharacter('༄')">༄</button>
 
-            for (let y = 0; y < height; y++) {
-                for (let x = 0; x < width; x++) {
-                    const idx = (y * width + x) * 4;
-                    const r = pixels[idx];
-                    const g = pixels[idx + 1];
-                    const b = pixels[idx + 2];
-                    const a = pixels[idx + 3];
+<button class="custom-button" onclick="addCharacter('﹆')">﹆</button>
+<button class="custom-button" onclick="addCharacter('ヽ')">ヽ</button>
+<button class="custom-button" onclick="addCharacter('〇')">〇</button>
+<button class="custom-button" onclick="addCharacter('〬')">〬</button>
+<button class="custom-button" onclick="addCharacter('〭')">〭</button>
+<button class="custom-button" onclick="addCharacter('〪')">〪</button>
+<button class="custom-button" onclick="addCharacter('〫')">〫</button>
+<button class="custom-button" onclick="addCharacter('༊')">༊</button>
+<button class="custom-button" onclick="addCharacter('〼')">〼</button>
+<button class="custom-button" onclick="addCharacter('ෂ')">ෂ</button>
+<button class="custom-button" onclick="addCharacter('ꕬ')">ꕬ</button>
+<button class="custom-button" onclick="addCharacter('ꛃ')">ꛃ</button>
+<button class="custom-button" onclick="addCharacter('ཊ')">ཊ</button>
+<button class="custom-button" onclick="addCharacter('ཏ')">ཏ</button>
+<button class="custom-button" onclick="addCharacter('ཤ')">ཤ</button>
+<button class="custom-button" onclick="addCharacter('ཥ')">ཥ</button>
+<button class="custom-button" onclick="addCharacter('ꛘ')">ꛘ</button>
+<button class="custom-button" onclick="addCharacter('ʬ')">ʬ</button>
+<button class="custom-button" onclick="addCharacter('ꖯ')">ꖯ</button>
 
-                    if (a === 0) {
-                        asciiArt += ' '; // Gunakan spasi untuk piksel transparan
-                    } else {
-                        const brightness = (r + g + b) / 3; // Menghitung kecerahan
-                        const charIndex = Math.floor((brightness / 255) * (asciiChars.length - 1));
-                        asciiArt += asciiChars[charIndex]; // Menambahkan karakter tanpa <span>
-                    }
-                }
-                asciiArt += '\n'; // Menambahkan baris baru di akhir setiap baris gambar
-            }
+<button class="custom-button" onclick="addCharacter('㈠')">㈠</button>
+<button class="custom-button" onclick="addCharacter('㈡')">㈡</button>
+<button class="custom-button" onclick="addCharacter('㈢')">㈢</button>
+<button class="custom-button" onclick="addCharacter('㈣')">㈣</button>
+<button class="custom-button" onclick="addCharacter('㈤')">㈤</button>
+<button class="custom-button" onclick="addCharacter('㈥')">㈥</button>
+<button class="custom-button" onclick="addCharacter('㈦')">㈦</button>
+<button class="custom-button" onclick="addCharacter('㈧')">㈧</button>
+<button class="custom-button" onclick="addCharacter('㈨')">㈨</button>
+<button class="custom-button" onclick="addCharacter('㈩')">㈩</button>
 
-            asciiOutput.textContent = asciiArt; // Menggunakan textContent untuk menampilkan ASCII
-            asciiOutput.style.fontSize = `${scaleValue / 100}em`; // Mengatur ukuran font berdasarkan nilai skala
-        };
-    }
+<button class="custom-button" onclick="addCharacter('۱')">۱</button>
+<button class="custom-button" onclick="addCharacter('۲')">۲</button>
+<button class="custom-button" onclick="addCharacter('۳')">۳</button>
+<button class="custom-button" onclick="addCharacter('ញ')">ញ</button>
+<button class="custom-button" onclick="addCharacter('ܐ')">ܐ</button>
+<button class="custom-button" onclick="addCharacter('݈')">݈</button>
+<button class="custom-button" onclick="addCharacter('ອ')">ອ</button>
+<button class="custom-button" onclick="addCharacter('ܓ')">ܓ</button>
+<button class="custom-button" onclick="addCharacter('ᜊ')">ᜊ</button>
+<button class="custom-button" onclick="addCharacter('ᜃ')">ᜃ</button>
 
-    function generateASCII() {
-        updateASCII();
-    }
+<button class="custom-button" onclick="addCharacter('စ')">စ</button>
+<button class="custom-button" onclick="addCharacter('ꩩ')">ꩩ</button>
+<button class="custom-button" onclick="addCharacter('۵')">۵</button>
+<button class="custom-button" onclick="addCharacter('๏')">๏</button>
+<button class="custom-button" onclick="addCharacter('ຼ')">ຼ</button>
+<button class="custom-button" onclick="addCharacter('ົ')">ົ</button>
+<button class="custom-button" onclick="addCharacter('៙')">៙</button>
+<button class="custom-button" onclick="addCharacter('ꔮ')">ꔮ</button>
+<button class="custom-button" onclick="addCharacter('ꕺ')">ꕺ</button>
+<button class="custom-button" onclick="addCharacter('ｷ')">ｷ</button>
+<button class="custom-button" onclick="addCharacter('ග')">ග</button>
+<button class="custom-button" onclick="addCharacter('ꛅ')">ꛅ</button>
+<button class="custom-button" onclick="addCharacter('ᱪ')">ᱪ</button>
+<button class="custom-button" onclick="addCharacter('﹫')">﹫</button>
+<button class="custom-button" onclick="addCharacter('ꫢ')">ꫢ</button>
+<button class="custom-button" onclick="addCharacter('꫱')">꫱</button>
+<button class="custom-button" onclick="addCharacter('ະ')">ະ</button>
+<button class="custom-button" onclick="addCharacter('ᶓ')">ᶓ</button>
+<button class="custom-button" onclick="addCharacter('ᶔ')">ᶔ</button>
+<button class="custom-button" onclick="addCharacter('ꛕ')">ꛕ</button>
+<button class="custom-button" onclick="addCharacter('ꚼ')">ꚼ</button>
+<button class="custom-button" onclick="addCharacter('ಹ')">ಹ</button>
+<button class="custom-button" onclick="addCharacter('쇼')">쇼</button>
 
-    function copyText() {
-        const asciiOutput = document.getElementById('ascii-output');
-        navigator.clipboard.writeText(asciiOutput.innerText)
-            .then(() => alert("ASCII art copied to clipboard!"))
-            .catch(err => console.error('Error copying text: ', err));
-    }
+<button class="custom-button" onclick="addCharacter('ᵀ')">ᵀ</button>
+<button class="custom-button" onclick="addCharacter('ᴹ')">ᴹ</button>
+<button class="custom-button" onclick="addCharacter('ꛨ')">ꛨ</button>
+<button class="custom-button" onclick="addCharacter(' ﷺ')"> ﷺ</button>
+<button class="custom-button" onclick="addCharacter('ﾛ')">ﾛ</button>
+<button class="custom-button" onclick="addCharacter('ꯆ')">ꯆ</button>
+<button class="custom-button" onclick="addCharacter('ꔮ')">ꔮ</button>
+<button class="custom-button" onclick="addCharacter('ꖀ')">ꖀ</button>
+<button class="custom-button" onclick="addCharacter('ꖩ')">ꖩ</button>
+<button class="custom-button" onclick="addCharacter('٭')">٭</button>
+<button class="custom-button" onclick="addCharacter('ꔷ')">ꔷ</button>
+<button class="custom-button" onclick="addCharacter('ꕹ')">ꕹ</button>
+<button class="custom-button" onclick="addCharacter('꘏')">꘏</button>
 
-    function takeScreenshot() {
-        const asciiOutput = document.getElementById('ascii-output');
-        html2canvas(asciiOutput).then(canvas => {
-            const link = document.createElement('a');
-            link.download = 'ascii_art.png';
-            link.href = canvas.toDataURL();
-            link.click();
+<button class="custom-button" onclick="addCharacter('ਛ')">ਛ</button>
+<button class="custom-button" onclick="addCharacter('ཬ')">ཬ</button>
+<button class="custom-button" onclick="addCharacter('༭')">༭</button>
+<button class="custom-button" onclick="addCharacter('ﾃ')">ﾃ</button>
+<button class="custom-button" onclick="addCharacter('ϟ')">ϟ</button>
+<button class="custom-button" onclick="addCharacter('৫')">৫</button>
+
+<button class="custom-button" onclick="addCharacter('罒')">罒</button>
+<button class="custom-button" onclick="addCharacter('艹')">艹</button>
+<button class="custom-button" onclick="addCharacter('ꩰ')">ꩰ</button>
+<button class="custom-button" onclick="addCharacter('༭')">༭</button>
+<button class="custom-button" onclick="addCharacter('ꜜ')">ꜜ</button>
+<button class="custom-button" onclick="addCharacter('ꜛ')">ꜛ</button>
+
+<button class="custom-button" onclick="addCharacter('＜')">＜</button>
+<button class="custom-button" onclick="addCharacter('＞')">＞</button>
+<button class="custom-button" onclick="addCharacter('｛')">｛</button>
+<button class="custom-button" onclick="addCharacter('｝')">｝</button>
+<button class="custom-button" onclick="addCharacter('〖')">〖</button>
+<button class="custom-button" onclick="addCharacter('〗')">〗</button>
+<button class="custom-button" onclick="addCharacter('〚')">〚</button>
+<button class="custom-button" onclick="addCharacter('〛')">〛</button>
+<button class="custom-button" onclick="addCharacter('《')">《</button>
+<button class="custom-button" onclick="addCharacter('》')">》</button>
+<button class="custom-button" onclick="addCharacter('︽')">︽</button>
+<button class="custom-button" onclick="addCharacter('︾')">︾</button>
+<button class="custom-button" onclick="addCharacter('【')">【</button>
+<button class="custom-button" onclick="addCharacter('】')">】</button>
+<button class="custom-button" onclick="addCharacter('『')">『</button>
+<button class="custom-button" onclick="addCharacter('』')">』</button>
+<button class="custom-button" onclick="addCharacter('〔')">〔</button>
+<button class="custom-button" onclick="addCharacter('〕')">〕</button>
+<button class="custom-button" onclick="addCharacter('︵')">︵</button>
+<button class="custom-button" onclick="addCharacter('︶')">︶</button>
+<button class="custom-button" onclick="addCharacter('︷')">︷</button>
+<button class="custom-button" onclick="addCharacter('︸')">︸</button>
+<button class="custom-button" onclick="addCharacter('︹')">︹</button>
+<button class="custom-button" onclick="addCharacter('︺')">︺</button>
+<button class="custom-button" onclick="addCharacter('︼')">︼</button>
+<button class="custom-button" onclick="addCharacter('︿')">︿</button>
+<button class="custom-button" onclick="addCharacter('﹀')">﹀</button>
+<button class="custom-button" onclick="addCharacter('﹁')">﹁</button>
+<button class="custom-button" onclick="addCharacter('﹄')">﹄</button>
+<button class="custom-button" onclick="addCharacter('﹙')">﹙</button>
+<button class="custom-button" onclick="addCharacter('﹚')">﹚</button>
+<button class="custom-button" onclick="addCharacter('﹛')">﹛</button>
+<button class="custom-button" onclick="addCharacter('﹜')">﹜</button>
+<button class="custom-button" onclick="addCharacter('﹝')">﹝</button>
+<button class="custom-button" onclick="addCharacter('﹞')">﹞</button>
+<button class="custom-button" onclick="addCharacter('メ')">メ</button>
+<button class="custom-button" onclick="addCharacter('ユ')">ユ</button>
+<button class="custom-button" onclick="addCharacter('ツ')">ツ</button>
+<button class="custom-button" onclick="addCharacter('ニ')">ニ</button>
+<button class="custom-button" onclick="addCharacter('﹐')">﹐</button>
+<button class="custom-button" onclick="addCharacter('﹑')">﹑</button>
+<button class="custom-button" onclick="addCharacter('﹒')">﹒</button>
+<button class="custom-button" onclick="addCharacter('﹔')">﹔</button>
+<button class="custom-button" onclick="addCharacter('﹕')">﹕</button>
+<button class="custom-button" onclick="addCharacter('﹖')">﹖</button>
+<button class="custom-button" onclick="addCharacter('﹗')">﹗</button>
+<button class="custom-button" onclick="addCharacter('﹘')">﹘</button>
+<button class="custom-button" onclick="addCharacter('﹙')">﹙</button>
+<button class="custom-button" onclick="addCharacter('﹚')">﹚</button>
+<button class="custom-button" onclick="addCharacter('﹛')">﹛</button>
+<button class="custom-button" onclick="addCharacter('﹜')">﹜</button>
+<button class="custom-button" onclick="addCharacter('﹝')">﹝</button>
+<button class="custom-button" onclick="addCharacter('﹞')">﹞</button>
+<button class="custom-button" onclick="addCharacter('﹟')">﹟</button>
+<button class="custom-button" onclick="addCharacter('﹠')">﹠</button>
+<button class="custom-button" onclick="addCharacter('﹡')">﹡</button>
+<button class="custom-button" onclick="addCharacter('﹢')">﹢</button>
+<button class="custom-button" onclick="addCharacter('﹣')">﹣</button>
+<button class="custom-button" onclick="addCharacter('﹤')">﹤</button>
+<button class="custom-button" onclick="addCharacter('﹥')">﹥</button>
+<button class="custom-button" onclick="addCharacter('﹦')">﹦</button>
+<button class="custom-button" onclick="addCharacter('﹨')">﹨</button>
+<button class="custom-button" onclick="addCharacter('﹩')">﹩</button>
+<button class="custom-button" onclick="addCharacter('﹪')">﹪</button>
+<button class="custom-button" onclick="addCharacter('！')">！</button>
+<button class="custom-button" onclick="addCharacter('＂')">＂</button>
+<button class="custom-button" onclick="addCharacter('＃')">＃</button>
+<button class="custom-button" onclick="addCharacter('＄')">＄</button>
+<button class="custom-button" onclick="addCharacter('＆')">＆</button>
+<button class="custom-button" onclick="addCharacter('＇')">＇</button>
+<button class="custom-button" onclick="addCharacter('＊')">＊</button>
+<button class="custom-button" onclick="addCharacter('＋')">＋</button>
+<button class="custom-button" onclick="addCharacter('，')">，</button>
+<button class="custom-button" onclick="addCharacter('－')">－</button>
+<button class="custom-button" onclick="addCharacter('．')">．</button>
+<button class="custom-button" onclick="addCharacter('０')">０</button>
+<button class="custom-button" onclick="addCharacter('１')">１</button>
+<button class="custom-button" onclick="addCharacter('２')">２</button>
+<button class="custom-button" onclick="addCharacter('３')">３</button>
+<button class="custom-button" onclick="addCharacter('４')">４</button>
+<button class="custom-button" onclick="addCharacter('５')">５</button>
+<button class="custom-button" onclick="addCharacter('６')">６</button>
+<button class="custom-button" onclick="addCharacter('７')">７</button>
+<button class="custom-button" onclick="addCharacter('８')">８</button>
+<button class="custom-button" onclick="addCharacter('９')">９</button>
+<button class="custom-button" onclick="addCharacter('：')">：</button>
+<button class="custom-button" onclick="addCharacter('；')">；</button>
+<button class="custom-button" onclick="addCharacter('＝')">＝</button>
+<button class="custom-button" onclick="addCharacter('？')">？</button>
+<button class="custom-button" onclick="addCharacter('＠')">＠</button>
+<button class="custom-button" onclick="addCharacter('ꔴ')">ꔴ</button>
+<button class="custom-button" onclick="addCharacter('ꘉ')">ꘉ</button>
+<button class="custom-button" onclick="addCharacter('ꔧ')">ꔧ</button>
+<button class="custom-button" onclick="addCharacter('〰')">〰</button>
+<button class="custom-button" onclick="addCharacter('ꗈ')">ꗈ</button>
+<button class="custom-button" onclick="addCharacter('ꗴ')">ꗴ</button>
+<button class="custom-button" onclick="addCharacter('ꗝ')">ꗝ</button>
+<button class="custom-button" onclick="addCharacter('ꖜ')">ꖜ</button>
+<button class="custom-button" onclick="addCharacter('ꕶ')">ꕶ</button>
+<button class="custom-button" onclick="addCharacter('ꕃ')">ꕃ</button>
+<button class="custom-button" onclick="addCharacter('ꚨ')">ꚨ</button>
+<button class="custom-button" onclick="addCharacter('ꖉ')">ꖉ</button>
+<button class="custom-button" onclick="addCharacter('ꕑ')">ꕑ</button>
+<button class="custom-button" onclick="addCharacter('ꘟ')">ꘟ</button>
+<button class="custom-button" onclick="addCharacter('己')">己</button>
+<button class="custom-button" onclick="addCharacter('ꖀ')">ꖀ</button>
+<button class="custom-button" onclick="addCharacter('ꖩ')">ꖩ</button>
+
+
+</div>
+
+ <body>
+    <div class="header-icons">
+        <button onclick="showPage('page1')"><span class="material-symbols-outlined">mood</span></button>
+        <button onclick="showPage('page2')"><span class="material-symbols-outlined">stars</span></button>
+        <button onclick="showPage('page3')"><span class="material-symbols-outlined">motion_photos_auto</span></button>
+        <button onclick="showPage('page4')"><span class="material-symbols-outlined">ar_stickers</span></button>
+        <button onclick="showPage('page5')"><span class="material-symbols-outlined">adb</span></button>
+    </div>
+
+    <!-- Konten setiap halaman -->
+    <section id="page1" class="page">
+        <h2>Emoji　</h2>
+        <div id="note1" class="note-box"> 🦸 🦸‍♂️ 🦸‍♀️ 🦹 🦹‍♂️ 🦹‍♀️ 🧚‍♂️ 🧚‍♀️ 🧛‍♂️ 🧛‍♀️ 🧞‍♀️ 🧞‍♂️ 🧟‍♂️ 🧟‍♀️ 🧜‍♀️ 🧜‍♂️ 🧝‍♂️ 🧝‍♀️ 👯‍♂️ 🕴️  👯‍♀️ 🧘‍♀️ 🧘‍♂️🧑‍🤝‍🧑 🤾‍♀️ 🦅 🕊️ 🐧 🦉 🦇 🐭 🐰 🐹 🐿️  🐳 🐬 🐟 🦈 🐠 🐙 🦚 🐲 🦂 🕷️ 🐝 🦟 🐞 🦗 🐜 🐡  🌺 🏵️ 🌹 🌸 🌴 🌿 🌾 🍁 🍂🌷 🍎 🍏 🍅 🍄 🦀 🦞 🎃 🎎 🏆 🏅 ⚽ 🏀 🥊 🎱 🎲 🤿 🎣 🪁 🎮  ♣️ ♦️ ♥️ ♠️ ♟️ 🃏 🎭 🌍 🗽 🚇 🚦 ✈️ 🚀 🛸 ⏰ ⭐ 🌝 ☀️ 🌀 ☂️ 🌈 🌊 💧 🔥 ☄️ ⛄ 👓 🕶️ 👒 🎩 🧢 🔕 🔇 💎 🎧 📟 ☎️ 📠 🖲️ 📔 📕 📗 📘 📙 📓 📒 📔 💰 💴 🖋️ 🖊️ 🖌️ 🔐 🔓 ⚙️ 🔗 🧬 🩸 🗿 🚹 🚺 🛂 ☢️ ☣️ 🚭 🚷 🔞 📵 ✡️ ♾️ ⚛️ ☯️ ☪️ ☮️ ⚜️ 🔱 ✅ ☑️ ❎ ✔️ ❌ ©️ ®️ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟 🆔 Ⓜ️ 🆘 🆎 🅰️ ㊗️ ㊙️ 🈴 🔴 🟡 🟢 🟠 🔵 🟣 🟤 ⚫ ⚪ 🟥 🟧 🟨 🟩 🟦 🟪 🟫 ⬛ ⬜ 🔺 🔻 🔷 🔶 💠 😀 😃 😄 😁 😆 😅 🤣 😂 🙂 🙃 😉 😊 😇 🥰 😍 🤩 😘 😗 ☺️ 😚 😙 😋 😛 😜 🤪 😝 🤑 🤗 🤭 🤫 🤔 🤐 🤨 😐 😑 😶 😏 😒 🙄 😬 🤥 😌 😔 😪 🤤 😴 😷 🤒 🤕 🤢 🤮 🤧 🥵 🥶 🥴 😵 🤯 🤠 🥳 😎 🤓 🧐 😕 😟 🙁 ☹️ 😮 😯 😲 😳 🥺 😦 😧 😨 😰 😥 😢 😭 😱 😖 😣 😞 😓 😩 😫 🥱 😤 😡 😠 🤬 😈 👿 💀 ☠️ 💩 🤡 👹 👺 👻 👽 👾 🤖 😺 😾 🙈 🙉 🙊 💋 💌 💘 💝 💖 💗 💓 💞 💕 💟 ❣️ 💔 ❤️ 🧡 💛 💚 💙 💜 🤎 🖤 🤍 💯 💢 💥 💫 💦 💨 🕳️ 💣 💬 👁️‍🗨️ 🗨️ 🗯️ 💭 💤 👋 🤚 🖐️ ✋ 🖖 👌 🤏 ✌️ 🤞 🤟 🤘 🤙 👈 👉 👆 🖕 👇 ☝️ 👍  👎 ✊ 👊 🤛 🤜 👏 🙌 👐 🤲 🤝 🙏 ✍️ 💅 🤳 💪 🦾 🦿 🦵 🦶 👂 🦻 👃 🧠 🦷 🦴 👀 👁️ 👅 👄 👶 🧒  👦 👧 🧑 👨 🧔 👨‍🦰 👨‍🦱 👨‍🦳 👨‍🦲 👩 👩‍🦰 👩‍🦱 👩‍🦳 👩‍🦲 👱‍♀️ 👱‍♂️ 🧓 👴 👵 🙍‍♂️ 🙍‍♀️ 🙎‍♂️ 🙎‍♀️ 🙅‍♂️ 🙅‍♀️ 🙆‍♂️ 🙆‍♀️ 💁‍♂️ 💁‍♀️ 🙋‍♂️ 🙋‍♀️ 🧏 🧏‍♂️ 🧏‍♀️ 🙇‍♂️ 🙇‍♀️ 🤦‍♂️ 🤦‍♀️ 🤷‍♂️ 🤷‍♀️ 👨‍⚕️ 👩‍⚕️ 👨‍🎓 👩‍🎓 👨‍🏫 👩‍🏫 👨‍⚖️ 👩‍⚖️ 👨‍🌾 👩‍🌾 👨‍🍳 👩‍🍳 👨‍🔧 👩‍🔧 👨‍🏭 👩‍🏭 👨‍💼  👩‍💼 👩‍🔬 👨‍💻 👩‍💻 👨‍🎤 👩‍🎤 👨‍🎨 👩‍🎨 👨‍✈️ 👩‍✈️ 👨‍🚀 👩‍🚀 👨‍🚒 👩‍🚒 👮‍♂️ 👮‍♀️ 🕵️‍♂️ 🕵️‍♀️ 💂‍♂️ 💂‍♀️ 👷‍♂️ 👷‍♀️ 🤴 👸 👳‍♂️ 👳‍♀️ 👲 🧕 🤵 👰 🤰 🤱 👼 🎅 🤶 🏴‍☠️ 🏳️‍🌈 🏁 🇦🇩 🇦🇪 🇦🇫 🇦🇬 🇦🇮 🇦🇷 🇦🇸 🇦🇺 🇦🇽 🇦🇿 🇧🇦 🇧🇧 🇧🇩 🇧🇭 🇧🇮 🇧🇳 🇧🇹 🇧🇿 🇨🇨 🇨🇩 🇨🇫 🇨🇮 🇨🇳 🇩🇴 🇯🇵 🇰🇷 🇲🇰 🇲🇵 🇵🇦 🇷🇪 🇹🇬 🇺🇬 🇺🇳 🇹🇰 🇹🇱 🇸🇿 🇻🇮 🇻🇳 🏴󠁧󠁢󠁷󠁬󠁳󠁿 🇿🇼  🙃 🤐 🤨 😐 😑 😶 😶‍🌫️ 😒 🙄 😬😮‍💨 🤥 🙂‍↔️ 🙂‍↕️
+
+        </div>
+    </section>
+
+    <section id="page2" class="page">
+        <h2>𝖲𝗒𝗆𝖻𝗈𝗅　</h2>
+        <div id="note2" class="note-box">
+<h3>
+★ ☆ ✡ ✦ ✧ ✩ ✪ ✫ ✬ ✭ ✮ ✯ ✰ ✢ ✣ ✤ ✥ ✱ ✲ ✳ ✴ ✵ ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿ ❀ ❁ ❂ ❃ ❇ ❈ ❉ ❊ ❋ ❄ ❆ ❅ ⋆ ≛ ᕯ ✲ ࿏ ꙰ ۞ ⭒ ⍟ 
+♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟ ♤ ♠ ♧ ♣ ♡ ♥ ♢ ♦
+☂ ☃ ☉ ☼ ☽ ☾ ♁ ♨ ❄ ❅ ❆ ☇ ☈ ☄
+↕ ↖ ↗ ↘ ↙ ↚ ↛ ↜ ↝ ↞ ↟ ↠ ↡ ↢ ↣ ↤ ↥ ↦ ↧ ↨ ↩ ↪ ↫ ↬ ↭ ↮ ↯ ↰ ↱ ↲ ↳ ↴ ↶ ↷ ↸ ↹ ↺ ↻ ↼ ↽ ↾ ↿ ⇀ ⇁ ⇂ ⇃ ⇄ ⇅ ⇆ ⇇ ⇈ ⇉ ⇊ ⇋ ⇌ ⇍ ⇎ ⇏ ⇕ ⇖
+⇗ ⇘ ⇙ ⇚ ⇛ ⇜ ⇝ ⇞ ⇟ ⇠ ⇡ ⇢ ⇣ ⇤ ⇥ ⇦ ⇧ ⇨ ⇩ ⇪ ⌅ ⌆ ⌤ ⏎ ▶ ☇ ☈ ☊ ☋ ☌ ☍ ➔ ➘ ➙ ➚ ➛ ➜ ➝ ➞ ➟ ➠ ➡ ➢ ➣ ➤ ➥ ➦ ➧ ➨ ➩ ➪ ➫ ➬ ➭
+➮ ➯ ➱ ➲ ➳ ➴ ➵ ➶ ➷ ➸ ➹ ➺ ➻ ➼ ➽ ➾ ⤴ ⤵ ↵ ↓ ↔ ← → ↑ ⌦ ⌫ ⌧ ⇰ ⇫ ⇬ ⇭ ⇳ ⇮ ⇯ ⇱ ⇲ ⇴ ⇵ ⇷ ⇸ ⇹ ⇺ ⇑ ⇓ ⇽ ⇾
+⤡ ⤢ ⤣ ⤤ ⤥ ⤦ ⤪ ⤨ ⤧ ⤩ ⤭ ⤮ ⤯ ⤰ ⤱ ⤲ ⤫ ⤬ ⬐ ⬎ ⬑ ⬏ ⤶ ⤷ ⥂ ⥃ ⥄
+⥢ ⥤ ⥣ ⥥ ⥦ ⥨ ⥧ ⥩ ⥮ ⥯ ⥪ ⥬ ⥫ ⥭ ⤌ ⤍ ⤎ ⤏ ⬸ ⤑ ⬱ ⟸ ⟹ ⟺ ⤂ ⤃ ⤄ ⤆ ⤇ ⤊ ⤋ ⭅ ⭆ ⟰ ⟱ ⇐ ⇒ ⇔ ⇶ ⟵ ⟶ ⟷ ⬄ ⬀ ⬁ ⬂ ⬃ ⬅ ⬆ ⬇ ⬈ ⬉ ⬊ ⬋ ⬌ ⬍ ⟻ ⟼ ⤒ ⤓ ⤙ ⤚
+⤼ ⤽ ⤾ ⤿ ⤸ ⤺ ⤹ ⤻ ⥀ ⥁ ⟲ ⟳
+☤ ☥ ☧ ☨ ☩ ☫ ☬ ☭ ☯ ☽ ☾ ✙ ✚ ✛ ✜ ✝ ✞ ✟ † ⊹ ‡ ♁ ♆ ❖ ♅ ✠ ✡ ✢ 卍 卐 〷 ☠ ☢ ☣
+♡ ❥ ❣ ❦ ❧
+✓ ✔ ✗ ✘ ☓ ∨ √
+⚣ ⚤ ⚥ ⚦ ⚧ ⚨ ⚢ ␣ ⎋ ⋮ ⋯ ⋰ ⋱ ✖ ﹢ ﹣ ＋ － ／ ＝ ÷ ± × ⊰ ⊱ ⊲ ⊳ ⊏ ⊐ ⊑ ⊒ ⊓ ⊔ ⊕ ⊖ ⊗ ⊘ ⊙ ⊚ ⊛ ⊜ ⊝ ⊞ ⊟ ⊠ ⊡ ⊢ ⊣ ⊤ ⋐ ⋑ ⋒ ⋓ ⊶ ⊷ ⊿ ⋀ ⋁ ⋂ ⋃ ⋄ ⋖ ⋗ ⋘ ⋙ ⌂ ⌈ ⌉ ⌊ ⌋ ⌐ ⌑ ⌒ ⌓ ⌔ ⌕ ⌖ ⌢ ⌣ ⌤ ⌥ ⌦ ⌧ ⌨ ⌫ ⌬ ⌭ ⌮ ⌯ ⌰ ⌱ ⌲ ⌳ ⌴ ⌵ ⌶ ⌷ ⌸ ⌹ ⌺ ⌻ ⌼ ⌽ ⌾ ⌿ ⍀ ⍁ ⍂ ⍃ ⍄ ⍅ ⍆ ⍇ ⍈ ⍉ ⍊ ⍋ ⍌ ⍍ ⍎ ⍏ ⍐ ⍑ ⍒ ⍓ ⍔ ⍕ ⍖ ⍗ ⍘ ⍙ ⍚ ⍛ ⍜ ⍝ ⍞ ⍟ ⍠ ⍡ ⍢ ⍣ ⍤ ⍥ ⍦ ⍧ ⍨ ⍩ ⍪ ⍫ ⍬ ⍭ ⍮ ⍯ ⍰ ⍱ ⍲ ⍳ ⍴ ⍵ ⍶ ⍷ ⍸ ⍹ ⍺ ﹘ ﹝ ﹞ ﹟ ﹡ 〶 ␛ ␡ ␚ ␟ ␘ ␠ ␤ ␋ ␌ ␍ ␎ ␏ ␐ ␑ ␒ ␓ ␔ ␕ ␖ ␗ ␙ ␜ ␝ ␞ ␀ ␁ ␂ ␃ ␄ ␅ ␆ ␇ ␈ ␉ ␊ ❏ ❐ ❑ ❒ ▀ ▁ ▂ ▃ ▄ ▅ ▆ ▇ ▉ ▊ ▋ █ ▌ ▐ ▍ ▎ ▏ ▕ ░ ▒ ▓ ▔ ▬ ▢ ▣ ▤ ▥ ▦ ▧ ▨ ▩ ▪ ▫ ▭ ▮ ▯ ☰ ☲ ☱ ☴ ☵ ☶ ☳ ☷ ▰ ▱ ◧ ◨ ◩ ◪ ◫ ∎ ■ □ ⊞ ⊟ ⊠ ⊡ ❘ ❙ ❚ 〓 ◊ ◈ ◇ ◆ ⎔ ⎚ ☖ ☗ ◄ ▲ ▼ ► ◀ ◣ ◥ ◤ ◢ ▶ ◂ ▴ ▾ ▸ ◁ △ ▽ ▷ ∆ ∇ ⊳ ⊲ ⊴ ⊵ ◅ ▻ ▵ ▿ ◃ ▹ ◭ ◮ ⫷ ⫸ ⋖ ⋗ ⋪ ⋫ ⋬ ⋭ ⊿ ◬ ≜ ⑅ │ ┃ ╽ ╿ ╏ ║ ╎ ┇ ︱ ┊ ︳ ┋ ┆ ╵ 〡 〢 ╹ ╻ ╷ 〣 ☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷ ≡ ✕ ═ ━ ─ ╍ ┅ ┉ ┄ ┈ ╌ ╴ ╶ ╸ ╺ ╼ ╾ ﹉ ﹍ ﹊ ﹎ ︲ ⑆ ⑇ ⑈ ⑉ ⑊ ⑄ ⑀ ︴ ﹏ ﹌ ﹋ ╳ ╲ ╱ ︶ ︵ 〵 〴 〳 〆 ` ᐟ ‐ ⁃ ⎯ 〄 ﹄ ﹃ ﹂ ﹁ ┕ ┓ └ ┐ ┖ ┒ ┗ ┑ ┍ ┙ ┏ ┛ ┎ ┚ ┌ ┘ 「 」 『 』 ˩ ˥ ├ ┝ ┞ ┟ ┠ ┡ ┢ ┣ ┤ ┥ ┦ ┧ ┨ ┩ ┪ ┫ ┬ ┭ ┮ ┯ ┰ ┱ ┲ ┳ ┴ ┵ ┶ ┷ ┸ ┹ ┺ ┻ ┼ ┽ ┾ ┿ ╀ ╁ ╂ ╃ ╄ ╅ ╆ ╇ ╈ ╉ ╊ ╋ ╒ ╕ ╓ ╖ ╔ ╗ ╘ ╛ ╙ ╜ ╚ ╝ ╞ ╡ ╟ ╢ ╠ ╣ ╥ ╨ ╧ ╤ ╦ ╩ ╪ ╫ ╬ 〒 ⊢ ⊣ ⊤ ⊥ ╭ ╮ ╯ ╰ ⊦ ⊧ ⊨ ⊩ ⊪ ⊫ ⊬ ⊭ ⊮ ⊯ ⊺ 〦 〧 〨 ˦ ˧ ˨ ⑁ ⑂ ⑃ ∟ ◉ ○ ◌ ◍ ◎ ● ◐ ◑ ◒ ◓ ◔ ◕ ◖ ◗ ❂ ☢ ⊗ ⊙ ◘ ◙ ◚ ◛ ◜ ◝ ◞ ◟ ◠ ◡ ◯ 〇 〶 ⚫ ⬤ ◦ ∅ ∘ ⊕ ⊖ ⊘ ⊚ ⊛ ⊜ ⊝ ❍ ⦿ 
+
+
+          </h3>
+        </div>
+    </section>
+
+    <section id="page3" class="page">
+        <h2>Bubble Text　</h2>
+        <div id="note3" class="note-box">Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ
+🅐 🅑 🅒 🅓 🅔 🅕 🅖 🅗 🅘 🅙 🅚 🅛 🅜 🅝 🅞 🅟 🅠 🅡 🅢 🅣 🅤 🅥🅦 🅧 🅨 🅩
+🄰 🄱 🄲 🄳 🄴 🄵 🄶 🄷 🄸 🄹 🄺 🄻 🄼 🄽 🄾 🄿 🅀 🅁 🅂 🅃 🅄 🅅 🅆 🅇 🅈 🅉
+🅰 🅱 🅲 🅳 🅴 🅵 🅶 🅷 🅸 🅹 🅺 🅻 🅼 🅽 🅾 🅿 🆀 🆁 🆂 🆃 🆄 🆅 🆆 🆇 🆈 🆉
+➀ ➁ ➂ ➃ ➄ ➅ ➆ ➇ ➈ ➉
+➊ ➋ ➌ ➍ ➎ ➏ ➐ ➑ ➒ ➓
+⓵ ⓶ ⓷ ⓸ ⓹ ⓺ ⓻ ⓼ ⓽ ⓾
+㉈㉉㉊㉋㉌㉍㉎㉏
+㉑ ㉒ ㉓ ㉔ ㉕ ㉖ ㉗ ㉘ ㉙ ㉚
+㉛ ㉜ ㉝ ㉞ ㉟ ㊱ ㊲ ㊳ ㊴ ㊵
+㊶ ㊷ ㊸ ㊹ ㊺ ㊻ ㊼ ㊽ ㊾ ㊿
+⓿ ❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿ ⓪ ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ 
+㈠ ㈡ ㈢ ㈣ ㈤ ㈥ ㈦ ㈧ ㈨ ㈩
+㊀ ㊁ ㊂ ㊃ ㊄ ㊅ ㊆ ㊇ ㊈ 
+０ １ ２ ３ ４ ５ ６ ７ ８ ９ ⑴ ⑵ ⑶ ⑷ ⑸ ⑹ ⑺ ⑻ ⑼ ⑽ ⑾ ⑿ ⒀ ⒁ ⒂ ⒃ ⒄ ⒅ ⒆ ⒇ ⒈ ⒉ ⒊ ⒋ ⒌ ⒍ ⒎ ⒏ ⒐ ⒑ ⒒ ⒓ ⒔ ⒕ ⒖ ⒗ ⒘ ⒙ ⒚ ⒛
+ↀ ↁ ↂ
+㊊ ㊋ ㊌ ㊍ ㊎ ㊏ ㊐ ㊑ ㊒ ㊓ ㊔ ㊕ ㊖ ㊗ ㊘ ㊙ ㊚ ㊛ ㊜ ㊝ ㊞ ㊟ ㊠ ㊡ ㊢ ㊣ ㊤ ㊥ ㊦ ㊧ ㊨ ㊩ ㊪ ㊫ ㊬ ㊭ ㊮ ㊯ ㊰
+
+
+
+</div>
+    </section>
+
+    <section id="page4" class="page">
+        <h2>Card　</h2>
+        <div id="note4" class="note-box"><h4>🂡 🂢 🂣 🂤 🂥 🂦 🂧 🂨 🂩 🂪 🂫 🂬 🂮 🂱 🂲 🂳 🂴 🂵 🂶 🂷 🂸 🂺 🂻 🂼 🂽 🂾 🃁 🃂 🃃 🃄 🃅 🃆 🃇 🃈 🃉 🃊 🃋 🃌 🃍 🃎 🃑 🃒 🃓 🃔 🃕 🃖 🃗 🃘 🃙 🃚 🃛 🃜 🃝 🃞 🃌 🂾 🀢 🀦 🃁 🀆 🀥 🀢 🀤 🀩 🀣 🀦 🀛 🀟 🀐 🀚 🀁 🂠 🀝 🀖 🀇 🀋 🀉 🀍 🀈 🀂 🀎 🀅 🀃 
+</h4>
+        </div>
+    </section>
+
+    <section id="page5" class="page">
+        <h2>𝖢𝗋𝖾𝖺𝗍𝗂𝗈𝗇 𝖳𝖾𝗑𝗍　</h2>
+        <div id="note5" class="note-box">
+
+Bɑɖbꔮyʂ㉗-ꛃᵉᵇ〽ꛕ᜵ʂiteく᜵ꛨ9
+ᜆ艹ꣻꣻꣻꣻヽᶠᵃᶜᵉᵇᵒᵒᵏ＼ヽヽヽ
+︳ʃ︭ʋ︭︦ʃ︭︦ʂ︭︦ʃ︭︦ɛ︭︦ʃ︭︦ʀ︭︦ʃ︦卝一ꗴꛨꛨ᜵᜵ꛨ0᜵᜵24
+乀＿＿＿＿＿＿＿＿＿＿＿＿
+︻ꔮ༭ꔷꕹ一一一一一一一一一
+<hr>
+ꛅᴹ۵卝ＢＡＤＢＯＹ卝  乀ꕺノ
+乀۵ꕢﷺꕢ۵ノꔮꔷ一一一一一ꔷꔮ
+꘏＿＿＿＿＿꘏ꕬꖯꖀꔀꖻ፯፬፯፶ꖩ
+ᶠᵃᶜᵉᵇᵒᵒᵏꜜꜛꖘ꛵꛶٭﹫ꚵꚨꕬꔷꘘꗣꗈ㉗
+ꕤꕺꕤ＿＿＿＿＿＿＿＿ꕤꕺꕤ
+<hr>
+（＼꘏᜵）　 ᜵）᜵）一٭ꛃᵉⁿⁿʸ〽
+（ｷ ᶿꔷᶿ ）（ ᶿꔷᶿ ）一٭᜵᜵ꛨꛨ᜵᜵ꛨ0
+ᜆ〽ꕤញɘ︩︠ɭɪ︡ʈ︪ɧ︢ɑ︨︣＿＿＿＿ꕤܓܐ݈
+乀＿＿＿＿＿＿＿＿ʃ︭ʋ︭︦ʃ︭︦ʂ︭︦ʃ︭︦ɛ︭︦ʃ︭︦ʀ︭︦ʃ︦
+
+<hr>
+一ꔷꔮꕤꔮ＼ꕺ＼﹏／ꕺ／ꔮꕤꔮꔷ一
+ꕺ＿＿＿／۵ꕢﷺꕢ۵＼＿＿＿ꕺ
+《＼〇〪〭〫〬／》ꕺꕺꕤꕺꕺ《＼〇〪〭〫〬／》
+《卝ꕤ卝》l፸፶፮፪፫l《卝ꕤ卝》
+《／〇〪〭〫〬＼》ꕺꕺꕤꕺꕺ《／〇〪〭〫〬＼》
+ꕺ﹋﹋﹋＼۵ꕢﷺꕢ۵／﹋﹋﹋ꕺ
+一ꔷꔮꕤꔮ／ꕺ／﹋＼ꕺ＼ꔮꕤꔮꔷ一
+<hr>
+ＢＡＤＢＯＹ ＥＬＩＴＨ『㉗ 
+︻๏ꯆ㉈፯፬፯፶㉈ﾛﾃᆖ一一一一 
+ᴒ︳ノ艹ᵀᴹ۵（〇〪〭〫〬ɪ︭︦ɔ︭︦ʜ︭︦ʌ︭︦〇〪〭〫〬）２７ 
+ᴑ︳＿＿＿２７＼ ０１＼ ９９ 
+ᴟ︳ｕｎｉｑｕｅ（ｷ꫱ꫢ꫱）ツ 
+︻๏༨㉗ꯆ፯፬፯፶声ᆕ一一一一＊
+
+        </div>
+    </section>
+    
+<h2>Cari karakter khusus　
+</h2>
+
+<script>
+    // Fungsi untuk menampilkan halaman yang dipilih
+    function showPage(pageId) {
+        // Sembunyikan semua halaman
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(function(page) {
+            page.style.display = 'none';
         });
+
+        // Tampilkan halaman yang dipilih
+        const page = document.getElementById(pageId);
+        if (page) {
+            page.style.display = 'block';
+        }
+    }
+
+    // Fungsi untuk menyalin teks dari elemen menggunakan navigator.clipboard
+    function copyText(elementId) {
+        // Ambil teks dari elemen dengan ID tertentu
+        const text = document.getElementById(elementId).textContent;
+
+        // Menggunakan navigator.clipboard API untuk menyalin teks ke clipboard
+        navigator.clipboard.writeText(text)
+            .then(function() {
+                alert("Catatan disalin: " + text);
+            })
+            .catch(function(err) {
+                console.error("Gagal menyalin teks: ", err);
+                alert("Gagal menyalin teks");
+            });
+    }
+
+    // Menampilkan halaman pertama secara default ketika halaman pertama kali dimuat
+    document.addEventListener('DOMContentLoaded', function() {
+        showPage('page1');
+    });
+</script>
+
+
+
+  <!-- Tombol untuk mode gelap -->
+    <button id="toggle-dark-mode" onclick="toggleDarkMode()">
+        <span id="toggle_icon" class="material-symbols-outlined">toggle_off</span>
+    </button>
+
+
+
+<script>
+    // Fungsi untuk mengalihkan mode gelap (dark mode)
+    function toggleDarkMode() {
+        // Menambah atau menghapus kelas 'dark-mode' pada body
+        document.body.classList.toggle('dark-mode');
+        
+        // Mengubah ikon berdasarkan status mode gelap
+        const toggleIcon = document.getElementById('toggle_icon');
+        
+        if (document.body.classList.contains('dark-mode')) {
+            // Ganti ikon menjadi 'toggle_on' saat mode gelap aktif
+            toggleIcon.textContent = 'toggle_on';
+        } else {
+            // Kembali ke ikon 'toggle_off' saat mode gelap dinonaktifkan
+            toggleIcon.textContent = 'toggle_off';
+        }
     }
 </script>
 
-</body>
+
+
+
+<script>
+    // Menambahkan spasi pada posisi kursor
+    function addSpace() {
+        const memo = document.getElementById('memo');
+        const cursorPos = memo.selectionStart; // Menyimpan posisi kursor
+        const textBefore = memo.value.substring(0, cursorPos); // Bagian teks sebelum kursor
+        const textAfter = memo.value.substring(cursorPos); // Bagian teks setelah kursor
+        
+        // Menambahkan spasi pada posisi kursor
+        memo.value = textBefore + ' ' + textAfter;
+        
+        // Mengembalikan posisi kursor setelah penambahan spasi
+        memo.selectionStart = memo.selectionEnd = cursorPos + 1;
+        memo.focus();
+    }
+
+    // Menambahkan newline (Enter) pada posisi kursor
+    function addEnter() {
+        const memo = document.getElementById('memo');
+        const cursorPos = memo.selectionStart; // Menyimpan posisi kursor
+        const textBefore = memo.value.substring(0, cursorPos); // Bagian teks sebelum kursor
+        const textAfter = memo.value.substring(cursorPos); // Bagian teks setelah kursor
+        
+        // Menambahkan newline (Enter) pada posisi kursor
+        memo.value = textBefore + '\n' + textAfter;
+        
+        // Mengembalikan posisi kursor setelah penambahan enter
+        memo.selectionStart = memo.selectionEnd = cursorPos + 1;
+        memo.focus();
+    }
+
+    // Menyalin teks ke clipboard
+    function copyText() {
+        const memo = document.getElementById('memo');
+        memo.select();
+        document.execCommand('copy');
+        alert('Teks disalin ke clipboard');
+    }
+
+    // Menghapus satu karakter terakhir
+    function clearText() {
+        const memo = document.getElementById('memo');
+        memo.value = memo.value.slice(0, -1); // Menghapus satu karakter terakhir
+        memo.focus();
+    }
+
+    // Menambahkan karakter tertentu pada posisi kursor
+    function addCharacter(char) {
+        const memo = document.getElementById('memo');
+        const cursorPos = memo.selectionStart; // Menyimpan posisi kursor
+        const textBefore = memo.value.substring(0, cursorPos); // Bagian teks sebelum kursor
+        const textAfter = memo.value.substring(cursorPos); // Bagian teks setelah kursor
+        
+        // Menambahkan karakter pada posisi kursor
+        memo.value = textBefore + char + textAfter;
+        
+        // Mengembalikan posisi kursor setelah penambahan karakter
+        memo.selectionStart = memo.selectionEnd = cursorPos + char.length;
+        memo.focus();
+    }
+
+    // Menghapus karakter pada posisi kursor
+    function deleteCharacter() {
+        const memo = document.getElementById('memo');
+        const cursorPos = memo.selectionStart; // Menyimpan posisi kursor
+        
+        // Menghapus karakter terakhir pada posisi kursor
+        memo.value = memo.value.slice(0, cursorPos - 1) + memo.value.slice(cursorPos);
+        
+        // Mengembalikan posisi kursor setelah penghapusan karakter
+        memo.selectionStart = memo.selectionEnd = cursorPos - 1;
+        memo.focus();
+    }
+</script>
+
+
+  </body>
 </html>
