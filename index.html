@@ -10,8 +10,17 @@
    /* Mengatur font keluarga global */
 
         body {
-    font-family: 'Arial', 'Helvetica', sans-serif
+            font-family: Arial, sans-serif;
+            justify-content: center;
+            height: 95vh;
+            background-color: white;
+            color: #333;
+             padding: 5px 0px;
+
+            box-shadow: 0 0px 5px rgb(119, 136, 153);
+            border-radius: 5px
         }
+
 
    /* Gaya untuk profile-name */
         .profile-name {
@@ -32,232 +41,219 @@
 
     #memo {
         border: 1px solid #007bff; /* Garis border biru */
-        border-radius: 15px; /* Menambahkan sudut melengkung untuk lingkaran */
+        border-radius: 0px; /* Menambahkan sudut melengkung untuk lingkaran */
         padding: 10px;
-        width: 93%; /* Lebar penuh */
+        width: 94%; /* Lebar penuh */
         min-height: 125px; /* Tinggi minimum untuk kenyamanan mengetik */
-          margin-bottom: 10px;
+          margin-bottom: 0px;
           font-size: 14px;
+          text-align: 0px;
+          margin-top: 0px;
         }
 
-  /* Gaya saat area teks aktif (fokus) */
-    #memo:focus {
+      /* Gaya saat area teks aktif (fokus) */
+        #memo:focus {
         outline: none; /* Menghapus outline default */
         border-color: darkblue; /* Ubah warna border saat fokus */
     }
 
 
-  /* Gaya untuk footer */
-  footer {
-    position: absolute; 
-    top: 0;
-    left: 0; 
-    font-size: 8px; 
-    color: #007bff; 
-    transition: color 0.3s ease; 
-    z-index: 1000;
-    padding: 12px
+   /* Gaya untuk footer */
+      footer {
+      position: absolute; 
+      top: 0;
+      left: 0; 
+      font-size: 8px; 
+      color: #007bff; 
+      transition: color 0.3s ease; 
+      z-index: 1000;
+      padding: 12px
          }
+         
+        /* Efek kedip */
+        .button-clicked {
+         animation: blink 0.3s ease-in-out;
+              }
 
-/* Gaya untuk tombol 1*/
+        /* Animasi kedip */
+        @keyframes blink {
+        0% {
+        background-color: #ffc107;
+        box-shadow: 0 0 0px #fff;
+              }
+          50% {
+        background-color: #ffdf70;  /* Warna lebih terang saat kedip */
+        box-shadow: 0 0 10px #fff;
+              }
+        100% {
+        background-color: #ffc107;
+        box-shadow: 0 0 0px #fff;
+                }
+          }
+
+  /* Tombol Spasi&copy */
+      .action-button.spasi {
+       background-color: #28a745;  /* Hijau */
+       width: 80px;  /* Lebar tombol */
+       height: 25px;  /* Tinggi tombol */
+       padding: 3px 10px;  /* Padding untuk ruang dalam tombol */
+       font-size: 13px;  /* Ukuran font */
+       border-radius: 5px;  /* Sudut tombol tumpul */
+       color: white;  /* Warna teks tombol */
+       border: none;  /* Menghilangkan border default */
+            }
+
+       .action-button.enter {
+        background-color: #007bff;  /* Biru */
+        width: 80px;
+        height: 25px;
+        padding: 3px 10px;
+        font-size: 13px;
+        border-radius: 5px;
+        color: white;
+        border: none;
+                }
+
+        .action-button.salin {
+         background-color: #ffc107;  /* Kuning */
+         width: 80px;
+         height: 25px;
+         padding: 3px 10px;
+         font-size: 13px;
+         border-radius: 5px;
+         color: white;
+         border: none;
+            }
+
+        .action-button.hapus {
+         background-color: #dc3545;  /* Merah */
+         width: 90px;
+         height: 25px;
+         padding: 3px 10px;
+         font-size: 13px;
+         border-radius: 5px;
+         color: white;
+         border: none;
+             }
+
+   /* Hover klik tombol spasi&dll */
+       .action-button:hover {
+        opacity: 0.8;  /* Efek transparansi saat hover */
+        cursor: pointer;  /* Menunjukkan pointer pada mouse saat hover */
+        color: white;
+        background-color: black;
+        border: 2px solid #778899;
+              }
+
+
+/* tombol 1*/
     div button {
-    color: black; /* Warna teks tombol */
-    border: 2px solid #778899; /* Border warna */
-    border-radius: 5px; 
-    /* Sudut border melengkung */
-    padding: 4px 5px; 
-    /* Padding untuk tombol */
-    font-size: 11px; 
-    /* Ukuran font tombol */
-    cursor: pointer; 
-    /* Mengubah cursor menjadi pointer */
-    margin: 0px; /* Jarak antar tombol */
-    margin-bottom: 5px; 
-    /* Jarak antar tombol secara vertikal */
- 
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Efek transisi saat hover */
-    min-width: 0px; /* Lebar minimum tombol */
-    position: relative;         /* Mengaktifkan positioning relatif */
-    top: 3px;
+        padding: 5px 4px;
+         margin-top: 2px;
+         margin-bottom: 2px;
+        background-color: #007bff;
+        color: #ffffff;
+        border-radius: 6px;
+        font-size: 12px;
+        margin-bottom: 1px; 
+            margin-left: 6px;
+          /* Jarak antar tombol secara vertikal */
+          
         }
 
-/* Efek mode klik  tombol */
-    div button:hover {
-    background-color: blue; /* Mengubah warna latar belakang saat hover */
-    border-color: white; /* Mengubah
+   /* Efek klik tombol 1 */
+     div button:hover {
+     background-color: red; /* Mengubah latar belakang saat hover */
+     border-color: #3a3a3a; /* Mengubah
      warna border saat hover */
       }
-
-h4 {
-    font-size: 50px;
-    color: red;
-
-    margin-top: -10px; /* Mengurangi jarak atas */
-    margin-bottom: 10px; /* Mengurangi jarak bawah */
-    margin-left: 0; /* Mengatur margin kiri */
-    margin-right: 0; /* Mengatur margin kanan */
-    
-    font-weight: 100; /* Membuat font lebih tipis (nilai 100 adalah yang paling tipis) */
-    letter-spacing: -5px; /* Mengurangi jarak antar huruf (merapatkan) */
-    line-height: 1.0;
-
-}
-
-h3 {
-    font-size: 19px;
-    color: #2F4F4F;
-    margin-top: 0px; /* Mengurangi jarak atas */
-    margin-bottom: 0px; /* Mengurangi jarak bawah */
-    margin-left: 0px; /* Mengatur margin kiri */
-    margin-right: 0; /* Mengatur margin kanan */
-    
-    font-weight: 80; /* Membuat font lebih tipis (nilai 100 adalah yang paling tipis) */
-    letter-spacing: 0px; /* Mengurangi jarak antar huruf (merapatkan) */
-    line-height: 1.0;
-
-}
-
-  h2 {
-    font-size: 10px;
-    background-color: #f0f2f4;
-    margin-left: 0px;
-    color: black;
-    font-weight: bold;
-    text-align: 0px;
-    margin-top: 6px;
-    margin-bottom: 2px;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 0px 1px rgba(0, 0, 255, 0.6);
-    
-
-    background-color: #2f88e1; /* Mengubah warna latar belakang saat hover */
-    color: white; 
-    border-radius: 3px ;
-    }
-    input, textarea {
-    background-color: white;
-      }
-
-  <div class="button-container">
-    <button class="custom-button">OK</button>
-  </div>
-
-  <div class="button-container">
-    <button class="custom-button">OK</button>
-  </div>
-
-  /* tombol bagian spasi 1*/
-      div button:active {
-      background-color: #0056b3; 
-       }
-       
-    /* tombol 1*/
-   /* Gaya untuk container tombol 1*/
-    .button-container {
-     max-height: 65px;
-     overflow-y: auto;
-     
-     
-  /* tombol 2*/
-     border-radius: 5px ;
-     box-shadow: 0 0px 3px rgba(0, 0, 255, 0.6);
-           
-  /* Warna biru saat diklik 1*/
-    div button:hover {
-    background-color: #2f88e1; /* Mengubah warna latar belakang saat hover */
-    color: white; /* Mengubah warna teks menjadi kuning saat hover */
-    box-shadow: 0 1px 1px rgba(0, 0, 255, 0.6); /* Menambahkan bayangan biru saat hover */
+  /* tombol 1*/
+    /* Gaya untuk container tombol 1*/
+      .button-container {
+       max-height: 70px;
+     border: 1px solid #007bff;
+       overflow-y: auto;
+    /* Warna biru saat diklik 1*/
+      div button:hover {
+      background-color: red;
+    /* Mengubah warna latar belakang saat hover */
+      color: white; /* Mengubah warna teks menjadi kuning saat hover */
+      box-shadow: 0 1px 1px rgba(0, 0, 255, 0.6); /* Menambahkan bayangan biru saat hover */
           }
-
+          
        display: flex;
        flex-wrap: wrap;
-        }
- /* tombol 2*/
-   .custom-container {
-    border: 3px ; /* Border untuk container khusus */
-    padding: 0px;
-    border-radius: 5px;
-    box-shadow: 0 1px 2px rgba(0, 0, 255, 0.6);
-
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-    
-  /* tombol 2*/
-    /* Agar container bisa diperbesar atau diperkecil */
-    resize: both; /* Membuat container bisa diubah ukurannya */
-    overflow: auto; /* Menambahkan scrollbar jika konten terlalu banyak */
-    max-width: 100%; /* Agar container tidak melebihi layar */
-    max-height: 115px; /* Membatasi tinggi container */
-    width: auto; /* Lebar awal yang disesuaikan */
-    height: auto; /* Tinggi awal yang disesuaikan */
-        }
-
-/* tombol 2 */
-.custom-button {
-    width: 33px;
-    height: 33px;
-    font-size: 13px;
-    text-align: center;
-    border: 1px solid #778899;
-    box-shadow: 0 0 2px rgb(119, 136, 153); /* Bayangan lebih besar saat tombol diklik */
-    border-radius: 45px;
-    color: black;
-    background: #f0f2f4;
-    margin: 0; /* Menghilangkan margin auto untuk pemusatan */
-    margin-left: 5px;
-
-    display: inline-block; /* Menjadikan tombol bersifat inline-block, sehingga bisa rata kiri */
-}
-
-
-    /* Gaya tombol tab 2*/
-     .custom-button:hover {
-      background-color: #2f88e1;
-      color: white;
-     box-shadow: 0 2px 1px rgba(0, 0, 255, 0.6); 
-          }
+            }
         
-   /* Gaya untuk mode gelap */
-        .dark-mode .profile-name,
-        .dark-mode footer {
-            color: #5DFC0A;
+  /* banner pilih huruf */
+         h2 {
+         font-size: 10px;
+         margin-top: 2px;
+         margin-bottom: 2px;
+         font-family: Arial, sans-serif;
+         background-color: #007bff; 
+         color: wite; 
+      /* Mengubah warna latar belakang saat hover */
+         color: white; 
+              }
+         input, textarea {
+         background-color: white;
+                 }
+    
+/* tombol 2*/
+       .custom-container {
+        display: flex;
+        gap: 3px;
+        flex-wrap: wrap;
+        overflow: auto; /* Menambahkan scrollbar jika konten terlalu banyak */
+        max-width: 101%; /* Agar container tidak melebihi layar */
+        border: 1px solid #007bff;
+        max-height: 124px; /* Membatasi tinggi container */
+        width: auto; /* Lebar awal yang disesuaikan */
+        height: auto; /* Tinggi awal yang disesuaikan */
         }
+     div button:hover {
+     background-color: #FF0000; /* Mengubah latar belakang saat hover */
+     color: white;
+     border-color: #3a3a3a; /* Mengubah
+     warna border saat hover */
+      }
+        
+       .custom-button {
+        width: 26px;
+        height: 35px;
+        font-size: 12px;
+        text-align: center;
+     border: 2px solid #3a3a3a;
+        border-radius: 5px;
+        color: white;
+        background: #007bff;
+        margin: 0; /* Menghilangkan margin auto untuk pemusatan */
+        margin-left: 5px;
+             margin-top: 2px;
+        margin-bottom: 2px;
+         }
 
-    .dark-mode {
-            background: black;
-            color: white;
-        }
 
-    #toggle-dark-mode {
-    position: absolute;
-    top: 0px;    /* Posisikan di bagian atas */
-    right: 0px;  /* Posisikan di pojok kanan */
-    color: black; /* Warna teks default */
-    padding: 8px;
-    background: none; /* Tidak ada latar belakang default */
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.dark-mode #toggle-dark-mode {
-    color: #5DFC0A; /* Warna teks saat mode gelap */
-    background: none; /* Tidak ada latar belakang untuk mode gelap */
-}
-
-/* Menyembunyikan halaman pengaturan pada awalnya */
-.settings-card {
-    display: none;
+/* icons dan emoji-keyboard */
+.header-emoji-container {
+    display: flex;
+         border: 1px solid #007bff;
+    justify-content: space-between; /* Mengatur spasi antar elemen */
+    align-items: center;
+    margin-top: 0px;
+    padding: 0px;
+    gap: 0px; /* Jarak antar elemen */
 }
 
 /* icon hider */
-   .header-icons {
+.header-icons {
     display: flex;
     justify-content: space-around;
-    margin-top: 10px;
-    padding: 1px;
-    box-shadow: 0 0px 2px rgb(197, 204, 211);
-    border-radius: 50px;
+    margin-top: 1px;
+    padding: 10px;
+
+    border-radius: 0px;
 }
 
 .header-icons button {
@@ -267,73 +263,144 @@ h3 {
     width: 30px;
     height: 30px;
     background-color: #007bff;
-    border: none;
+    border-color: #3a3a3a;
     border-radius: 50%;
-    color: #f0f2f4;
-    cursor: pointer;
 
+    cursor: pointer;
 }
 
 .header-icons button:hover {
-    color: white;
-    background-color: #0040ff;
-    box-shadow: 0 0px 8px rgb(197, 204, 211);
-    border: 1px solid #a6a6a6; /* Border hijau */
-    border-radius: 50%; /* Membuat lingkaran */
-    padding: 10px; /* Menyesuaikan padding agar tombol berbentuk lingkaran */
+    border-radius: 100%;
+    padding: 0px;
 }
 
+/* Keyboard Emoji */
+.emoji-keyboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1px;
+    justify-items: center;
+    margin-top: 2px;
+            max-height: 119px; /* Tinggi maksimal untuk konten yang akan di-scroll */
+             border: 1px solid #007bff;
+       overflow-y: auto; /* Tambahkan scrollbar vertikal jika konten terlalu banyak */
+    
+}
 
+.emoji-keyboard button {
+    font-size: 15px;
+    
+    
+}
 
-     /* Menyembunyikan halaman pada awalnya */
-        .page {
-            display: none;
-        }
-
-/* CSS untuk styling kolom teks dengan scroll */
-.note-box {
-    width: 321px; /* Lebar tetap */
-    height: 97px; /* Tinggi tetap */
-    padding: 10px;
+/* Button untuk menampilkan emoji keyboard */
+#toggle-emoji {
+    padding: 5px 10px;
+    margin-top: 3px;
+    background-color: #45a049;
+        border-color: #3a3a3a;
+    color: white;
 
     border-radius: 5px;
-    overflow-y: auto; /* Scroll vertikal jika konten lebih tinggi */
-    white-space: pre-wrap;
+    cursor: pointer;
+}
+
+#toggle-emoji:hover {
+    background-color: red;
 }
 
 
+    /* Gaya untuk mode gelap */
+           .dark-mode .profile-name,
+           .dark-mode footer {
+            color: #5DFC0A;
+            }
 
-.copy-button:hover {
-    background-color: #4178d0; /* Warna saat tombol di-hover */
+            .dark-mode {
+              background: black;
+              color: white;
+              }
+
+            #toggle-dark-mode {
+            position: absolute;
+            top: 0px;    /* Posisikan di bagian atas */
+            right: 0px;  /* Posisikan di pojok kanan */
+            color: black; /* Warna teks default */
+            padding: 8px;
+            background: none; /* Tidak ada latar belakang default */
+            border: none;
+            transition: background-color 0.3s ease;
+                  }
+
+          .dark-mode #toggle-dark-mode {
+           color: #5DFC0A; /* Warna teks saat mode gelap */
+           background: none; /* Tidak ada latar belakang untuk mode gelap */
+            }
+
+
+/* CSS khusus kelas .page */
+
+      .page .note-box {
+        max-height: 128px; /* Tinggi maksimal untuk konten yang akan di-scroll */
+             border: 1px solid #007bff;
+       overflow-y: auto; /* Tambahkan scrollbar vertikal jika konten terlalu banyak */
+
+               }
+
+      section.page h2 {
+    color: white !important;
+    font-size: 5px;
+    margin-top: 0 !important;
 }
 
-.note-box {
-    font-size: 1.5em; /* Sesuaikan ukuran font */
-    line-height: 1.3; /* Jarak antar baris agar tetap rapi */
-    text-left: center; /* Posisikan teks di tengah */
-    padding: 10px;
-    overflow-wrap: break-word; /* Pecah kata jika terlalu panjang */
-    word-wrap: break-word;
-    white-space: normal; /* Membiarkan teks turun ke baris berikutnya */
+section.page .note-box {
+    margin-top: -3px !important;
+    padding: 0px !important;
+    background-color: white !important;
+    border-left: 3px solid #007bff !important;
+    border-radius: 0px !important;
 }
 
+section.page .note-box button {
+    padding: 2px 2px !important;
+    font-size: 20px !important;
 
-/* Gaya tambahan untuk memperindah */
-.page h2 {
-    font-size: 1em;
-    margin-bottom: 10px;
-    text-align: center;
-    color: 𝗐𝗁𝗂𝗍𝖾;
+    color: black !important;
+    background-color: white !important;
+    border: none !important;
+    border-radius: 0px !important;
+    cursor: pointer;
+    margin-right: 0px !important;
 }
 
-#note1 {
-    font-family: 'Segoe UI', sans-serif; /* Gunakan font yang rapi */
-    font-weight: bold;
-    color: #555; /* Sesuaikan warna teks */
+section.page .note-box button:hover {
+    background-color: #007bff !important;
+}
+
+/* Gaya khusus untuk setiap halaman berdasarkan ID */
+#page1.page {
+    background-color: gray !important; /* Biru muda */
+    border: 1px solid gray; /*
+}
+
+#page2.page {
+    background-color: #fce4ec !important; /* Merah muda */
+}
+
+#page3.page {
+    background-color: #f3e5f5 !important; /* Ungu muda */
+}
+
+#page4.page {
+    background-color: #e8f5e9 !important; /* Hijau muda */
+}
+
+#page5.page {
+    background-color: #fff3e0 !important; /* Jingga muda */
 }
 
     </style>
-</head>
+ </head>
 <body>
 
     <p class="profile-name">Tommy Developer
@@ -344,19 +411,11 @@ h3 {
 
     <textarea id="memo" placeholder="Tulis catatan Anda di sini..."></textarea>
     
-   <div style="border-radius: 8px; 
-       margin-top: -8px;
-    margin-bottom: -4px;
-   display: flex; gap: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
- flex-wrap: wrap;">
-    <button style="background-color: #28a745; margin-bottom: 8px; color: white; border-radius: 8px; padding: 2px 15px; font-size: 13px; cursor: pointer; transition: background-color 0.3s ease;" onclick="addSpace()">Spasi</button>
-    <button style="background-color: #007bff; margin-bottom: 8px; color: white; border-radius: 8px; padding: 0px 15px; font-size: 12px; cursor: pointer; transition: background-color 0.3s ease;" onclick="addEnter()">Enter</button>
-    <button style="background-color: #ffc107; margin-bottom: 8px; color: white; border-radius: 8px; padding: 0px 15px; font-size: 12px; cursor: pointer; transition: background-color 0.3s ease;" onclick="copyText()">Salin</button>
-    <button style="background-color: #dc3545; margin-bottom: 8px; color: white;  border-radius: 8px; padding: 0px 50px; font-size: 12px; cursor: pointer; transition: background-color 0.3s ease;" onclick="clearText()">Hapus</button>
-    
-    
+    <button class="action-button spasi" onclick="addSpace(event)">Spasi</button>
+    <button class="action-button enter" onclick="addEnter(event)">Enter</button>
+    <button class="action-button salin" onclick="copyText(event)">Salin</button>
+    <button class="action-button hapus" onclick="clearText(event)">Hapus</button>
+    </div>
 </div>
 
 
@@ -415,10 +474,8 @@ h3 {
     <button onclick="addCharacter('ｘ')">ｘ</button>
     <button onclick="addCharacter('ｙ')">ｙ</button>
     <button onclick="addCharacter('ｚ')">ｚ</button>
-    
-</div>
-
-        <!-- Tambahkan tombol lainnya sesuai kebutuhan -->
+       </div>
+       
     </div>
 
 <h2>Tambah Karakter Khusus　　　　　　　　　　　 ⇵ Geser untuk pilihan</h2>
@@ -662,16 +719,6 @@ h3 {
 <button class="custom-button" onclick="addCharacter('，')">，</button>
 <button class="custom-button" onclick="addCharacter('－')">－</button>
 <button class="custom-button" onclick="addCharacter('．')">．</button>
-<button class="custom-button" onclick="addCharacter('０')">０</button>
-<button class="custom-button" onclick="addCharacter('１')">１</button>
-<button class="custom-button" onclick="addCharacter('２')">２</button>
-<button class="custom-button" onclick="addCharacter('３')">３</button>
-<button class="custom-button" onclick="addCharacter('４')">４</button>
-<button class="custom-button" onclick="addCharacter('５')">５</button>
-<button class="custom-button" onclick="addCharacter('６')">６</button>
-<button class="custom-button" onclick="addCharacter('７')">７</button>
-<button class="custom-button" onclick="addCharacter('８')">８</button>
-<button class="custom-button" onclick="addCharacter('９')">９</button>
 <button class="custom-button" onclick="addCharacter('：')">：</button>
 <button class="custom-button" onclick="addCharacter('；')">；</button>
 <button class="custom-button" onclick="addCharacter('＝')">＝</button>
@@ -694,23 +741,462 @@ h3 {
 <button class="custom-button" onclick="addCharacter('己')">己</button>
 <button class="custom-button" onclick="addCharacter('ꖀ')">ꖀ</button>
 <button class="custom-button" onclick="addCharacter('ꖩ')">ꖩ</button>
+<!-- Angka Arab -->
+<button onclick="addToMemo('١')">١</button>
+<button onclick="addToMemo('٢')">٢</button>
+<button onclick="addToMemo('٣')">٣</button>
+<button onclick="addToMemo('٤')">٤</button>
+<button onclick="addToMemo('٥')">٥</button>
+<button onclick="addToMemo('٦')">٦</button>
+<button onclick="addToMemo('٧')">٧</button>
+<button onclick="addToMemo('٨')">٨</button>
+<button onclick="addToMemo('٩')">٩</button>
+
+<!-- Angka Ge'ez (Ethiopia) -->
+<button onclick="addToMemo('፩')">፩</button>
+<button onclick="addToMemo('፪')">፪</button>
+<button onclick="addToMemo('፫')">፫</button>
+<button onclick="addToMemo('፬')">፬</button>
+<button onclick="addToMemo('፭')">፭</button>
+<button onclick="addToMemo('፮')">፮</button>
+<button onclick="addToMemo('፯')">፯</button>
+<button onclick="addToMemo('፰')">፰</button>
+<button onclick="addToMemo('፱')">፱</button>
+<button onclick="addToMemo('፲')">፲</button>
+<button onclick="addToMemo('፳')">፳</button>
+<button onclick="addToMemo('፴')">፴</button>
+<button onclick="addToMemo('፵')">፵</button>
+<button onclick="addToMemo('፶')">፶</button>
+<button onclick="addToMemo('፷')">፷</button>
+<button onclick="addToMemo('፸')">፸</button>
+<button onclick="addToMemo('፹')">፹</button>
+<button onclick="addToMemo('፺')">፺</button>
+<button onclick="addToMemo('፻')">፻</button>
+<button onclick="addToMemo('፼')">፼</button>
 
 
 </div>
 
- <body>
+
+<div class="header-emoji-container">
+    <div class="emoji-keyboard-container">
+        <button id="toggle-emoji" onclick="toggleEmojiKeyboard()">Card</button>
+        </div>
+        
+    <!-- Header Icons (ikon) -->
     <div class="header-icons">
         <button onclick="showPage('page1')"><span class="material-symbols-outlined">mood</span></button>
         <button onclick="showPage('page2')"><span class="material-symbols-outlined">stars</span></button>
         <button onclick="showPage('page3')"><span class="material-symbols-outlined">motion_photos_auto</span></button>
-        <button onclick="showPage('page4')"><span class="material-symbols-outlined">ar_stickers</span></button>
+        <button onclick="showPage('page4')"><span class="material-symbols-outlined">counter_8</span></button>
         <button onclick="showPage('page5')"><span class="material-symbols-outlined">adb</span></button>
-    </div>
+        </div>
+            </div>
+        <!-- Keyboard Emoji akan muncul di bawah tombol "Pilih Emoji" -->
+        <div class="emoji-keyboard" id="emoji-keyboard" style="display: none;">
+           <button onclick="addToMemo('┕')">┕</button>
+           
+           <button onclick="addToMemo('🂡')">🂡</button>
+<button onclick="addToMemo('🂢')">🂢</button>
+<button onclick="addToMemo('🂣')">🂣</button>
+<button onclick="addToMemo('🂤')">🂤</button>
+<button onclick="addToMemo('🂥')">🂥</button>
+<button onclick="addToMemo('🂦')">🂦</button>
+<button onclick="addToMemo('🂧')">🂧</button>
+<button onclick="addToMemo('🂨')">🂨</button>
+<button onclick="addToMemo('🂩')">🂩</button>
+<button onclick="addToMemo('🂪')">🂪</button>
+<button onclick="addToMemo('🂫')">🂫</button>
+<button onclick="addToMemo('🂬')">🂬</button>
+<button onclick="addToMemo('🂮')">🂮</button>
+<button onclick="addToMemo('🂱')">🂱</button>
+<button onclick="addToMemo('🂲')">🂲</button>
+<button onclick="addToMemo('🂳')">🂳</button>
+<button onclick="addToMemo('🂴')">🂴</button>
+<button onclick="addToMemo('🂵')">🂵</button>
+<button onclick="addToMemo('🂶')">🂶</button>
+<button onclick="addToMemo('🂷')">🂷</button>
+<button onclick="addToMemo('🂸')">🂸</button>
+<button onclick="addToMemo('🂺')">🂺</button>
+<button onclick="addToMemo('🂻')">🂻</button>
+<button onclick="addToMemo('🂼')">🂼</button>
+<button onclick="addToMemo('🂽')">🂽</button>
+<button onclick="addToMemo('🂾')">🂾</button>
+<button onclick="addToMemo('🃁')">🃁</button>
+<button onclick="addToMemo('🃂')">🃂</button>
+<button onclick="addToMemo('🃃')">🃃</button>
+<button onclick="addToMemo('🃄')">🃄</button>
+<button onclick="addToMemo('🃅')">🃅</button>
+<button onclick="addToMemo('🃆')">🃆</button>
+<button onclick="addToMemo('🃇')">🃇</button>
+<button onclick="addToMemo('🃈')">🃈</button>
+<button onclick="addToMemo('🃉')">🃉</button>
+<button onclick="addToMemo('🃊')">🃊</button>
+<button onclick="addToMemo('🃋')">🃋</button>
+<button onclick="addToMemo('🃌')">🃌</button>
+<button onclick="addToMemo('🃍')">🃍</button>
+<button onclick="addToMemo('🃎')">🃎</button>
+<button onclick="addToMemo('🃑')">🃑</button>
+<button onclick="addToMemo('🃒')">🃒</button>
+<button onclick="addToMemo('🃓')">🃓</button>
+<button onclick="addToMemo('🃔')">🃔</button>
+<button onclick="addToMemo('🃕')">🃕</button>
+<button onclick="addToMemo('🃖')">🃖</button>
+<button onclick="addToMemo('🃗')">🃗</button>
+<button onclick="addToMemo('🃘')">🃘</button>
+<button onclick="addToMemo('🃙')">🃙</button>
+<button onclick="addToMemo('🃚')">🃚</button>
+<button onclick="addToMemo('🃛')">🃛</button>
+<button onclick="addToMemo('🃜')">🃜</button>
+<button onclick="addToMemo('🃝')">🃝</button>
+<button onclick="addToMemo('🃞')">🃞</button>
+<button onclick="addToMemo('🃌')">🃌</button>
+<button onclick="addToMemo('🂾')">🂾</button>
+<button onclick="addToMemo('🀢')">🀢</button>
+<button onclick="addToMemo('🀦')">🀦</button>
+<button onclick="addToMemo('🃁')">🃁</button>
+<button onclick="addToMemo('🀆')">🀆</button>
+<button onclick="addToMemo('🀥')">🀥</button>
+<button onclick="addToMemo('🀢')">🀢</button>
+<button onclick="addToMemo('🀤')">🀤</button>
+<button onclick="addToMemo('🀩')">🀩</button>
+<button onclick="addToMemo('🀣')">🀣</button>
+<button onclick="addToMemo('🀦')">🀦</button>
+<button onclick="addToMemo('🀛')">🀛</button>
+<button onclick="addToMemo('🀟')">🀟</button>
+<button onclick="addToMemo('🀐')">🀐</button>
+<button onclick="addToMemo('🀚')">🀚</button>
+<button onclick="addToMemo('🁁')">🁁</button>
+<button onclick="addToMemo('🂠')">🂠</button>
+<button onclick="addToMemo('🀝')">🀝</button>
+<button onclick="addToMemo('🀖')">🀖</button>
+<button onclick="addToMemo('🀇')">🀇</button>
+<button onclick="addToMemo('🀋')">🀋</button>
+<button onclick="addToMemo('🀉')">🀉</button>
+<button onclick="addToMemo('🀍')">🀍</button>
+<button onclick="addToMemo('🀈')">🀈</button>
+<button onclick="addToMemo('🂂')">🂂</button>
+<button onclick="addToMemo('🀎')">🀎</button>
+<button onclick="addToMemo('🀅')">🀅</button>
+<button onclick="addToMemo('🀃')">🀃</button>
+           
+
+            <!-- Tambahkan emoji lain jika diperlukan -->
+        </div>
+
+   <!-- Button untuk membuka Keyboard Emoji -->
 
     <!-- Konten setiap halaman -->
     <section id="page1" class="page">
-        <h2>Emoji　</h2>
-        <div id="note1" class="note-box"> 🦸 🦸‍♂️ 🦸‍♀️ 🦹 🦹‍♂️ 🦹‍♀️ 🧚‍♂️ 🧚‍♀️ 🧛‍♂️ 🧛‍♀️ 🧞‍♀️ 🧞‍♂️ 🧟‍♂️ 🧟‍♀️ 🧜‍♀️ 🧜‍♂️ 🧝‍♂️ 🧝‍♀️ 👯‍♂️ 🕴️  👯‍♀️ 🧘‍♀️ 🧘‍♂️🧑‍🤝‍🧑 🤾‍♀️ 🦅 🕊️ 🐧 🦉 🦇 🐭 🐰 🐹 🐿️  🐳 🐬 🐟 🦈 🐠 🐙 🦚 🐲 🦂 🕷️ 🐝 🦟 🐞 🦗 🐜 🐡  🌺 🏵️ 🌹 🌸 🌴 🌿 🌾 🍁 🍂🌷 🍎 🍏 🍅 🍄 🦀 🦞 🎃 🎎 🏆 🏅 ⚽ 🏀 🥊 🎱 🎲 🤿 🎣 🪁 🎮  ♣️ ♦️ ♥️ ♠️ ♟️ 🃏 🎭 🌍 🗽 🚇 🚦 ✈️ 🚀 🛸 ⏰ ⭐ 🌝 ☀️ 🌀 ☂️ 🌈 🌊 💧 🔥 ☄️ ⛄ 👓 🕶️ 👒 🎩 🧢 🔕 🔇 💎 🎧 📟 ☎️ 📠 🖲️ 📔 📕 📗 📘 📙 📓 📒 📔 💰 💴 🖋️ 🖊️ 🖌️ 🔐 🔓 ⚙️ 🔗 🧬 🩸 🗿 🚹 🚺 🛂 ☢️ ☣️ 🚭 🚷 🔞 📵 ✡️ ♾️ ⚛️ ☯️ ☪️ ☮️ ⚜️ 🔱 ✅ ☑️ ❎ ✔️ ❌ ©️ ®️ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟 🆔 Ⓜ️ 🆘 🆎 🅰️ ㊗️ ㊙️ 🈴 🔴 🟡 🟢 🟠 🔵 🟣 🟤 ⚫ ⚪ 🟥 🟧 🟨 🟩 🟦 🟪 🟫 ⬛ ⬜ 🔺 🔻 🔷 🔶 💠 😀 😃 😄 😁 😆 😅 🤣 😂 🙂 🙃 😉 😊 😇 🥰 😍 🤩 😘 😗 ☺️ 😚 😙 😋 😛 😜 🤪 😝 🤑 🤗 🤭 🤫 🤔 🤐 🤨 😐 😑 😶 😏 😒 🙄 😬 🤥 😌 😔 😪 🤤 😴 😷 🤒 🤕 🤢 🤮 🤧 🥵 🥶 🥴 😵 🤯 🤠 🥳 😎 🤓 🧐 😕 😟 🙁 ☹️ 😮 😯 😲 😳 🥺 😦 😧 😨 😰 😥 😢 😭 😱 😖 😣 😞 😓 😩 😫 🥱 😤 😡 😠 🤬 😈 👿 💀 ☠️ 💩 🤡 👹 👺 👻 👽 👾 🤖 😺 😾 🙈 🙉 🙊 💋 💌 💘 💝 💖 💗 💓 💞 💕 💟 ❣️ 💔 ❤️ 🧡 💛 💚 💙 💜 🤎 🖤 🤍 💯 💢 💥 💫 💦 💨 🕳️ 💣 💬 👁️‍🗨️ 🗨️ 🗯️ 💭 💤 👋 🤚 🖐️ ✋ 🖖 👌 🤏 ✌️ 🤞 🤟 🤘 🤙 👈 👉 👆 🖕 👇 ☝️ 👍  👎 ✊ 👊 🤛 🤜 👏 🙌 👐 🤲 🤝 🙏 ✍️ 💅 🤳 💪 🦾 🦿 🦵 🦶 👂 🦻 👃 🧠 🦷 🦴 👀 👁️ 👅 👄 👶 🧒  👦 👧 🧑 👨 🧔 👨‍🦰 👨‍🦱 👨‍🦳 👨‍🦲 👩 👩‍🦰 👩‍🦱 👩‍🦳 👩‍🦲 👱‍♀️ 👱‍♂️ 🧓 👴 👵 🙍‍♂️ 🙍‍♀️ 🙎‍♂️ 🙎‍♀️ 🙅‍♂️ 🙅‍♀️ 🙆‍♂️ 🙆‍♀️ 💁‍♂️ 💁‍♀️ 🙋‍♂️ 🙋‍♀️ 🧏 🧏‍♂️ 🧏‍♀️ 🙇‍♂️ 🙇‍♀️ 🤦‍♂️ 🤦‍♀️ 🤷‍♂️ 🤷‍♀️ 👨‍⚕️ 👩‍⚕️ 👨‍🎓 👩‍🎓 👨‍🏫 👩‍🏫 👨‍⚖️ 👩‍⚖️ 👨‍🌾 👩‍🌾 👨‍🍳 👩‍🍳 👨‍🔧 👩‍🔧 👨‍🏭 👩‍🏭 👨‍💼  👩‍💼 👩‍🔬 👨‍💻 👩‍💻 👨‍🎤 👩‍🎤 👨‍🎨 👩‍🎨 👨‍✈️ 👩‍✈️ 👨‍🚀 👩‍🚀 👨‍🚒 👩‍🚒 👮‍♂️ 👮‍♀️ 🕵️‍♂️ 🕵️‍♀️ 💂‍♂️ 💂‍♀️ 👷‍♂️ 👷‍♀️ 🤴 👸 👳‍♂️ 👳‍♀️ 👲 🧕 🤵 👰 🤰 🤱 👼 🎅 🤶 🏴‍☠️ 🏳️‍🌈 🏁 🇦🇩 🇦🇪 🇦🇫 🇦🇬 🇦🇮 🇦🇷 🇦🇸 🇦🇺 🇦🇽 🇦🇿 🇧🇦 🇧🇧 🇧🇩 🇧🇭 🇧🇮 🇧🇳 🇧🇹 🇧🇿 🇨🇨 🇨🇩 🇨🇫 🇨🇮 🇨🇳 🇩🇴 🇯🇵 🇰🇷 🇲🇰 🇲🇵 🇵🇦 🇷🇪 🇹🇬 🇺🇬 🇺🇳 🇹🇰 🇹🇱 🇸🇿 🇻🇮 🇻🇳 🏴󠁧󠁢󠁷󠁬󠁳󠁿 🇿🇼  🙃 🤐 🤨 😐 😑 😶 😶‍🌫️ 😒 🙄 😬😮‍💨 🤥 🙂‍↔️ 🙂‍↕️
+        <h2>Emoji</h2>
+        <div id="note1" class="note-box">
+          
+<button onclick="addToMemo('♈')">♈</button>
+<button onclick="addToMemo('♉')">♉</button>
+<button onclick="addToMemo('♊')">♊</button>
+<button onclick="addToMemo('♋')">♋</button>
+<button onclick="addToMemo('♌')">♌</button>
+<button onclick="addToMemo('♑')">♑</button>
+<button onclick="addToMemo('♐')">♐</button>
+<button onclick="addToMemo('♏')">♏</button>
+<button onclick="addToMemo('♎')">♎</button>
+<button onclick="addToMemo('♍')">♍</button>
+<button onclick="addToMemo('♓')">♓</button>
+<button onclick="addToMemo('♒')">♒</button>
+
+<button onclick="addToMemo('😀')">😀</button>
+<button onclick="addToMemo('😃')">😃</button>
+<button onclick="addToMemo('😄')">😄</button>
+<button onclick="addToMemo('😁')">😁</button>
+<button onclick="addToMemo('😆')">😆</button>
+<button onclick="addToMemo('😅')">😅</button>
+<button onclick="addToMemo('🤣')">🤣</button>
+<button onclick="addToMemo('😂')">😂</button>
+<button onclick="addToMemo('🙂')">🙂</button>
+<button onclick="addToMemo('🙃')">🙃</button>
+<button onclick="addToMemo('😉')">😉</button>
+<button onclick="addToMemo('😊')">😊</button>
+<button onclick="addToMemo('😇')">😇</button>
+<button onclick="addToMemo('🥰')">🥰</button>
+<button onclick="addToMemo('😍')">😍</button>
+<button onclick="addToMemo('🤩')">🤩</button>
+<button onclick="addToMemo('😘')">😘</button>
+<button onclick="addToMemo('😗')">😗</button>
+<button onclick="addToMemo('☺️')">☺️</button>
+<button onclick="addToMemo('😚')">😚</button>
+<button onclick="addToMemo('😙')">😙</button>
+<button onclick="addToMemo('😋')">😋</button>
+<button onclick="addToMemo('😛')">😛</button>
+<button onclick="addToMemo('😜')">😜</button>
+<button onclick="addToMemo('🤪')">🤪</button>
+<button onclick="addToMemo('😝')">😝</button>
+<button onclick="addToMemo('🤑')">🤑</button>
+<button onclick="addToMemo('🤗')">🤗</button>
+<button onclick="addToMemo('🤭')">🤭</button>
+<button onclick="addToMemo('🤫')">🤫</button>
+<button onclick="addToMemo('🤔')">🤔</button>
+<button onclick="addToMemo('🤐')">🤐</button>
+<button onclick="addToMemo('🤨')">🤨</button>
+<button onclick="addToMemo('😐')">😐</button>
+<button onclick="addToMemo('😑')">😑</button>
+<button onclick="addToMemo('😶')">😶</button>
+<button onclick="addToMemo('😏')">😏</button>
+<button onclick="addToMemo('😒')">😒</button>
+<button onclick="addToMemo('🙄')">🙄</button>
+<button onclick="addToMemo('😬')">😬</button>
+<button onclick="addToMemo('🤥')">🤥</button>
+<button onclick="addToMemo('😌')">😌</button>
+<button onclick="addToMemo('😔')">😔</button>
+<button onclick="addToMemo('😪')">😪</button>
+<button onclick="addToMemo('🤤')">🤤</button>
+<button onclick="addToMemo('😴')">😴</button>
+<button onclick="addToMemo('😷')">😷</button>
+<button onclick="addToMemo('🤒')">🤒</button>
+<button onclick="addToMemo('🤕')">🤕</button>
+<button onclick="addToMemo('🤢')">🤢</button>
+<button onclick="addToMemo('🤮')">🤮</button>
+<button onclick="addToMemo('🤧')">🤧</button>
+<button onclick="addToMemo('🥵')">🥵</button>
+<button onclick="addToMemo('🥶')">🥶</button>
+<button onclick="addToMemo('🥴')">🥴</button>
+<button onclick="addToMemo('😵')">😵</button>
+<button onclick="addToMemo('🤯')">🤯</button>
+<button onclick="addToMemo('🤠')">🤠</button>
+<button onclick="addToMemo('🥳')">🥳</button>
+<button onclick="addToMemo('😎')">😎</button>
+<button onclick="addToMemo('🤓')">🤓</button>
+<button onclick="addToMemo('🧐')">🧐</button>
+<button onclick="addToMemo('😕')">😕</button>
+<button onclick="addToMemo('😟')">😟</button>
+<button onclick="addToMemo('🙁')">🙁</button>
+<button onclick="addToMemo('☹️')">☹️</button>
+<button onclick="addToMemo('😮')">😮</button>
+<button onclick="addToMemo('😯')">😯</button>
+<button onclick="addToMemo('😲')">😲</button>
+<button onclick="addToMemo('😳')">😳</button>
+<button onclick="addToMemo('🥺')">🥺</button>
+<button onclick="addToMemo('😦')">😦</button>
+<button onclick="addToMemo('😧')">😧</button>
+<button onclick="addToMemo('😨')">😨</button>
+<button onclick="addToMemo('😰')">😰</button>
+<button onclick="addToMemo('😥')">😥</button>
+<button onclick="addToMemo('😢')">😢</button>
+<button onclick="addToMemo('😭')">😭</button>
+<button onclick="addToMemo('😱')">😱</button>
+<button onclick="addToMemo('😖')">😖</button>
+<button onclick="addToMemo('😣')">😣</button>
+<button onclick="addToMemo('😞')">😞</button>
+<button onclick="addToMemo('😓')">😓</button>
+<button onclick="addToMemo('😩')">😩</button>
+<button onclick="addToMemo('😫')">😫</button>
+<button onclick="addToMemo('🥱')">🥱</button>
+<button onclick="addToMemo('😤')">😤</button>
+<button onclick="addToMemo('😡')">😡</button>
+<button onclick="addToMemo('😠')">😠</button>
+<button onclick="addToMemo('🤬')">🤬</button>
+<button onclick="addToMemo('🦸')">🦸</button>
+<button onclick="addToMemo('🦸‍♂️')">🦸‍♂️</button>
+<button onclick="addToMemo('🦸‍♀️')">🦸‍♀️</button>
+<button onclick="addToMemo('🦹')">🦹</button>
+<button onclick="addToMemo('🦹‍♂️')">🦹‍♂️</button>
+<button onclick="addToMemo('🦹‍♀️')">🦹‍♀️</button>
+<button onclick="addToMemo('🧚‍♂️')">🧚‍♂️</button>
+<button onclick="addToMemo('🧚‍♀️')">🧚‍♀️</button>
+<button onclick="addToMemo('🧛‍♂️')">🧛‍♂️</button>
+<button onclick="addToMemo('🧛‍♀️')">🧛‍♀️</button>
+<button onclick="addToMemo('🧞‍♀️')">🧞‍♀️</button>
+<button onclick="addToMemo('🧞‍♂️')">🧞‍♂️</button>
+<button onclick="addToMemo('🧟‍♂️')">🧟‍♂️</button>
+<button onclick="addToMemo('🧟‍♀️')">🧟‍♀️</button>
+<button onclick="addToMemo('🧜‍♀️')">🧜‍♀️</button>
+<button onclick="addToMemo('🧜‍♂️')">🧜‍♂️</button>
+<button onclick="addToMemo('🧝‍♂️')">🧝‍♂️</button>
+<button onclick="addToMemo('🧝‍♀️')">🧝‍♀️</button>
+<button onclick="addToMemo('👯‍♂️')">👯‍♂️</button>
+<button onclick="addToMemo('🕴️')">🕴️</button>
+<button onclick="addToMemo('👯‍♀️')">👯‍♀️</button>
+<button onclick="addToMemo('🧘‍♀️')">🧘‍♀️</button>
+<button onclick="addToMemo('🧘‍♂️')">🧘‍♂️</button>
+<button onclick="addToMemo('🧑‍🤝‍🧑')">🧑‍🤝‍🧑</button>
+<button onclick="addToMemo('🤾‍♀️')">🤾‍♀️</button>
+<button onclick="addToMemo('🦅')">🦅</button>
+<button onclick="addToMemo('🕊️')">🕊️</button>
+<button onclick="addToMemo('🐧')">🐧</button>
+<button onclick="addToMemo('🦉')">🦉</button>
+<button onclick="addToMemo('🦇')">🦇</button>
+<button onclick="addToMemo('🐭')">🐭</button>
+<button onclick="addToMemo('🐰')">🐰</button>
+<button onclick="addToMemo('🐹')">🐹</button>
+<button onclick="addToMemo('🐿️')">🐿️</button>
+<button onclick="addToMemo('🐳')">🐳</button>
+<button onclick="addToMemo('🐬')">🐬</button>
+<button onclick="addToMemo('🐟')">🐟</button>
+<button onclick="addToMemo('🦈')">🦈</button>
+<button onclick="addToMemo('🐠')">🐠</button>
+<button onclick="addToMemo('🐙')">🐙</button>
+<button onclick="addToMemo('🦚')">🦚</button>
+<button onclick="addToMemo('🐲')">🐲</button>
+<button onclick="addToMemo('🦂')">🦂</button>
+<button onclick="addToMemo('🕷️')">🕷️</button>
+<button onclick="addToMemo('🐝')">🐝</button>
+<button onclick="addToMemo('🦟')">🦟</button>
+<button onclick="addToMemo('🐞')">🐞</button>
+<button onclick="addToMemo('🦗')">🦗</button>
+<button onclick="addToMemo('🐜')">🐜</button>
+<button onclick="addToMemo('🐡')">🐡</button>
+<button onclick="addToMemo('🌺')">🌺</button>
+<button onclick="addToMemo('🏵️')">🏵️</button>
+<button onclick="addToMemo('🌹')">🌹</button>
+<button onclick="addToMemo('🌸')">🌸</button>
+<button onclick="addToMemo('🌴')">🌴</button>
+<button onclick="addToMemo('🌿')">🌿</button>
+<button onclick="addToMemo('🌾')">🌾</button>
+<button onclick="addToMemo('🍁')">🍁</button>
+<button onclick="addToMemo('🍂')">🍂</button>
+<button onclick="addToMemo('🌷')">🌷</button>
+<button onclick="addToMemo('🍎')">🍎</button>
+<button onclick="addToMemo('🍏')">🍏</button>
+<button onclick="addToMemo('🍅')">🍅</button>
+<button onclick="addToMemo('🍄')">🍄</button>
+<button onclick="addToMemo('🦀')">🦀</button>
+<button onclick="addToMemo('🦞')">🦞</button>
+<button onclick="addToMemo('🎃')">🎃</button>
+<button onclick="addToMemo('🎎')">🎎</button>
+<button onclick="addToMemo('🏆')">🏆</button>
+<button onclick="addToMemo('🏅')">🏅</button>
+<button onclick="addToMemo('⚽')">⚽</button>
+<button onclick="addToMemo('🏀')">🏀</button>
+<button onclick="addToMemo('🥊')">🥊</button>
+<button onclick="addToMemo('🎱')">🎱</button>
+<button onclick="addToMemo('🎲')">🎲</button>
+<button onclick="addToMemo('🤿')">🤿</button>
+<button onclick="addToMemo('🎣')">🎣</button>
+<button onclick="addToMemo('🪁')">🪁</button>
+<button onclick="addToMemo('🎮')">🎮</button>
+<button onclick="addToMemo('♣️')">♣️</button>
+<button onclick="addToMemo('♦️')">♦️</button>
+<button onclick="addToMemo('♥️')">♥️</button>
+<button onclick="addToMemo('♠️')">♠️</button>
+<button onclick="addToMemo('♟️')">♟️</button>
+<button onclick="addToMemo('🃏')">🃏</button>
+<button onclick="addToMemo('🎭')">🎭</button>
+<button onclick="addToMemo('🌍')">🌍</button>
+<button onclick="addToMemo('🗽')">🗽</button>
+<button onclick="addToMemo('🚇')">🚇</button>
+<button onclick="addToMemo('🚦')">🚦</button>
+<button onclick="addToMemo('✈️')">✈️</button>
+<button onclick="addToMemo('🚀')">🚀</button>
+<button onclick="addToMemo('🛸')">🛸</button>
+<button onclick="addToMemo('⏰')">⏰</button>
+<button onclick="addToMemo('⭐')">⭐</button>
+<button onclick="addToMemo('🌝')">🌝</button>
+<button onclick="addToMemo('☀️')">☀️</button>
+<button onclick="addToMemo('🌀')">🌀</button>
+<button onclick="addToMemo('☂️')">☂️</button>
+<button onclick="addToMemo('🌈')">🌈</button>
+<button onclick="addToMemo('🌊')">🌊</button>
+<button onclick="addToMemo('💧')">💧</button>
+<button onclick="addToMemo('🔥')">🔥</button>
+<button onclick="addToMemo('☄️')">☄️</button>
+<button onclick="addToMemo('⛄')">⛄</button>
+<button onclick="addToMemo('👓')">👓</button>
+<button onclick="addToMemo('🕶️')">🕶️</button>
+<button onclick="addToMemo('👒')">👒</button>
+<button onclick="addToMemo('🎩')">🎩</button>
+<button onclick="addToMemo('🧢')">🧢</button>
+<button onclick="addToMemo('🔕')">🔕</button>
+<button onclick="addToMemo('🔇')">🔇</button>
+<button onclick="addToMemo('💎')">💎</button>
+<button onclick="addToMemo('🎧')">🎧</button>
+<button onclick="addToMemo('📟')">📟</button>
+<button onclick="addToMemo('☎️')">☎️</button>
+<button onclick="addToMemo('📠')">📠</button>
+<button onclick="addToMemo('🖲️')">🖲️</button>
+<button onclick="addToMemo('📔')">📔</button>
+<button onclick="addToMemo('📕')">📕</button>
+<button onclick="addToMemo('📗')">📗</button>
+<button onclick="addToMemo('📘')">📘</button>
+<button onclick="addToMemo('📙')">📙</button>
+<button onclick="addToMemo('📓')">📓</button>
+<button onclick="addToMemo('📒')">📒</button>
+<button onclick="addToMemo('📔')">📔</button>
+<button onclick="addToMemo('💰')">💰</button>
+<button onclick="addToMemo('💴')">💴</button>
+<button onclick="addToMemo('🖋️')">🖋️</button>
+<button onclick="addToMemo('🖊️')">🖊️</button>
+<button onclick="addToMemo('🖌️')">🖌️</button>
+<button onclick="addToMemo('🔐')">🔐</button>
+<button onclick="addToMemo('🔓')">🔓</button>
+<button onclick="addToMemo('⚙️')">⚙️</button>
+<button onclick="addToMemo('🔗')">🔗</button>
+<button onclick="addToMemo('🧬')">🧬</button>
+<button onclick="addToMemo('🩸')">🩸</button>
+<button onclick="addToMemo('🗿')">🗿</button>
+<button onclick="addToMemo('🚹')">🚹</button>
+<button onclick="addToMemo('🚺')">🚺</button>
+<button onclick="addToMemo('🛂')">🛂</button>
+<button onclick="addToMemo('☢️')">☢️</button>
+<button onclick="addToMemo('☣️')">☣️</button>
+<button onclick="addToMemo('🚭')">🚭</button>
+<button onclick="addToMemo('🚷')">🚷</button>
+<button onclick="addToMemo('🔞')">🔞</button>
+<button onclick="addToMemo('📵')">📵</button>
+<button onclick="addToMemo('✡️')">✡️</button>
+<button onclick="addToMemo('♾️')">♾️</button>
+<button onclick="addToMemo('⚛️')">⚛️</button>
+<button onclick="addToMemo('☯️')">☯️</button>
+<button onclick="addToMemo('☪️')">☪️</button>
+<button onclick="addToMemo('☮️')">☮️</button>
+<button onclick="addToMemo('⚜️')">⚜️</button>
+<button onclick="addToMemo('🔱')">🔱</button>
+<button onclick="addToMemo('✅')">✅</button>
+<button onclick="addToMemo('☑️')">☑️</button>
+<button onclick="addToMemo('❎')">❎</button>
+<button onclick="addToMemo('✔️')">✔️</button>
+<button onclick="addToMemo('❌')">❌</button>
+<button onclick="addToMemo('©️')">©️</button>
+<button onclick="addToMemo('®️')">®️</button>
+<button onclick="addToMemo('1️⃣')">1️⃣</button>
+<button onclick="addToMemo('2️⃣')">2️⃣</button>
+<button onclick="addToMemo('3️⃣')">3️⃣</button>
+<button onclick="addToMemo('4️⃣')">4️⃣</button>
+<button onclick="addToMemo('5️⃣')">5️⃣</button>
+<button onclick="addToMemo('6️⃣')">6️⃣</button>
+<button onclick="addToMemo('7️⃣')">7️⃣</button>
+<button onclick="addToMemo('8️⃣')">8️⃣</button>
+<button onclick="addToMemo('9️⃣')">9️⃣</button>
+<button onclick="addToMemo('🔟')">🔟</button>
+<button onclick="addToMemo('🆔')">🆔</button>
+<button onclick="addToMemo('Ⓜ️')">Ⓜ️</button>
+<button onclick="addToMemo('🆘')">🆘</button>
+<button onclick="addToMemo('🆎')">🆎</button>
+<button onclick="addToMemo('🅰️')">🅰️</button>
+<button onclick="addToMemo('㊗️')">㊗️</button>
+<button onclick="addToMemo('㊙️')">㊙️</button>
+<button onclick="addToMemo('🈴')">🈴</button>
+<button onclick="addToMemo('🔴')">🔴</button>
+<button onclick="addToMemo('🟡')">🟡</button>
+<button onclick="addToMemo('🟢')">🟢</button>
+<button onclick="addToMemo('🟠')">🟠</button>
+<button onclick="addToMemo('🔵')">🔵</button>
+<button onclick="addToMemo('🟣')">🟣</button>
+<button onclick="addToMemo('🟤')">🟤</button>
+<button onclick="addToMemo('⚫')">⚫</button>
+<button onclick="addToMemo('⚪')">⚪</button>
+<button onclick="addToMemo('🟥')">🟥</button>
+<button onclick="addToMemo('🟧')">🟧</button>
+<button onclick="addToMemo('🟨')">🟨</button>
+<button onclick="addToMemo('🟩')">🟩</button>
+<button onclick="addToMemo('🟦')">🟦</button>
+<button onclick="addToMemo('🟪')">🟪</button>
+<button onclick="addToMemo('🟫')">🟫</button>
+<button onclick="addToMemo('⬛')">⬛</button>
+<button onclick="addToMemo('⬜')">⬜</button>
+<button onclick="addToMemo('🔺')">🔺</button>
+<button onclick="addToMemo('🔻')">🔻</button>
+<button onclick="addToMemo('🔷')">🔷</button>
+<button onclick="addToMemo('🔶')">🔶</button>
+<button onclick="addToMemo('💠')">💠</button>
 
         </div>
     </section>
@@ -718,45 +1204,291 @@ h3 {
     <section id="page2" class="page">
         <h2>𝖲𝗒𝗆𝖻𝗈𝗅　</h2>
         <div id="note2" class="note-box">
-<h3>
-★ ☆ ✡ ✦ ✧ ✩ ✪ ✫ ✬ ✭ ✮ ✯ ✰ ✢ ✣ ✤ ✥ ✱ ✲ ✳ ✴ ✵ ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿ ❀ ❁ ❂ ❃ ❇ ❈ ❉ ❊ ❋ ❄ ❆ ❅ ⋆ ≛ ᕯ ✲ ࿏ ꙰ ۞ ⭒ ⍟ 
-♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟ ♤ ♠ ♧ ♣ ♡ ♥ ♢ ♦
-☂ ☃ ☉ ☼ ☽ ☾ ♁ ♨ ❄ ❅ ❆ ☇ ☈ ☄
-↕ ↖ ↗ ↘ ↙ ↚ ↛ ↜ ↝ ↞ ↟ ↠ ↡ ↢ ↣ ↤ ↥ ↦ ↧ ↨ ↩ ↪ ↫ ↬ ↭ ↮ ↯ ↰ ↱ ↲ ↳ ↴ ↶ ↷ ↸ ↹ ↺ ↻ ↼ ↽ ↾ ↿ ⇀ ⇁ ⇂ ⇃ ⇄ ⇅ ⇆ ⇇ ⇈ ⇉ ⇊ ⇋ ⇌ ⇍ ⇎ ⇏ ⇕ ⇖
-⇗ ⇘ ⇙ ⇚ ⇛ ⇜ ⇝ ⇞ ⇟ ⇠ ⇡ ⇢ ⇣ ⇤ ⇥ ⇦ ⇧ ⇨ ⇩ ⇪ ⌅ ⌆ ⌤ ⏎ ▶ ☇ ☈ ☊ ☋ ☌ ☍ ➔ ➘ ➙ ➚ ➛ ➜ ➝ ➞ ➟ ➠ ➡ ➢ ➣ ➤ ➥ ➦ ➧ ➨ ➩ ➪ ➫ ➬ ➭
-➮ ➯ ➱ ➲ ➳ ➴ ➵ ➶ ➷ ➸ ➹ ➺ ➻ ➼ ➽ ➾ ⤴ ⤵ ↵ ↓ ↔ ← → ↑ ⌦ ⌫ ⌧ ⇰ ⇫ ⇬ ⇭ ⇳ ⇮ ⇯ ⇱ ⇲ ⇴ ⇵ ⇷ ⇸ ⇹ ⇺ ⇑ ⇓ ⇽ ⇾
-⤡ ⤢ ⤣ ⤤ ⤥ ⤦ ⤪ ⤨ ⤧ ⤩ ⤭ ⤮ ⤯ ⤰ ⤱ ⤲ ⤫ ⤬ ⬐ ⬎ ⬑ ⬏ ⤶ ⤷ ⥂ ⥃ ⥄
-⥢ ⥤ ⥣ ⥥ ⥦ ⥨ ⥧ ⥩ ⥮ ⥯ ⥪ ⥬ ⥫ ⥭ ⤌ ⤍ ⤎ ⤏ ⬸ ⤑ ⬱ ⟸ ⟹ ⟺ ⤂ ⤃ ⤄ ⤆ ⤇ ⤊ ⤋ ⭅ ⭆ ⟰ ⟱ ⇐ ⇒ ⇔ ⇶ ⟵ ⟶ ⟷ ⬄ ⬀ ⬁ ⬂ ⬃ ⬅ ⬆ ⬇ ⬈ ⬉ ⬊ ⬋ ⬌ ⬍ ⟻ ⟼ ⤒ ⤓ ⤙ ⤚
-⤼ ⤽ ⤾ ⤿ ⤸ ⤺ ⤹ ⤻ ⥀ ⥁ ⟲ ⟳
-☤ ☥ ☧ ☨ ☩ ☫ ☬ ☭ ☯ ☽ ☾ ✙ ✚ ✛ ✜ ✝ ✞ ✟ † ⊹ ‡ ♁ ♆ ❖ ♅ ✠ ✡ ✢ 卍 卐 〷 ☠ ☢ ☣
-♡ ❥ ❣ ❦ ❧
-✓ ✔ ✗ ✘ ☓ ∨ √
-⚣ ⚤ ⚥ ⚦ ⚧ ⚨ ⚢ ␣ ⎋ ⋮ ⋯ ⋰ ⋱ ✖ ﹢ ﹣ ＋ － ／ ＝ ÷ ± × ⊰ ⊱ ⊲ ⊳ ⊏ ⊐ ⊑ ⊒ ⊓ ⊔ ⊕ ⊖ ⊗ ⊘ ⊙ ⊚ ⊛ ⊜ ⊝ ⊞ ⊟ ⊠ ⊡ ⊢ ⊣ ⊤ ⋐ ⋑ ⋒ ⋓ ⊶ ⊷ ⊿ ⋀ ⋁ ⋂ ⋃ ⋄ ⋖ ⋗ ⋘ ⋙ ⌂ ⌈ ⌉ ⌊ ⌋ ⌐ ⌑ ⌒ ⌓ ⌔ ⌕ ⌖ ⌢ ⌣ ⌤ ⌥ ⌦ ⌧ ⌨ ⌫ ⌬ ⌭ ⌮ ⌯ ⌰ ⌱ ⌲ ⌳ ⌴ ⌵ ⌶ ⌷ ⌸ ⌹ ⌺ ⌻ ⌼ ⌽ ⌾ ⌿ ⍀ ⍁ ⍂ ⍃ ⍄ ⍅ ⍆ ⍇ ⍈ ⍉ ⍊ ⍋ ⍌ ⍍ ⍎ ⍏ ⍐ ⍑ ⍒ ⍓ ⍔ ⍕ ⍖ ⍗ ⍘ ⍙ ⍚ ⍛ ⍜ ⍝ ⍞ ⍟ ⍠ ⍡ ⍢ ⍣ ⍤ ⍥ ⍦ ⍧ ⍨ ⍩ ⍪ ⍫ ⍬ ⍭ ⍮ ⍯ ⍰ ⍱ ⍲ ⍳ ⍴ ⍵ ⍶ ⍷ ⍸ ⍹ ⍺ ﹘ ﹝ ﹞ ﹟ ﹡ 〶 ␛ ␡ ␚ ␟ ␘ ␠ ␤ ␋ ␌ ␍ ␎ ␏ ␐ ␑ ␒ ␓ ␔ ␕ ␖ ␗ ␙ ␜ ␝ ␞ ␀ ␁ ␂ ␃ ␄ ␅ ␆ ␇ ␈ ␉ ␊ ❏ ❐ ❑ ❒ ▀ ▁ ▂ ▃ ▄ ▅ ▆ ▇ ▉ ▊ ▋ █ ▌ ▐ ▍ ▎ ▏ ▕ ░ ▒ ▓ ▔ ▬ ▢ ▣ ▤ ▥ ▦ ▧ ▨ ▩ ▪ ▫ ▭ ▮ ▯ ☰ ☲ ☱ ☴ ☵ ☶ ☳ ☷ ▰ ▱ ◧ ◨ ◩ ◪ ◫ ∎ ■ □ ⊞ ⊟ ⊠ ⊡ ❘ ❙ ❚ 〓 ◊ ◈ ◇ ◆ ⎔ ⎚ ☖ ☗ ◄ ▲ ▼ ► ◀ ◣ ◥ ◤ ◢ ▶ ◂ ▴ ▾ ▸ ◁ △ ▽ ▷ ∆ ∇ ⊳ ⊲ ⊴ ⊵ ◅ ▻ ▵ ▿ ◃ ▹ ◭ ◮ ⫷ ⫸ ⋖ ⋗ ⋪ ⋫ ⋬ ⋭ ⊿ ◬ ≜ ⑅ │ ┃ ╽ ╿ ╏ ║ ╎ ┇ ︱ ┊ ︳ ┋ ┆ ╵ 〡 〢 ╹ ╻ ╷ 〣 ☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷ ≡ ✕ ═ ━ ─ ╍ ┅ ┉ ┄ ┈ ╌ ╴ ╶ ╸ ╺ ╼ ╾ ﹉ ﹍ ﹊ ﹎ ︲ ⑆ ⑇ ⑈ ⑉ ⑊ ⑄ ⑀ ︴ ﹏ ﹌ ﹋ ╳ ╲ ╱ ︶ ︵ 〵 〴 〳 〆 ` ᐟ ‐ ⁃ ⎯ 〄 ﹄ ﹃ ﹂ ﹁ ┕ ┓ └ ┐ ┖ ┒ ┗ ┑ ┍ ┙ ┏ ┛ ┎ ┚ ┌ ┘ 「 」 『 』 ˩ ˥ ├ ┝ ┞ ┟ ┠ ┡ ┢ ┣ ┤ ┥ ┦ ┧ ┨ ┩ ┪ ┫ ┬ ┭ ┮ ┯ ┰ ┱ ┲ ┳ ┴ ┵ ┶ ┷ ┸ ┹ ┺ ┻ ┼ ┽ ┾ ┿ ╀ ╁ ╂ ╃ ╄ ╅ ╆ ╇ ╈ ╉ ╊ ╋ ╒ ╕ ╓ ╖ ╔ ╗ ╘ ╛ ╙ ╜ ╚ ╝ ╞ ╡ ╟ ╢ ╠ ╣ ╥ ╨ ╧ ╤ ╦ ╩ ╪ ╫ ╬ 〒 ⊢ ⊣ ⊤ ⊥ ╭ ╮ ╯ ╰ ⊦ ⊧ ⊨ ⊩ ⊪ ⊫ ⊬ ⊭ ⊮ ⊯ ⊺ 〦 〧 〨 ˦ ˧ ˨ ⑁ ⑂ ⑃ ∟ ◉ ○ ◌ ◍ ◎ ● ◐ ◑ ◒ ◓ ◔ ◕ ◖ ◗ ❂ ☢ ⊗ ⊙ ◘ ◙ ◚ ◛ ◜ ◝ ◞ ◟ ◠ ◡ ◯ 〇 〶 ⚫ ⬤ ◦ ∅ ∘ ⊕ ⊖ ⊘ ⊚ ⊛ ⊜ ⊝ ❍ ⦿ 
+          <!-- Baris Karakter -->
+<button onclick="addToMemo('★')">★</button>
+<button onclick="addToMemo('☆')">☆</button>
+<button onclick="addToMemo('✡')">✡</button>
+<button onclick="addToMemo('✦')">✦</button>
+<button onclick="addToMemo('✧')">✧</button>
+<button onclick="addToMemo('✩')">✩</button>
+<button onclick="addToMemo('✪')">✪</button>
+<button onclick="addToMemo('✫')">✫</button>
+<button onclick="addToMemo('✬')">✬</button>
+<button onclick="addToMemo('✭')">✭</button>
+<button onclick="addToMemo('✮')">✮</button>
+<button onclick="addToMemo('✯')">✯</button>
+<button onclick="addToMemo('✰')">✰</button>
+<button onclick="addToMemo('✢')">✢</button>
+<button onclick="addToMemo('✣')">✣</button>
+<button onclick="addToMemo('✤')">✤</button>
+<button onclick="addToMemo('✥')">✥</button>
+<button onclick="addToMemo('✱')">✱</button>
+<button onclick="addToMemo('✲')">✲</button>
+<button onclick="addToMemo('✳')">✳</button>
+<button onclick="addToMemo('✴')">✴</button>
+<button onclick="addToMemo('✵')">✵</button>
+<button onclick="addToMemo('✶')">✶</button>
+<button onclick="addToMemo('✷')">✷</button>
+<button onclick="addToMemo('✸')">✸</button>
+<button onclick="addToMemo('✹')">✹</button>
+<button onclick="addToMemo('✺')">✺</button>
+<button onclick="addToMemo('✻')">✻</button>
+<button onclick="addToMemo('✼')">✼</button>
+<button onclick="addToMemo('✽')">✽</button>
+<button onclick="addToMemo('✾')">✾</button>
+<button onclick="addToMemo('✿')">✿</button>
+<button onclick="addToMemo('❀')">❀</button>
+<button onclick="addToMemo('❁')">❁</button>
+<button onclick="addToMemo('❂')">❂</button>
+<button onclick="addToMemo('❃')">❃</button>
+<button onclick="addToMemo('❇')">❇</button>
+<button onclick="addToMemo('❈')">❈</button>
+<button onclick="addToMemo('❉')">❉</button>
+<button onclick="addToMemo('❊')">❊</button>
+<button onclick="addToMemo('❋')">❋</button>
+<button onclick="addToMemo('❆')">❆</button>
+<button onclick="addToMemo('❅')">❅</button>
+<button onclick="addToMemo('✲')">✲</button>
+<button onclick="addToMemo('۞')">۞</button>
+<button onclick="addToMemo('⍟')">⍟</button>
+<button onclick="addToMemo('♔')">♔</button>
+<button onclick="addToMemo('♕')">♕</button>
+<button onclick="addToMemo('♖')">♖</button>
+<button onclick="addToMemo('♗')">♗</button>
+<button onclick="addToMemo('♘')">♘</button>
+<button onclick="addToMemo('♙')">♙</button>
+<button onclick="addToMemo('♚')">♚</button>
+<button onclick="addToMemo('♛')">♛</button>
+<button onclick="addToMemo('♜')">♜</button>
+<button onclick="addToMemo('♝')">♝</button>
+<button onclick="addToMemo('♞')">♞</button>
+<button onclick="addToMemo('♟')">♟</button>
+<button onclick="addToMemo('♤')">♤</button>
+<button onclick="addToMemo('♧')">♧</button>
+<button onclick="addToMemo('♡')">♡</button>
+<button onclick="addToMemo('♢')">♢</button>
+<!-- Baris Karakter -->
+<button onclick="addToMemo('➔')">➔</button>
+<button onclick="addToMemo('➘')">➘</button>
+<button onclick="addToMemo('➙')">➙</button>
+<button onclick="addToMemo('➚')">➚</button>
+<button onclick="addToMemo('➛')">➛</button>
+<button onclick="addToMemo('➜')">➜</button>
+<button onclick="addToMemo('➝')">➝</button>
+<button onclick="addToMemo('➞')">➞</button>
+<button onclick="addToMemo('➟')">➟</button>
+<button onclick="addToMemo('➠')">➠</button>
+<button onclick="addToMemo('➡')">➡</button>
+<button onclick="addToMemo('➢')">➢</button>
+<button onclick="addToMemo('➣')">➣</button>
+<button onclick="addToMemo('➤')">➤</button>
+<button onclick="addToMemo('➥')">➥</button>
+<button onclick="addToMemo('➦')">➦</button>
+<button onclick="addToMemo('➧')">➧</button>
+<button onclick="addToMemo('➨')">➨</button>
+<button onclick="addToMemo('➩')">➩</button>
+<button onclick="addToMemo('➪')">➪</button>
+<button onclick="addToMemo('➫')">➫</button>
+<button onclick="addToMemo('➬')">➬</button>
+<button onclick="addToMemo('➭')">➭</button>
+<button onclick="addToMemo('⌫')">⌫</button>
+<button onclick="addToMemo('⌧')">⌧</button>
+<button onclick="addToMemo('⌦')">⌦</button>
+<button onclick="addToMemo('❥')">❥</button>
+<button onclick="addToMemo('❣')">❣</button>
+<button onclick="addToMemo('❦')">❦</button>
+<button onclick="addToMemo('❧')">❧</button>
+<button onclick="addToMemo('➮')">➮</button>
+<button onclick="addToMemo('➯')">➯</button>
+<button onclick="addToMemo('➱')">➱</button>
+<button onclick="addToMemo('➲')">➲</button>
+<button onclick="addToMemo('➳')">➳</button>
+<button onclick="addToMemo('➴')">➴</button>
+<button onclick="addToMemo('➵')">➵</button>
+<button onclick="addToMemo('➶')">➶</button>
+<button onclick="addToMemo('➷')">➷</button>
+<button onclick="addToMemo('➸')">➸</button>
+<button onclick="addToMemo('➹')">➹</button>
+<button onclick="addToMemo('➺')">➺</button>
+<button onclick="addToMemo('➻')">➻</button>
+<button onclick="addToMemo('➼')">➼</button>
+<button onclick="addToMemo('➽')">➽</button>
+<button onclick="addToMemo('☫')">☫</button>
+<button onclick="addToMemo('☬')">☬</button>
+<button onclick="addToMemo('☭')">☭</button>
+<button onclick="addToMemo('☯')">☯</button>
+<button onclick="addToMemo('☽')">☽</button>
+<button onclick="addToMemo('☾')">☾</button>
+<button onclick="addToMemo('✙')">✙</button>
+<button onclick="addToMemo('✚')">✚</button>
+<button onclick="addToMemo('✛')">✛</button>
+<button onclick="addToMemo('✜')">✜</button>
+<button onclick="addToMemo('✞')">✞</button>
+<button onclick="addToMemo('✟')">✟</button>
+<button onclick="addToMemo('✓')">✓</button>
+<button onclick="addToMemo('✔')">✔</button>
+<button onclick="addToMemo('✗')">✗</button>
+<button onclick="addToMemo('✘')">✘</button>
 
 
-          </h3>
         </div>
     </section>
 
     <section id="page3" class="page">
         <h2>Bubble Text　</h2>
-        <div id="note3" class="note-box">Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ
-🅐 🅑 🅒 🅓 🅔 🅕 🅖 🅗 🅘 🅙 🅚 🅛 🅜 🅝 🅞 🅟 🅠 🅡 🅢 🅣 🅤 🅥🅦 🅧 🅨 🅩
-🄰 🄱 🄲 🄳 🄴 🄵 🄶 🄷 🄸 🄹 🄺 🄻 🄼 🄽 🄾 🄿 🅀 🅁 🅂 🅃 🅄 🅅 🅆 🅇 🅈 🅉
-🅰 🅱 🅲 🅳 🅴 🅵 🅶 🅷 🅸 🅹 🅺 🅻 🅼 🅽 🅾 🅿 🆀 🆁 🆂 🆃 🆄 🆅 🆆 🆇 🆈 🆉
-➀ ➁ ➂ ➃ ➄ ➅ ➆ ➇ ➈ ➉
-➊ ➋ ➌ ➍ ➎ ➏ ➐ ➑ ➒ ➓
-⓵ ⓶ ⓷ ⓸ ⓹ ⓺ ⓻ ⓼ ⓽ ⓾
-㉈㉉㉊㉋㉌㉍㉎㉏
-㉑ ㉒ ㉓ ㉔ ㉕ ㉖ ㉗ ㉘ ㉙ ㉚
-㉛ ㉜ ㉝ ㉞ ㉟ ㊱ ㊲ ㊳ ㊴ ㊵
-㊶ ㊷ ㊸ ㊹ ㊺ ㊻ ㊼ ㊽ ㊾ ㊿
-⓿ ❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿ ⓪ ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ 
-㈠ ㈡ ㈢ ㈣ ㈤ ㈥ ㈦ ㈧ ㈨ ㈩
-㊀ ㊁ ㊂ ㊃ ㊄ ㊅ ㊆ ㊇ ㊈ 
-０ １ ２ ３ ４ ５ ６ ７ ８ ９ ⑴ ⑵ ⑶ ⑷ ⑸ ⑹ ⑺ ⑻ ⑼ ⑽ ⑾ ⑿ ⒀ ⒁ ⒂ ⒃ ⒄ ⒅ ⒆ ⒇ ⒈ ⒉ ⒊ ⒋ ⒌ ⒍ ⒎ ⒏ ⒐ ⒑ ⒒ ⒓ ⒔ ⒕ ⒖ ⒗ ⒘ ⒙ ⒚ ⒛
-ↀ ↁ ↂ
-㊊ ㊋ ㊌ ㊍ ㊎ ㊏ ㊐ ㊑ ㊒ ㊓ ㊔ ㊕ ㊖ ㊗ ㊘ ㊙ ㊚ ㊛ ㊜ ㊝ ㊞ ㊟ ㊠ ㊡ ㊢ ㊣ ㊤ ㊥ ㊦ ㊧ ㊨ ㊩ ㊪ ㊫ ㊬ ㊭ ㊮ ㊯ ㊰
+        <div id="note3" class="note-box">
+          
+<button onclick="addToMemo('Ⓐ')">Ⓐ</button>
+<button onclick="addToMemo('Ⓑ')">Ⓑ</button>
+<button onclick="addToMemo('Ⓒ')">Ⓒ</button>
+<button onclick="addToMemo('Ⓓ')">Ⓓ</button>
+<button onclick="addToMemo('Ⓔ')">Ⓔ</button>
+<button onclick="addToMemo('Ⓕ')">Ⓕ</button>
+<button onclick="addToMemo('Ⓖ')">Ⓖ</button>
+<button onclick="addToMemo('Ⓗ')">Ⓗ</button>
+<button onclick="addToMemo('Ⓘ')">Ⓘ</button>
+<button onclick="addToMemo('Ⓙ')">Ⓙ</button>
+<button onclick="addToMemo('Ⓚ')">Ⓚ</button>
+<button onclick="addToMemo('Ⓛ')">Ⓛ</button>
+<button onclick="addToMemo('Ⓜ')">Ⓜ</button>
+<button onclick="addToMemo('Ⓝ')">Ⓝ</button>
+<button onclick="addToMemo('Ⓞ')">Ⓞ</button>
+<button onclick="addToMemo('Ⓟ')">Ⓟ</button>
+<button onclick="addToMemo('Ⓠ')">Ⓠ</button>
+<button onclick="addToMemo('Ⓡ')">Ⓡ</button>
+<button onclick="addToMemo('Ⓢ')">Ⓢ</button>
+<button onclick="addToMemo('Ⓣ')">Ⓣ</button>
+<button onclick="addToMemo('Ⓤ')">Ⓤ</button>
+<button onclick="addToMemo('Ⓥ')">Ⓥ</button>
+<button onclick="addToMemo('Ⓦ')">Ⓦ</button>
+<button onclick="addToMemo('Ⓧ')">Ⓧ</button>
+<button onclick="addToMemo('Ⓨ')">Ⓨ</button>
+<button onclick="addToMemo('Ⓩ')">Ⓩ</button>
+
+<!-- Baris Karakter -->
+<button onclick="addToMemo('🅐')">🅐</button>
+<button onclick="addToMemo('🅑')">🅑</button>
+<button onclick="addToMemo('🅒')">🅒</button>
+<button onclick="addToMemo('🅓')">🅓</button>
+<button onclick="addToMemo('🅔')">🅔</button>
+<button onclick="addToMemo('🅕')">🅕</button>
+<button onclick="addToMemo('🅖')">🅖</button>
+<button onclick="addToMemo('🅗')">🅗</button>
+<button onclick="addToMemo('🅘')">🅘</button>
+<button onclick="addToMemo('🅙')">🅙</button>
+<button onclick="addToMemo('🅚')">🅚</button>
+<button onclick="addToMemo('🅛')">🅛</button>
+<button onclick="addToMemo('🅜')">🅜</button>
+<button onclick="addToMemo('🅝')">🅝</button>
+<button onclick="addToMemo('🅞')">🅞</button>
+<button onclick="addToMemo('🅟')">🅟</button>
+<button onclick="addToMemo('🅠')">🅠</button>
+<button onclick="addToMemo('🅡')">🅡</button>
+<button onclick="addToMemo('🅢')">🅢</button>
+<button onclick="addToMemo('🅣')">🅣</button>
+<button onclick="addToMemo('🅤')">🅤</button>
+<button onclick="addToMemo('🅥')">🅥</button>
+<button onclick="addToMemo('🅦')">🅦</button>
+<button onclick="addToMemo('🅧')">🅧</button>
+<button onclick="addToMemo('🅨')">🅨</button>
+<button onclick="addToMemo('🅩')">🅩</button>
+
+<!-- Baris Karakter -->
+<button onclick="addToMemo('🄰')">🄰</button>
+<button onclick="addToMemo('🄱')">🄱</button>
+<button onclick="addToMemo('🄲')">🄲</button>
+<button onclick="addToMemo('🄳')">🄳</button>
+<button onclick="addToMemo('🄴')">🄴</button>
+<button onclick="addToMemo('🄵')">🄵</button>
+<button onclick="addToMemo('🄶')">🄶</button>
+<button onclick="addToMemo('🄷')">🄷</button>
+<button onclick="addToMemo('🄸')">🄸</button>
+<button onclick="addToMemo('🄹')">🄹</button>
+<button onclick="addToMemo('🄺')">🄺</button>
+<button onclick="addToMemo('🄻')">🄻</button>
+<button onclick="addToMemo('🄼')">🄼</button>
+<button onclick="addToMemo('🄽')">🄽</button>
+<button onclick="addToMemo('🄾')">🄾</button>
+<button onclick="addToMemo('🄿')">🄿</button>
+<button onclick="addToMemo('🅀')">🅀</button>
+<button onclick="addToMemo('🅁')">🅁</button>
+<button onclick="addToMemo('🅂')">🅂</button>
+<button onclick="addToMemo('🅃')">🅃</button>
+<button onclick="addToMemo('🅄')">🅄</button>
+<button onclick="addToMemo('🅅')">🅅</button>
+<button onclick="addToMemo('🅆')">🅆</button>
+<button onclick="addToMemo('🅇')">🅇</button>
+<button onclick="addToMemo('🅈')">🅈</button>
+<button onclick="addToMemo('🅉')">🅉</button>
+
+<!-- Baris Karakter -->
+<button onclick="addToMemo('🅰')">🅰</button>
+<button onclick="addToMemo('🅱')">🅱</button>
+<button onclick="addToMemo('🅲')">🅲</button>
+<button onclick="addToMemo('🅳')">🅳</button>
+<button onclick="addToMemo('🅴')">🅴</button>
+<button onclick="addToMemo('🅵')">🅵</button>
+<button onclick="addToMemo('🅶')">🅶</button>
+<button onclick="addToMemo('🅷')">🅷</button>
+<button onclick="addToMemo('🅸')">🅸</button>
+<button onclick="addToMemo('🅹')">🅹</button>
+<button onclick="addToMemo('🅺')">🅺</button>
+<button onclick="addToMemo('🅻')">🅻</button>
+<button onclick="addToMemo('🅼')">🅼</button>
+<button onclick="addToMemo('🅽')">🅽</button>
+<button onclick="addToMemo('🅾')">🅾</button>
+<button onclick="addToMemo('🅿')">🅿</button>
+<button onclick="addToMemo('🆀')">🆀</button>
+<button onclick="addToMemo('🆁')">🆁</button>
+<button onclick="addToMemo('🆂')">🆂</button>
+<button onclick="addToMemo('🆃')">🆃</button>
+<button onclick="addToMemo('🆄')">🆄</button>
+<button onclick="addToMemo('🆅')">🆅</button>
+<button onclick="addToMemo('🆆')">🆆</button>
+<button onclick="addToMemo('🆇')">🆇</button>
+<button onclick="addToMemo('🆈')">🆈</button>
+<button onclick="addToMemo('🆉')">🆉</button>
+<button onclick="addToMemo('㋛')">㋛</button>
+<button onclick="addToMemo('㋡')">㋡</button>
+<button onclick="addToMemo('㊚')">㊚</button>
+<button onclick="addToMemo('㊛')">㊛</button>
+<button onclick="addToMemo('㊜')">㊜</button>
+<button onclick="addToMemo('㊝')">㊝</button>
+<button onclick="addToMemo('㊞')">㊞</button>
+<button onclick="addToMemo('㊣')">㊣</button>
+<button onclick="addToMemo('㊢')">㊢</button>
+<button onclick="addToMemo('㊡')">㊡</button>
+<button onclick="addToMemo('㊠')">㊠</button>
+<button onclick="addToMemo('㊟')">㊟</button>
+<button onclick="addToMemo('㊤')">㊤</button>
+<button onclick="addToMemo('㊥')">㊥</button>
+<button onclick="addToMemo('㊦')">㊦</button>
+<button onclick="addToMemo('㊧')">㊧</button>
+<button onclick="addToMemo('㊨')">㊨</button>
+<button onclick="addToMemo('㊭')">㊭</button>
+<button onclick="addToMemo('㊬')">㊬</button>
+<button onclick="addToMemo('㊫')">㊫</button>
+<button onclick="addToMemo('㊪')">㊪</button>
+<button onclick="addToMemo('㊩')">㊩</button>
+<button onclick="addToMemo('㊮')">㊮</button>
+<button onclick="addToMemo('㊯')">㊯</button>
+<button onclick="addToMemo('㊰')">㊰</button>
+<button onclick="addToMemo('㊊')">㊊</button>
+<button onclick="addToMemo('㊋')">㊋</button>
+<button onclick="addToMemo('㊐')">㊐</button>
+<button onclick="addToMemo('㊏')">㊏</button>
+<button onclick="addToMemo('㊎')">㊎</button>
+<button onclick="addToMemo('㊍')">㊍</button>
+<button onclick="addToMemo('㊌')">㊌</button>
+<button onclick="addToMemo('㊑')">㊑</button>
+<button onclick="addToMemo('㊒')">㊒</button>
+<button onclick="addToMemo('㊓')">㊓</button>
+<button onclick="addToMemo('㊔')">㊔</button>
+<button onclick="addToMemo('㊕')">㊕</button>
+<button onclick="addToMemo('㊙')">㊙</button>
+<button onclick="addToMemo('㊘')">㊘</button>
+<button onclick="addToMemo('㊗')">㊗</button>
+<button onclick="addToMemo('㊖')">㊖</button>
 
 
 
@@ -764,56 +1496,216 @@ h3 {
     </section>
 
     <section id="page4" class="page">
-        <h2>Card　</h2>
-        <div id="note4" class="note-box"><h4>🂡 🂢 🂣 🂤 🂥 🂦 🂧 🂨 🂩 🂪 🂫 🂬 🂮 🂱 🂲 🂳 🂴 🂵 🂶 🂷 🂸 🂺 🂻 🂼 🂽 🂾 🃁 🃂 🃃 🃄 🃅 🃆 🃇 🃈 🃉 🃊 🃋 🃌 🃍 🃎 🃑 🃒 🃓 🃔 🃕 🃖 🃗 🃘 🃙 🃚 🃛 🃜 🃝 🃞 🃌 🂾 🀢 🀦 🃁 🀆 🀥 🀢 🀤 🀩 🀣 🀦 🀛 🀟 🀐 🀚 🀁 🂠 🀝 🀖 🀇 🀋 🀉 🀍 🀈 🀂 🀎 🀅 🀃 
-</h4>
+        <h2>Number</h2>
+        <div id="note4" class="note-box">
+          <!-- Baris Karakter -->
+<button onclick="addToMemo('➀')">➀</button>
+<button onclick="addToMemo('➁')">➁</button>
+<button onclick="addToMemo('➂')">➂</button>
+<button onclick="addToMemo('➃')">➃</button>
+<button onclick="addToMemo('➄')">➄</button>
+<button onclick="addToMemo('➅')">➅</button>
+<button onclick="addToMemo('➆')">➆</button>
+<button onclick="addToMemo('➇')">➇</button>
+<button onclick="addToMemo('➈')">➈</button>
+<button onclick="addToMemo('➉')">➉</button>
+
+<!-- Baris Karakter -->
+<button onclick="addToMemo('➊')">➊</button>
+<button onclick="addToMemo('➋')">➋</button>
+<button onclick="addToMemo('➌')">➌</button>
+<button onclick="addToMemo('➍')">➍</button>
+<button onclick="addToMemo('➎')">➎</button>
+<button onclick="addToMemo('➏')">➏</button>
+<button onclick="addToMemo('➐')">➐</button>
+<button onclick="addToMemo('➑')">➑</button>
+<button onclick="addToMemo('➒')">➒</button>
+<button onclick="addToMemo('➓')">➓</button>
+
+<!-- Baris Karakter -->
+<button onclick="addToMemo('⓵')">⓵</button>
+<button onclick="addToMemo('⓶')">⓶</button>
+<button onclick="addToMemo('⓷')">⓷</button>
+<button onclick="addToMemo('⓸')">⓸</button>
+<button onclick="addToMemo('⓹')">⓹</button>
+<button onclick="addToMemo('⓺')">⓺</button>
+<button onclick="addToMemo('⓻')">⓻</button>
+<button onclick="addToMemo('⓼')">⓼</button>
+<button onclick="addToMemo('⓽')">⓽</button>
+<button onclick="addToMemo('⓾')">⓾</button>
+
+<!-- Baris Karakter -->
+<button onclick="addToMemo('㉈')">㉈</button>
+<button onclick="addToMemo('㉉')">㉉</button>
+<button onclick="addToMemo('㉊')">㉊</button>
+<button onclick="addToMemo('㉋')">㉋</button>
+<button onclick="addToMemo('㉌')">㉌</button>
+<button onclick="addToMemo('㉍')">㉍</button>
+<button onclick="addToMemo('㉎')">㉎</button>
+<button onclick="addToMemo('㉏')">㉏</button>
+<!-- Simbol Angka dalam Lingkaran -->
+<button onclick="addToMemo('⓫')">⓫</button>
+<button onclick="addToMemo('⓬')">⓬</button>
+<button onclick="addToMemo('⓭')">⓭</button>
+<button onclick="addToMemo('⓮')">⓮</button>
+<button onclick="addToMemo('⓯')">⓯</button>
+<button onclick="addToMemo('⓰')">⓰</button>
+<button onclick="addToMemo('⓱')">⓱</button>
+<button onclick="addToMemo('⓲')">⓲</button>
+<button onclick="addToMemo('⓳')">⓳</button>
+<button onclick="addToMemo('⓴')">⓴</button>
+
+<!-- Angka Bold dalam Unicode -->
+<button onclick="addToMemo('𝟷')">𝟷</button>
+<button onclick="addToMemo('𝟸')">𝟸</button>
+<button onclick="addToMemo('𝟹')">𝟹</button>
+<button onclick="addToMemo('𝟺')">𝟺</button>
+<button onclick="addToMemo('𝟻')">𝟻</button>
+<button onclick="addToMemo('𝟼')">𝟼</button>
+<button onclick="addToMemo('𝟽')">𝟽</button>
+<button onclick="addToMemo('𝟾')">𝟾</button>
+<button onclick="addToMemo('𝟿')">𝟿</button>
+<button onclick="addToMemo('𝟶')">𝟶</button>
+
+<!-- Angka Italic Unicode -->
+<button onclick="addToMemo('𝟎')">𝟎</button>
+<button onclick="addToMemo('𝟏')">𝟏</button>
+<button onclick="addToMemo('𝟐')">𝟐</button>
+<button onclick="addToMemo('𝟑')">𝟑</button>
+<button onclick="addToMemo('𝟒')">𝟒</button>
+<button onclick="addToMemo('𝟓')">𝟓</button>
+<button onclick="addToMemo('𝟔')">𝟔</button>
+<button onclick="addToMemo('𝟕')">𝟕</button>
+<button onclick="addToMemo('𝟖')">𝟖</button>
+<button onclick="addToMemo('𝟗')">𝟗</button>
+
+<!-- Angka tebal miring (bold italic) -->
+<button onclick="addToMemo('𝟬')">𝟬</button>
+<button onclick="addToMemo('𝟭')">𝟭</button>
+<button onclick="addToMemo('𝟮')">𝟮</button>
+<button onclick="addToMemo('𝟯')">𝟯</button>
+<button onclick="addToMemo('𝟰')">𝟰</button>
+<button onclick="addToMemo('𝟱')">𝟱</button>
+<button onclick="addToMemo('𝟲')">𝟲</button>
+<button onclick="addToMemo('𝟳')">𝟳</button>
+<button onclick="addToMemo('𝟴')">𝟴</button>
+<button onclick="addToMemo('𝟵')">𝟵</button>
+
+<!-- Angka gaya script -->
+<button onclick="addToMemo('𝟘')">𝟘</button>
+<button onclick="addToMemo('𝟙')">𝟙</button>
+<button onclick="addToMemo('𝟚')">𝟚</button>
+<button onclick="addToMemo('𝟛')">𝟛</button>
+<button onclick="addToMemo('𝟜')">𝟜</button>
+<button onclick="addToMemo('𝟝')">𝟝</button>
+<button onclick="addToMemo('𝟞')">𝟞</button>
+<button onclick="addToMemo('𝟟')">𝟟</button>
+<button onclick="addToMemo('𝟠')">𝟠</button>
+<button onclick="addToMemo('𝟡')">𝟡</button>
+
+<!-- Simbol daur ulang dan simbol numerik -->
+<button onclick="addToMemo('♸')">♸</button>
+<button onclick="addToMemo('♴')">♴</button>
+<button onclick="addToMemo('♵')">♵</button>
+<button onclick="addToMemo('♶')">♶</button>
+<button onclick="addToMemo('♷')">♷</button>
+<button onclick="addToMemo('♸')">♸</button>
+<button onclick="addToMemo('♹')">♹</button>
+<button onclick="addToMemo('♺')">♺</button>
+<button onclick="addToMemo('♺')">♺</button>
+
+<!-- Angka dalam format subscript -->
+<button onclick="addToMemo('₀')">₀</button>
+<button onclick="addToMemo('₁')">₁</button>
+<button onclick="addToMemo('₂')">₂</button>
+<button onclick="addToMemo('₃')">₃</button>
+<button onclick="addToMemo('₄')">₄</button>
+<button onclick="addToMemo('₅')">₅</button>
+<button onclick="addToMemo('₆')">₆</button>
+<button onclick="addToMemo('₇')">₇</button>
+<button onclick="addToMemo('₈')">₈</button>
+<button onclick="addToMemo('₉')">₉</button>
+
+<!-- Angka dalam format superscript -->
+<button onclick="addToMemo('⁰')">⁰</button>
+<button onclick="addToMemo('¹')">¹</button>
+<button onclick="addToMemo('²')">²</button>
+<button onclick="addToMemo('³')">³</button>
+<button onclick="addToMemo('⁴')">⁴</button>
+<button onclick="addToMemo('⁵')">⁵</button>
+<button onclick="addToMemo('⁶')">⁶</button>
+<button onclick="addToMemo('⁷')">⁷</button>
+<button onclick="addToMemo('⁸')">⁸</button>
+<button onclick="addToMemo('⁹')">⁹</button>
+
+
+<button class="custom-button" onclick="addCharacter('０')">０</button>
+<button class="custom-button" onclick="addCharacter('１')">１</button>
+<button class="custom-button" onclick="addCharacter('２')">２</button>
+<button class="custom-button" onclick="addCharacter('３')">３</button>
+<button class="custom-button" onclick="addCharacter('４')">４</button>
+<button class="custom-button" onclick="addCharacter('５')">５</button>
+<button class="custom-button" onclick="addCharacter('６')">６</button>
+<button class="custom-button" onclick="addCharacter('７')">７</button>
+<button class="custom-button" onclick="addCharacter('８')">８</button>
+<button class="custom-button" onclick="addCharacter('９')">９</button>
+
+          
+          
         </div>
     </section>
 
-    <section id="page5" class="page">
-        <h2>𝖢𝗋𝖾𝖺𝗍𝗂𝗈𝗇 𝖳𝖾𝗑𝗍　</h2>
-        <div id="note5" class="note-box">
+<section id="page5" class="page">
+    <h2 style="font: 15px;">𝖢𝗋𝖾𝖺𝗍𝗂𝗼𝗇 𝖳𝖾𝗑𝗍</h2>
+    <div id="note5" class="note-box">
+        <style="font: 1000px; color: black; ">
 
-Bɑɖbꔮyʂ㉗-ꛃᵉᵇ〽ꛕ᜵ʂiteく᜵ꛨ9
-ᜆ艹ꣻꣻꣻꣻヽᶠᵃᶜᵉᵇᵒᵒᵏ＼ヽヽヽ
-︳ʃ︭ʋ︭︦ʃ︭︦ʂ︭︦ʃ︭︦ɛ︭︦ʃ︭︦ʀ︭︦ʃ︦卝一ꗴꛨꛨ᜵᜵ꛨ0᜵᜵24
-乀＿＿＿＿＿＿＿＿＿＿＿＿
-︻ꔮ༭ꔷꕹ一一一一一一一一一
+
+Bɑɖbꔮyʂ㉗-ꛃᵉᵇ〽ꛕ᜵ʂiteく᜵ꛨ9<br>
+ᜆ艹ꣻꣻꣻꣻヽᶠᵃᶜᵉᵇᵒᵒᵏ＼ヽヽヽ<br>
+︳ʃ︭ʋ︭︦ʃ︭︦ʂ︭︦ʃ︭︦ɛ︭︦ʃ︭︦ʀ︭︦ʃ︦卝一ꗴꛨꛨ᜵᜵ꛨ0᜵᜵24<br>
+乀＿＿＿＿＿＿＿＿＿＿＿＿<br>
+︻ꔮ༭ꔷꕹ一一一一一一一一一<br>
 <hr>
-ꛅᴹ۵卝ＢＡＤＢＯＹ卝  乀ꕺノ
-乀۵ꕢﷺꕢ۵ノꔮꔷ一一一一一ꔷꔮ
-꘏＿＿＿＿＿꘏ꕬꖯꖀꔀꖻ፯፬፯፶ꖩ
-ᶠᵃᶜᵉᵇᵒᵒᵏꜜꜛꖘ꛵꛶٭﹫ꚵꚨꕬꔷꘘꗣꗈ㉗
-ꕤꕺꕤ＿＿＿＿＿＿＿＿ꕤꕺꕤ
+ꛅᴹ۵卝ＢＡＤＢＯＹ卝  乀ꕺノ<br>
+乀۵ꕢﷺꕢ۵ノꔮꔷ一一一一一ꔷꔮ<br>
+꘏＿＿＿＿＿꘏ꕬꖯꖀꔀꖻ፯፬፯፶ꖩ<br>
+ᶠᵃᶜᵉᵇᵒᵒᵏꜜꜛꖘ꛵꛶٭﹫ꚵꚨꕬꔷꘘꗣꗈ㉗<br>
+ꕤꕺꕤ＿＿＿＿＿＿＿＿ꕤꕺꕤ<br>
 <hr>
-（＼꘏᜵）　 ᜵）᜵）一٭ꛃᵉⁿⁿʸ〽
+（＼꘏᜵）　 ᜵）᜵）一٭ꛃᵉⁿⁿʸ〽<br>
 （ｷ ᶿꔷᶿ ）（ ᶿꔷᶿ ）一٭᜵᜵ꛨꛨ᜵᜵ꛨ0
-ᜆ〽ꕤញɘ︩︠ɭɪ︡ʈ︪ɧ︢ɑ︨︣＿＿＿＿ꕤܓܐ݈
+<br>
+ᜆ〽ꕤញɘ︩︠ɭɪ︡ʈ︪ɧ︢ɑ︨︣＿＿＿＿ꕤܓܐ݈<br>
 乀＿＿＿＿＿＿＿＿ʃ︭ʋ︭︦ʃ︭︦ʂ︭︦ʃ︭︦ɛ︭︦ʃ︭︦ʀ︭︦ʃ︦
 
 <hr>
-一ꔷꔮꕤꔮ＼ꕺ＼﹏／ꕺ／ꔮꕤꔮꔷ一
-ꕺ＿＿＿／۵ꕢﷺꕢ۵＼＿＿＿ꕺ
-《＼〇〪〭〫〬／》ꕺꕺꕤꕺꕺ《＼〇〪〭〫〬／》
-《卝ꕤ卝》l፸፶፮፪፫l《卝ꕤ卝》
-《／〇〪〭〫〬＼》ꕺꕺꕤꕺꕺ《／〇〪〭〫〬＼》
-ꕺ﹋﹋﹋＼۵ꕢﷺꕢ۵／﹋﹋﹋ꕺ
-一ꔷꔮꕤꔮ／ꕺ／﹋＼ꕺ＼ꔮꕤꔮꔷ一
+一ꔷꔮꕤꔮ＼ꕺ＼﹏／ꕺ／ꔮꕤꔮꔷ一<br>
+ꕺ＿＿＿／۵ꕢﷺꕢ۵＼＿＿＿ꕺ<br>
+《＼〇〪〭〫〬／》ꕺꕺꕤꕺꕺ《＼〇〪〭〫〬／》<br>
+《卝ꕤ卝》l፸፶፮፪፫l《卝ꕤ卝》<br>
+《／〇〪〭〫〬＼》ꕺꕺꕤꕺꕺ《／〇〪〭〫〬＼》<br>
+ꕺ﹋﹋﹋＼۵ꕢﷺꕢ۵／﹋﹋﹋ꕺ<br>
+一ꔷꔮꕤꔮ／ꕺ／﹋＼ꕺ＼ꔮꕤꔮꔷ一<br>
 <hr>
-ＢＡＤＢＯＹ ＥＬＩＴＨ『㉗ 
-︻๏ꯆ㉈፯፬፯፶㉈ﾛﾃᆖ一一一一 
-ᴒ︳ノ艹ᵀᴹ۵（〇〪〭〫〬ɪ︭︦ɔ︭︦ʜ︭︦ʌ︭︦〇〪〭〫〬）２７ 
-ᴑ︳＿＿＿２７＼ ０１＼ ９９ 
-ᴟ︳ｕｎｉｑｕｅ（ｷ꫱ꫢ꫱）ツ 
+ＢＡＤＢＯＹ ＥＬＩＴＨ『㉗ <br>
+︻๏ꯆ㉈፯፬፯፶㉈ﾛﾃᆖ一一一一 <br>
+ᴒ︳ノ艹ᵀᴹ۵（〇〪〭〫〬ɪ︭︦ɔ︭︦ʜ︭︦ʌ︭︦〇〪〭〫〬）２７ <br>
+ᴑ︳＿＿＿２７＼ ０１＼ ９９ <br>
+ᴟ︳ｕｎｉｑｕｅ（ｷ꫱ꫢ꫱）ツ <br>
 ︻๏༨㉗ꯆ፯፬፯፶声ᆕ一一一一＊
 
-        </div>
+</section>
+   </div>
     </section>
     
-<h2>Cari karakter khusus　
-</h2>
 
 <script>
+  
+      function toggleEmojiKeyboard() {
+        const emojiKeyboard = document.getElementById("emoji-keyboard");
+        emojiKeyboard.style.display = (emojiKeyboard.style.display === "none") ? "grid" : "none";
+    }
     // Fungsi untuk menampilkan halaman yang dipilih
     function showPage(pageId) {
         // Sembunyikan semua halaman
@@ -829,21 +1721,7 @@ Bɑɖbꔮyʂ㉗-ꛃᵉᵇ〽ꛕ᜵ʂiteく᜵ꛨ9
         }
     }
 
-    // Fungsi untuk menyalin teks dari elemen menggunakan navigator.clipboard
-    function copyText(elementId) {
-        // Ambil teks dari elemen dengan ID tertentu
-        const text = document.getElementById(elementId).textContent;
 
-        // Menggunakan navigator.clipboard API untuk menyalin teks ke clipboard
-        navigator.clipboard.writeText(text)
-            .then(function() {
-                alert("Catatan disalin: " + text);
-            })
-            .catch(function(err) {
-                console.error("Gagal menyalin teks: ", err);
-                alert("Gagal menyalin teks");
-            });
-    }
 
     // Menampilkan halaman pertama secara default ketika halaman pertama kali dimuat
     document.addEventListener('DOMContentLoaded', function() {
@@ -878,8 +1756,6 @@ Bɑɖbꔮyʂ㉗-ꛃᵉᵇ〽ꛕ᜵ʂiteく᜵ꛨ9
         }
     }
 </script>
-
-
 
 
 <script>
@@ -928,35 +1804,30 @@ Bɑɖbꔮyʂ㉗-ꛃᵉᵇ〽ꛕ᜵ʂiteく᜵ꛨ9
         memo.focus();
     }
 
-    // Menambahkan karakter tertentu pada posisi kursor
-    function addCharacter(char) {
-        const memo = document.getElementById('memo');
-        const cursorPos = memo.selectionStart; // Menyimpan posisi kursor
-        const textBefore = memo.value.substring(0, cursorPos); // Bagian teks sebelum kursor
-        const textAfter = memo.value.substring(cursorPos); // Bagian teks setelah kursor
-        
-        // Menambahkan karakter pada posisi kursor
-        memo.value = textBefore + char + textAfter;
-        
-        // Mengembalikan posisi kursor setelah penambahan karakter
-        memo.selectionStart = memo.selectionEnd = cursorPos + char.length;
-        memo.focus();
-    }
+        function addCharacter(character) {
+            document.getElementById('memo').value += character;
+        }
 
-    // Menghapus karakter pada posisi kursor
-    function deleteCharacter() {
-        const memo = document.getElementById('memo');
-        const cursorPos = memo.selectionStart; // Menyimpan posisi kursor
-        
-        // Menghapus karakter terakhir pada posisi kursor
-        memo.value = memo.value.slice(0, cursorPos - 1) + memo.value.slice(cursorPos);
-        
-        // Mengembalikan posisi kursor setelah penghapusan karakter
-        memo.selectionStart = memo.selectionEnd = cursorPos - 1;
-        memo.focus();
-    }
-</script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.style.display = 'none');
+            document.getElementById(pageId).style.display = 'block';
+        }
 
+        function toggleEmojiKeyboard() {
+            const emojiKeyboard = document.getElementById('emoji-keyboard');
+            emojiKeyboard.style.display = emojiKeyboard.style.display === 'none' ? 'grid' : 'none';
+        }
 
+        function addToMemo(symbol) {
+            document.getElementById('memo').value += symbol;
+        }
+        
+        function appendText(emoji) {
+    const memo = document.getElementById('memo');
+    memo.value += emoji;
+}
+
+    </script>
   </body>
 </html>
