@@ -320,34 +320,88 @@
            background: none; /* Tidak ada latar belakang untuk mode gelap */
             }
 
-  /* CSS khusus kelas page */
-      .page .note-box {
-        max-height: 128px; /* Tinggi maksimal untuk konten yang akan di-scroll */
-             border: 1px solid gray;
-       overflow-y: auto; /* Tambahkan scrollbar vertikal jika konten terlalu banyak */
 
-               }
+/* CSS khusus kelas page */
+.page .note-box {
+  max-height: 128px; /* Tinggi maksimal untuk konten yang akan di-scroll */
+  border: 1px solid gray;
+  overflow-y: auto; /* Tambahkan scrollbar vertikal jika konten terlalu banyak */
+  padding: 0; /* Pastikan padding tidak mengganggu layout */
+}
 
-    section.page h2 {
-    color: black !important;
-    font-size: 11px;
-    margin-top: 0 !important;
+section.page h2 {
+  color: black !important;
+  font-size: 11px;
+  margin-top: 0 !important;
 }
 
 section.page .note-box button {
-    padding: 2px 2px !important;
-    font-size: 20px !important;
-    color: black !important;
-    background-color: white;
-    border: 0px;
-    border-radius: 100px !important;
-    cursor: pointer;
-    margin-left: 5px !important;
-          }
+  padding: 1px 1px !important;
+  font-size: 18px !important;
+  color: black !important;
+  background-color: white;
+  border: 0px;
+  border-radius: 100px !important;
+  margin-left: 1px !important;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* Bayangan tombol */
+  transition: box-shadow 0.3s ease, transform 0.2s ease; /* Menambahkan transisi halus pada bayangan dan transformasi */
+  position: relative; /* Menambahkan posisi relative agar bayangan konsisten */
+  z-index: 1; /* Pastikan tombol tetap di atas elemen lain */
+}
 
-   section.page .note-box button:hover {
-   background-color: red !important;
-          }
+/* Tombol dengan Flexbox untuk sejajarkan teks dan border */
+#page2 .note-box .custom-button {
+  display: inline-flex; /* Menggunakan Flexbox */
+  align-items: center; /* Vertikal sejajar */
+  justify-content: center; /* Horizontal sejajar */
+  padding: 0.5rem 5rem;
+  font-size: 1.325rem;
+  color: black;
+  background-color: white;
+  border: 0px solid black; /* Border tombol */
+  border-radius: 20px;
+  margin-left: 2.375rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  position: relative;
+  z-index: 1;
+  height: auto; /* Pastikan ketinggian tombol sesuai konten */
+  line-height: normal; /* Menjaga jarak antar baris tetap */
+}
+
+/* Efek hover dan active untuk tombol */
+#page2 .note-box .custom-button:hover {
+  background-color: red;
+  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.2);
+}
+
+#page2 .note-box .custom-button:active {
+  box-shadow: 0 0.15rem 0.25rem rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+}
+
+/* Fokus tombol */
+#page2 .note-box .custom-button:focus {
+  outline: none;
+}
+
+
+
+
+section.page .note-box button:hover {
+  background-color: red !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bayangan lebih kuat saat hover */
+}
+
+section.page .note-box button:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Bayangan lebih kecil saat diklik */
+  transform: translateY(2px); /* Menambahkan efek tombol sedikit tertekan */
+}
+
+.page .note-box button:focus {
+  outline: none; /* Menghapus outline agar bayangan tetap terlihat */
+}
+
 
 /* Membuat latar belakang biru muda untuk seluruh section */
 #page5 {
@@ -367,8 +421,6 @@ section.page .note-box button {
     background-color: white; /* Latar belakang putih untuk note-box */
 
 }
-
-
 
     </style>
  </head>
@@ -1342,6 +1394,42 @@ section.page .note-box button {
 <button class="custom-button" onclick="addCharacter('己')">己</button>
 <button class="custom-button" onclick="addCharacter('ꖀ')">ꖀ</button>
 <button class="custom-button" onclick="addCharacter('ꖩ')">ꖩ</button>
+<button class="custom-button" onclick="addCharacter('❨')">❨</button>
+<button class="custom-button" onclick="addCharacter('❩')">❩</button>
+<button class="custom-button" onclick="addCharacter('❪')">❪</button>
+<button class="custom-button" onclick="addCharacter('❫')">❫</button>
+<button class="custom-button" onclick="addCharacter('❬')">❬</button>
+<button class="custom-button" onclick="addCharacter('❭')">❭</button>
+<button class="custom-button" onclick="addCharacter('❮')">❮</button>
+<button class="custom-button" onclick="addCharacter('❯')">❯</button>
+<button class="custom-button" onclick="addCharacter('❰')">❰</button>
+<button class="custom-button" onclick="addCharacter('❱')">❱</button>
+<button class="custom-button" onclick="addCharacter('❲')">❲</button>
+<button class="custom-button" onclick="addCharacter('❳')">❳</button>
+<button class="custom-button" onclick="addCharacter('❴')">❴</button>
+<button class="custom-button" onclick="addCharacter('❵')">❵</button>
+<button class="custom-button" onclick="addCharacter('⟬')">⟬</button>
+<button class="custom-button" onclick="addCharacter('⟭')">⟭</button>
+<button class="custom-button" onclick="addCharacter('⟪')">⟪</button>
+<button class="custom-button" onclick="addCharacter('⟫')">⟫</button>
+<button class="custom-button" onclick="addCharacter('⦃')">⦃</button>
+<button class="custom-button" onclick="addCharacter('⦄')">⦄</button>
+<button class="custom-button" onclick="addCharacter('⦅')">⦅</button>
+<button class="custom-button" onclick="addCharacter('⦆')">⦆</button>
+<button class="custom-button" onclick="addCharacter('⦇')">⦇</button>
+<button class="custom-button" onclick="addCharacter('⦈')">⦈</button>
+<button class="custom-button" onclick="addCharacter('⦉')">⦉</button>
+<button class="custom-button" onclick="addCharacter('⦊')">⦊</button>
+<button class="custom-button" onclick="addCharacter('⦑')">⦑</button>
+<button class="custom-button" onclick="addCharacter('⦒')">⦒</button>
+<button class="custom-button" onclick="addCharacter('⧼')">⧼</button>
+<button class="custom-button" onclick="addCharacter('⧽')">⧽</button>
+<button class="custom-button" onclick="addCharacter('⦓')">⦓</button>
+<button class="custom-button" onclick="addCharacter('⦔')">⦔</button>
+<button class="custom-button" onclick="addCharacter('⦕')">⦕</button>
+<button class="custom-button" onclick="addCharacter('⦖')">⦖</button>
+
+
 <!-- Angka Arab -->
 <button class="custom-button" onclick="addCharacter('١')">١</button>
 <button class="custom-button" onclick="addCharacter('٢')">٢</button>
@@ -1805,130 +1893,352 @@ section.page .note-box button {
         <h2>Symbols</h2>
         <div id="note2" class="note-box">
           <!-- Baris Karakter -->
-<button onclick="addToMemo('★')">★</button>
-<button onclick="addToMemo('☆')">☆</button>
-<button onclick="addToMemo('✡')">✡</button>
-<button onclick="addToMemo('✦')">✦</button>
-<button onclick="addToMemo('✧')">✧</button>
-<button onclick="addToMemo('✩')">✩</button>
-<button onclick="addToMemo('✪')">✪</button>
-<button onclick="addToMemo('✫')">✫</button>
-<button onclick="addToMemo('✬')">✬</button>
-<button onclick="addToMemo('✭')">✭</button>
-<button onclick="addToMemo('✮')">✮</button>
-<button onclick="addToMemo('✯')">✯</button>
-<button onclick="addToMemo('✰')">✰</button>
-<button onclick="addToMemo('✢')">✢</button>
-<button onclick="addToMemo('✣')">✣</button>
-<button onclick="addToMemo('✤')">✤</button>
-<button onclick="addToMemo('✥')">✥</button>
-<button onclick="addToMemo('✱')">✱</button>
-<button onclick="addToMemo('✲')">✲</button>
-<button onclick="addToMemo('✳')">✳</button>
-<button onclick="addToMemo('✴')">✴</button>
-<button onclick="addToMemo('✵')">✵</button>
-<button onclick="addToMemo('✶')">✶</button>
-<button onclick="addToMemo('✷')">✷</button>
-<button onclick="addToMemo('✸')">✸</button>
-<button onclick="addToMemo('✹')">✹</button>
-<button onclick="addToMemo('✺')">✺</button>
-<button onclick="addToMemo('✻')">✻</button>
-<button onclick="addToMemo('✼')">✼</button>
-<button onclick="addToMemo('✽')">✽</button>
-<button onclick="addToMemo('✾')">✾</button>
-<button onclick="addToMemo('✿')">✿</button>
-<button onclick="addToMemo('❀')">❀</button>
-<button onclick="addToMemo('❁')">❁</button>
-<button onclick="addToMemo('❂')">❂</button>
-<button onclick="addToMemo('❃')">❃</button>
-<button onclick="addToMemo('❇')">❇</button>
-<button onclick="addToMemo('❈')">❈</button>
-<button onclick="addToMemo('❉')">❉</button>
-<button onclick="addToMemo('❊')">❊</button>
-<button onclick="addToMemo('❋')">❋</button>
-<button onclick="addToMemo('❆')">❆</button>
-<button onclick="addToMemo('❅')">❅</button>
-<button onclick="addToMemo('✲')">✲</button>
-<button onclick="addToMemo('۞')">۞</button>
-<button onclick="addToMemo('⍟')">⍟</button>
-<button onclick="addToMemo('♔')">♔</button>
-<button onclick="addToMemo('♕')">♕</button>
-<button onclick="addToMemo('♖')">♖</button>
-<button onclick="addToMemo('♗')">♗</button>
-<button onclick="addToMemo('♘')">♘</button>
-<button onclick="addToMemo('♙')">♙</button>
-<button onclick="addToMemo('♚')">♚</button>
-<button onclick="addToMemo('♛')">♛</button>
-<button onclick="addToMemo('♜')">♜</button>
-<button onclick="addToMemo('♝')">♝</button>
-<button onclick="addToMemo('♞')">♞</button>
-<button onclick="addToMemo('♟')">♟</button>
-<button onclick="addToMemo('♤')">♤</button>
-<button onclick="addToMemo('♧')">♧</button>
-<button onclick="addToMemo('♡')">♡</button>
-<button onclick="addToMemo('♢')">♢</button>
+<button class="custom-button" onclick="addCharacter('★')">★</button>
+<button class="custom-button" onclick="addCharacter('☆')">☆</button>
+<button class="custom-button" onclick="addCharacter('✡')">✡</button>
+<button class="custom-button" onclick="addCharacter('✦')">✦</button>
+<button class="custom-button" onclick="addCharacter('✧')">✧</button>
+<button class="custom-button" onclick="addCharacter('✩')">✩</button>
+<button class="custom-button" onclick="addCharacter('✪')">✪</button>
+<button class="custom-button" onclick="addCharacter('✫')">✫</button>
+<button class="custom-button" onclick="addCharacter('✬')">✬</button>
+<button class="custom-button" onclick="addCharacter('✭')">✭</button>
+<button class="custom-button" onclick="addCharacter('✮')">✮</button>
+<button class="custom-button" onclick="addCharacter('✯')">✯</button>
+<button class="custom-button" onclick="addCharacter('✰')">✰</button>
+<button class="custom-button" onclick="addCharacter('✢')">✢</button>
+<button class="custom-button" onclick="addCharacter('✣')">✣</button>
+<button class="custom-button" onclick="addCharacter('✤')">✤</button>
+<button class="custom-button" onclick="addCharacter('✥')">✥</button>
+<button class="custom-button" onclick="addCharacter('✱')">✱</button>
+<button class="custom-button" onclick="addCharacter('✲')">✲</button>
+<button class="custom-button" onclick="addCharacter('✳')">✳</button>
+<button class="custom-button" onclick="addCharacter('✴')">✴</button>
+<button class="custom-button" onclick="addCharacter('✵')">✵</button>
+<button class="custom-button" onclick="addCharacter('✶')">✶</button>
+<button class="custom-button" onclick="addCharacter('✷')">✷</button>
+<button class="custom-button" onclick="addCharacter('✸')">✸</button>
+<button class="custom-button" onclick="addCharacter('✹')">✹</button>
+<button class="custom-button" onclick="addCharacter('✺')">✺</button>
+<button class="custom-button" onclick="addCharacter('✻')">✻</button>
+<button class="custom-button" onclick="addCharacter('✼')">✼</button>
+<button class="custom-button" onclick="addCharacter('✽')">✽</button>
+<button class="custom-button" onclick="addCharacter('✾')">✾</button>
+<button class="custom-button" onclick="addCharacter('✿')">✿</button>
+<button class="custom-button" onclick="addCharacter('❀')">❀</button>
+<button class="custom-button" onclick="addCharacter('❁')">❁</button>
+<button class="custom-button" onclick="addCharacter('❂')">❂</button>
+<button class="custom-button" onclick="addCharacter('❃')">❃</button>
+<button class="custom-button" onclick="addCharacter('❇')">❇</button>
+<button class="custom-button" onclick="addCharacter('❈')">❈</button>
+<button class="custom-button" onclick="addCharacter('❉')">❉</button>
+<button class="custom-button" onclick="addCharacter('❊')">❊</button>
+<button class="custom-button" onclick="addCharacter('❋')">❋</button>
+<button class="custom-button" onclick="addCharacter('❆')">❆</button>
+<button class="custom-button" onclick="addCharacter('❅')">❅</button>
+<button class="custom-button" onclick="addCharacter('✲')">✲</button>
+<button class="custom-button" onclick="addCharacter('۞')">۞</button>
+<button class="custom-button" onclick="addCharacter('⍟')">⍟</button>
+<button class="custom-button" onclick="addCharacter('♔')">♔</button>
+<button class="custom-button" onclick="addCharacter('♕')">♕</button>
+<button class="custom-button" onclick="addCharacter('♖')">♖</button>
+<button class="custom-button" onclick="addCharacter('♗')">♗</button>
+<button class="custom-button" onclick="addCharacter('♘')">♘</button>
+<button class="custom-button" onclick="addCharacter('♙')">♙</button>
+<button class="custom-button" onclick="addCharacter('♚')">♚</button>
+<button class="custom-button" onclick="addCharacter('♛')">♛</button>
+<button class="custom-button" onclick="addCharacter('♜')">♜</button>
+<button class="custom-button" onclick="addCharacter('♝')">♝</button>
+<button class="custom-button" onclick="addCharacter('♞')">♞</button>
+<button class="custom-button" onclick="addCharacter('♟')">♟</button>
+<button class="custom-button" onclick="addCharacter('♤')">♤</button>
+<button class="custom-button" onclick="addCharacter('♧')">♧</button>
+<button class="custom-button" onclick="addCharacter('♡')">♡</button>
+<button class="custom-button" onclick="addCharacter('♢')">♢</button>
+
+<button class="custom-button" onclick="addCharacter('⛤')">⛤</button>
+<button class="custom-button" onclick="addCharacter('⛧')">⛧</button>
+<button class="custom-button" onclick="addCharacter('⛦')">⛦</button>
+<button class="custom-button" onclick="addCharacter('⛥')">⛥</button>
+<button class="custom-button" onclick="addCharacter('⚝')">⚝</button>
+<button class="custom-button" onclick="addCharacter('⚘')">⚘</button>
+<button class="custom-button" onclick="addCharacter('⚚')">⚚</button>
+
+
 <!-- Baris Karakter -->
-<button onclick="addToMemo('➔')">➔</button>
-<button onclick="addToMemo('➘')">➘</button>
-<button onclick="addToMemo('➙')">➙</button>
-<button onclick="addToMemo('➚')">➚</button>
-<button onclick="addToMemo('➛')">➛</button>
-<button onclick="addToMemo('➜')">➜</button>
-<button onclick="addToMemo('➝')">➝</button>
-<button onclick="addToMemo('➞')">➞</button>
-<button onclick="addToMemo('➟')">➟</button>
-<button onclick="addToMemo('➠')">➠</button>
-<button onclick="addToMemo('➡')">➡</button>
-<button onclick="addToMemo('➢')">➢</button>
-<button onclick="addToMemo('➣')">➣</button>
-<button onclick="addToMemo('➤')">➤</button>
-<button onclick="addToMemo('➥')">➥</button>
-<button onclick="addToMemo('➦')">➦</button>
-<button onclick="addToMemo('➧')">➧</button>
-<button onclick="addToMemo('➨')">➨</button>
-<button onclick="addToMemo('➩')">➩</button>
-<button onclick="addToMemo('➪')">➪</button>
-<button onclick="addToMemo('➫')">➫</button>
-<button onclick="addToMemo('➬')">➬</button>
-<button onclick="addToMemo('➭')">➭</button>
-<button onclick="addToMemo('⌫')">⌫</button>
-<button onclick="addToMemo('⌧')">⌧</button>
-<button onclick="addToMemo('⌦')">⌦</button>
-<button onclick="addToMemo('❥')">❥</button>
-<button onclick="addToMemo('❣')">❣</button>
-<button onclick="addToMemo('❦')">❦</button>
-<button onclick="addToMemo('❧')">❧</button>
-<button onclick="addToMemo('➮')">➮</button>
-<button onclick="addToMemo('➯')">➯</button>
-<button onclick="addToMemo('➱')">➱</button>
-<button onclick="addToMemo('➲')">➲</button>
-<button onclick="addToMemo('➳')">➳</button>
-<button onclick="addToMemo('➴')">➴</button>
-<button onclick="addToMemo('➵')">➵</button>
-<button onclick="addToMemo('➶')">➶</button>
-<button onclick="addToMemo('➷')">➷</button>
-<button onclick="addToMemo('➸')">➸</button>
-<button onclick="addToMemo('➹')">➹</button>
-<button onclick="addToMemo('➺')">➺</button>
-<button onclick="addToMemo('➻')">➻</button>
-<button onclick="addToMemo('➼')">➼</button>
-<button onclick="addToMemo('➽')">➽</button>
-<button onclick="addToMemo('☫')">☫</button>
-<button onclick="addToMemo('☬')">☬</button>
-<button onclick="addToMemo('☭')">☭</button>
-<button onclick="addToMemo('☯')">☯</button>
-<button onclick="addToMemo('☽')">☽</button>
-<button onclick="addToMemo('☾')">☾</button>
-<button onclick="addToMemo('✙')">✙</button>
-<button onclick="addToMemo('✚')">✚</button>
-<button onclick="addToMemo('✛')">✛</button>
-<button onclick="addToMemo('✜')">✜</button>
-<button onclick="addToMemo('✞')">✞</button>
-<button onclick="addToMemo('✟')">✟</button>
-<button onclick="addToMemo('✓')">✓</button>
-<button onclick="addToMemo('✔')">✔</button>
-<button onclick="addToMemo('✗')">✗</button>
-<button onclick="addToMemo('✘')">✘</button>
+<button class="custom-button" onclick="addCharacter('➔')">➔</button>
+<button class="custom-button" onclick="addCharacter('➘')">➘</button>
+<button class="custom-button" onclick="addCharacter('➙')">➙</button>
+<button class="custom-button" onclick="addCharacter('➚')">➚</button>
+<button class="custom-button" onclick="addCharacter('➛')">➛</button>
+<button class="custom-button" onclick="addCharacter('➜')">➜</button>
+<button class="custom-button" onclick="addCharacter('➝')">➝</button>
+<button class="custom-button" onclick="addCharacter('➞')">➞</button>
+<button class="custom-button" onclick="addCharacter('➟')">➟</button>
+<button class="custom-button" onclick="addCharacter('➠')">➠</button>
+<button class="custom-button" onclick="addCharacter('➡')">➡</button>
+<button class="custom-button" onclick="addCharacter('➢')">➢</button>
+<button class="custom-button" onclick="addCharacter('➣')">➣</button>
+<button class="custom-button" onclick="addCharacter('➤')">➤</button>
+<button class="custom-button" onclick="addCharacter('➥')">➥</button>
+<button class="custom-button" onclick="addCharacter('➦')">➦</button>
+<button class="custom-button" onclick="addCharacter('➧')">➧</button>
+<button class="custom-button" onclick="addCharacter('➨')">➨</button>
+<button class="custom-button" onclick="addCharacter('➩')">➩</button>
+<button class="custom-button" onclick="addCharacter('➪')">➪</button>
+<button class="custom-button" onclick="addCharacter('➫')">➫</button>
+<button class="custom-button" onclick="addCharacter('➬')">➬</button>
+<button class="custom-button" onclick="addCharacter('➭')">➭</button>
+<button class="custom-button" onclick="addCharacter('⌫')">⌫</button>
+<button class="custom-button" onclick="addCharacter('⌧')">⌧</button>
+<button class="custom-button" onclick="addCharacter('⌦')">⌦</button>
+<button class="custom-button" onclick="addCharacter('❥')">❥</button>
+<button class="custom-button" onclick="addCharacter('❣')">❣</button>
+<button class="custom-button" onclick="addCharacter('❦')">❦</button>
+<button class="custom-button" onclick="addCharacter('❧')">❧</button>
+<button class="custom-button" onclick="addCharacter('➮')">➮</button>
+<button class="custom-button" onclick="addCharacter('➯')">➯</button>
+<button class="custom-button" onclick="addCharacter('➱')">➱</button>
+<button class="custom-button" onclick="addCharacter('➲')">➲</button>
+<button class="custom-button" onclick="addCharacter('➳')">➳</button>
+<button class="custom-button" onclick="addCharacter('➴')">➴</button>
+<button class="custom-button" onclick="addCharacter('➵')">➵</button>
+<button class="custom-button" onclick="addCharacter('➶')">➶</button>
+<button class="custom-button" onclick="addCharacter('➷')">➷</button>
+<button class="custom-button" onclick="addCharacter('➸')">➸</button>
+<button class="custom-button" onclick="addCharacter('➹')">➹</button>
+<button class="custom-button" onclick="addCharacter('➺')">➺</button>
+<button class="custom-button" onclick="addCharacter('➻')">➻</button>
+<button class="custom-button" onclick="addCharacter('➼')">➼</button>
+<button class="custom-button" onclick="addCharacter('➽')">➽</button>
+<button class="custom-button" onclick="addCharacter('☫')">☫</button>
+<button class="custom-button" onclick="addCharacter('☬')">☬</button>
+<button class="custom-button" onclick="addCharacter('☭')">☭</button>
+<button class="custom-button" onclick="addCharacter('☯')">☯</button>
+<button class="custom-button" onclick="addCharacter('☽')">☽</button>
+<button class="custom-button" onclick="addCharacter('☾')">☾</button>
+<button class="custom-button" onclick="addCharacter('✙')">✙</button>
+<button class="custom-button" onclick="addCharacter('✚')">✚</button>
+<button class="custom-button" onclick="addCharacter('✛')">✛</button>
+<button class="custom-button" onclick="addCharacter('✜')">✜</button>
+<button class="custom-button" onclick="addCharacter('✞')">✞</button>
+<button class="custom-button" onclick="addCharacter('✟')">✟</button>
+<button class="custom-button" onclick="addCharacter('✓')">✓</button>
+<button class="custom-button" onclick="addCharacter('✔')">✔</button>
+<button class="custom-button" onclick="addCharacter('✗')">✗</button>
+<button class="custom-button" onclick="addCharacter('✘')">✘</button>
+
+<button class="custom-button" onclick="addCharacter('▙')">▙</button>
+<button class="custom-button" onclick="addCharacter('▟')">▟</button>
+<button class="custom-button" onclick="addCharacter('▛')">▛</button>
+<button class="custom-button" onclick="addCharacter('▜')">▜</button>
+<button class="custom-button" onclick="addCharacter('▞')">▞</button>
+<button class="custom-button" onclick="addCharacter('▚')">▚</button>
+<button class="custom-button" onclick="addCharacter('▝')">▝</button>
+<button class="custom-button" onclick="addCharacter('▘')">▘</button>
+<button class="custom-button" onclick="addCharacter('▗')">▗</button>
+<button class="custom-button" onclick="addCharacter('▖')">▖</button>
+<button class="custom-button" onclick="addCharacter('■')">■</button>
+<button class="custom-button" onclick="addCharacter('▕')">▕</button>
+<button class="custom-button" onclick="addCharacter('▏')">▏</button>
+<button class="custom-button" onclick="addCharacter('▔')">▔</button>
+<button class="custom-button" onclick="addCharacter('▁')">▁</button>
+<button class="custom-button" onclick="addCharacter('▓')">▓</button>
+<button class="custom-button" onclick="addCharacter('▒')">▒</button>
+<button class="custom-button" onclick="addCharacter('░')">░</button>
+<button class="custom-button" onclick="addCharacter('▁')">▁</button>
+<button class="custom-button" onclick="addCharacter('▂')">▂</button>
+<button class="custom-button" onclick="addCharacter('▃')">▃</button>
+<button class="custom-button" onclick="addCharacter('▄')">▄</button>
+<button class="custom-button" onclick="addCharacter('▅')">▅</button>
+<button class="custom-button" onclick="addCharacter('▆')">▆</button>
+<button class="custom-button" onclick="addCharacter('▇')">▇</button>
+<button class="custom-button" onclick="addCharacter('█')">█</button>
+<button class="custom-button" onclick="addCharacter('▉')">▉</button>
+<button class="custom-button" onclick="addCharacter('▊')">▊</button>
+<button class="custom-button" onclick="addCharacter('▋')">▋</button>
+<button class="custom-button" onclick="addCharacter('▌')">▌</button>
+<button class="custom-button" onclick="addCharacter('▍')">▍</button>
+<button class="custom-button" onclick="addCharacter('▎')">▎</button>
+<button class="custom-button" onclick="addCharacter('▏')">▏</button>
+<button class="custom-button" onclick="addCharacter('▐')">▐</button>
+<button class="custom-button" onclick="addCharacter('❘')">❘</button>
+<button class="custom-button" onclick="addCharacter('❙')">❙</button>
+<button class="custom-button" onclick="addCharacter('❚')">❚</button>
+<button class="custom-button" onclick="addCharacter('╼')">╼</button>
+<button class="custom-button" onclick="addCharacter('╾')">╾</button>
+<button class="custom-button" onclick="addCharacter('╿')">╿</button>
+<button class="custom-button" onclick="addCharacter('╽')">╽</button>
+<button class="custom-button" onclick="addCharacter('⎖')">⎖</button>
+<button class="custom-button" onclick="addCharacter('⏎')">⏎</button>
+<button class="custom-button" onclick="addCharacter('╴')">╴</button>
+<button class="custom-button" onclick="addCharacter('╶')">╶</button>
+<button class="custom-button" onclick="addCharacter('╵')">╵</button>
+<button class="custom-button" onclick="addCharacter('╷')">╷</button>
+<button class="custom-button" onclick="addCharacter('╳')">╳</button>
+<button class="custom-button" onclick="addCharacter('╲')">╲</button>
+<button class="custom-button" onclick="addCharacter('╱')">╱</button>
+<button class="custom-button" onclick="addCharacter('⧸')">⧸</button>
+<button class="custom-button" onclick="addCharacter('⧹')">⧹</button>
+<button class="custom-button" onclick="addCharacter('◆')">◆</button>
+<button class="custom-button" onclick="addCharacter('◇')">◇</button>
+<button class="custom-button" onclick="addCharacter('⧫')">⧫</button>
+<button class="custom-button" onclick="addCharacter('⬧')">⬧</button>
+<button class="custom-button" onclick="addCharacter('⬨')">⬨</button>
+<button class="custom-button" onclick="addCharacter('⬪')">⬪</button>
+<button class="custom-button" onclick="addCharacter('⬫')">⬫</button>
+<button class="custom-button" onclick="addCharacter('◈')">◈</button>
+<button class="custom-button" onclick="addCharacter('❖')">❖</button>
+<button class="custom-button" onclick="addCharacter('◉')">◉</button>
+<button class="custom-button" onclick="addCharacter('◎')">◎</button>
+<button class="custom-button" onclick="addCharacter('⭗')">⭗</button>
+<button class="custom-button" onclick="addCharacter('⭖')">⭖</button>
+<button class="custom-button" onclick="addCharacter('⬬')">⬬</button>
+<button class="custom-button" onclick="addCharacter('⬭')">⬭</button>
+<button class="custom-button" onclick="addCharacter('⬮')">⬮</button>
+<button class="custom-button" onclick="addCharacter('⬯')">⬯</button>
+<button class="custom-button" onclick="addCharacter('◐')">◐</button>
+<button class="custom-button" onclick="addCharacter('◑')">◑</button>
+<button class="custom-button" onclick="addCharacter('◒')">◒</button>
+<button class="custom-button" onclick="addCharacter('◓')">◓</button>
+<button class="custom-button" onclick="addCharacter('⦼')">⦼</button>
+<button class="custom-button" onclick="addCharacter('⨷')">⨷</button>
+<button class="custom-button" onclick="addCharacter('⨸')">⨸</button>
+<button class="custom-button" onclick="addCharacter('⦿')">⦿</button>
+<button class="custom-button" onclick="addCharacter('⦸')">⦸</button>
+<button class="custom-button" onclick="addCharacter('⧀')">⧀</button>
+<button class="custom-button" onclick="addCharacter('⧁')">⧁</button>
+<button class="custom-button" onclick="addCharacter('◧')">◧</button>
+<button class="custom-button" onclick="addCharacter('◨')">◨</button>
+<button class="custom-button" onclick="addCharacter('◩')">◩</button>
+<button class="custom-button" onclick="addCharacter('◪')">◪</button>
+<button class="custom-button" onclick="addCharacter('⬒')">⬒</button>
+<button class="custom-button" onclick="addCharacter('⬓')">⬓</button>
+<button class="custom-button" onclick="addCharacter('⬖')">⬖</button>
+<button class="custom-button" onclick="addCharacter('⬗')">⬗</button>
+<button class="custom-button" onclick="addCharacter('⬘')">⬘</button>
+<button class="custom-button" onclick="addCharacter('⬙')">⬙</button>
+<button class="custom-button" onclick="addCharacter('☢')">☢</button>
+<button class="custom-button" onclick="addCharacter('☯')">☯</button>
+<button class="custom-button" onclick="addCharacter('☫')">☫</button>
+<button class="custom-button" onclick="addCharacter('⎔')">⎔</button>
+<button class="custom-button" onclick="addCharacter('⏣')">⏣</button>
+<button class="custom-button" onclick="addCharacter('⬠')">⬠</button>
+<button class="custom-button" onclick="addCharacter('⬡')">⬡</button>
+<button class="custom-button" onclick="addCharacter('⬟')">⬟</button>
+<button class="custom-button" onclick="addCharacter('⬢')">⬢</button>
+<button class="custom-button" onclick="addCharacter('⬣')">⬣</button>
+<button class="custom-button" onclick="addCharacter('⬤')">⬤</button>
+<button class="custom-button" onclick="addCharacter('⎊')">⎊</button>
+<button class="custom-button" onclick="addCharacter('⎉')">⎉</button>
+<button class="custom-button" onclick="addCharacter('⎏')">⎏</button>
+<button class="custom-button" onclick="addCharacter('⎐')">⎐</button>
+<button class="custom-button" onclick="addCharacter('◘')">◘</button>
+<button class="custom-button" onclick="addCharacter('◙')">◙</button>
+<button class="custom-button" onclick="addCharacter('⛞')">⛞</button>
+<button class="custom-button" onclick="addCharacter('⛝')">⛝</button>
+<button class="custom-button" onclick="addCharacter('▢')">▢</button>
+<button class="custom-button" onclick="addCharacter('▣')">▣</button>
+<button class="custom-button" onclick="addCharacter('▤')">▤</button>
+<button class="custom-button" onclick="addCharacter('▥')">▥</button>
+<button class="custom-button" onclick="addCharacter('▦')">▦</button>
+<button class="custom-button" onclick="addCharacter('▧')">▧</button>
+<button class="custom-button" onclick="addCharacter('▨')">▨</button>
+<button class="custom-button" onclick="addCharacter('▩')">▩</button>
+<button class="custom-button" onclick="addCharacter('◁')">◁</button>
+<button class="custom-button" onclick="addCharacter('▷')">▷</button>
+<button class="custom-button" onclick="addCharacter('△')">△</button>
+<button class="custom-button" onclick="addCharacter('▽')">▽</button>
+<button class="custom-button" onclick="addCharacter('◀')">◀</button>
+<button class="custom-button" onclick="addCharacter('▶')">▶</button>
+<button class="custom-button" onclick="addCharacter('▲')">▲</button>
+<button class="custom-button" onclick="addCharacter('▼')">▼</button>
+<button class="custom-button" onclick="addCharacter('◖')">◖</button>
+<button class="custom-button" onclick="addCharacter('◗')">◗</button>
+<button class="custom-button" onclick="addCharacter('⧏')">⧏</button>
+<button class="custom-button" onclick="addCharacter('⧐')">⧐</button>
+<button class="custom-button" onclick="addCharacter('◸')">◸</button>
+<button class="custom-button" onclick="addCharacter('◹')">◹</button>
+<button class="custom-button" onclick="addCharacter('◺')">◺</button>
+<button class="custom-button" onclick="addCharacter('◿')">◿</button>
+<button class="custom-button" onclick="addCharacter('⧨')">⧨</button>
+<button class="custom-button" onclick="addCharacter('◭')">◭</button>
+<button class="custom-button" onclick="addCharacter('◮')">◮</button>
+<button class="custom-button" onclick="addCharacter('◬')">◬</button>
+<button class="custom-button" onclick="addCharacter('⏥')">⏥</button>
+<button class="custom-button" onclick="addCharacter('⚐')">⚐</button>
+<button class="custom-button" onclick="addCharacter('⚑')">⚑</button>
+<button class="custom-button" onclick="addCharacter('⚈')">⚈</button>
+<button class="custom-button" onclick="addCharacter('⚉')">⚉</button>
+<button class="custom-button" onclick="addCharacter('⚆')">⚆</button>
+<button class="custom-button" onclick="addCharacter('⚇')">⚇</button>
+<button class="custom-button" onclick="addCharacter('♼')">♼</button>
+<button class="custom-button" onclick="addCharacter('♽')">♽</button>
+<button class="custom-button" onclick="addCharacter('♾')">♾</button>
+<button class="custom-button" onclick="addCharacter('⧬')">⧬</button>
+<button class="custom-button" onclick="addCharacter('⧭')">⧭</button>
+<button class="custom-button" onclick="addCharacter('♲')">♲</button>
+<button class="custom-button" onclick="addCharacter('♻')">♻</button>
+<button class="custom-button" onclick="addCharacter('❢')">❢</button>
+<button class="custom-button" onclick="addCharacter('❣')">❣</button>
+<button class="custom-button" onclick="addCharacter('❦')">❦</button>
+<button class="custom-button" onclick="addCharacter('❧')">❧</button>
+<button class="custom-button" onclick="addCharacter('❥')">❥</button>
+<button class="custom-button" onclick="addCharacter('♡')">♡</button>
+<button class="custom-button" onclick="addCharacter('♢')">♢</button>
+<button class="custom-button" onclick="addCharacter('♤')">♤</button>
+<button class="custom-button" onclick="addCharacter('♧')">♧</button>
+<button class="custom-button" onclick="addCharacter('⚀')">⚀</button>
+<button class="custom-button" onclick="addCharacter('⚁')">⚁</button>
+<button class="custom-button" onclick="addCharacter('⚂')">⚂</button>
+<button class="custom-button" onclick="addCharacter('⚃')">⚃</button>
+<button class="custom-button" onclick="addCharacter('⚄')">⚄</button>
+<button class="custom-button" onclick="addCharacter('⚅')">⚅</button>
+<button class="custom-button" onclick="addCharacter('⧮')">⧮</button>
+<button class="custom-button" onclick="addCharacter('⧯')">⧯</button>
+<button class="custom-button" onclick="addCharacter('⧰')">⧰</button>
+<button class="custom-button" onclick="addCharacter('⧱')">⧱</button>
+<button class="custom-button" onclick="addCharacter('⧲')">⧲</button>
+<button class="custom-button" onclick="addCharacter('⧳')">⧳</button>
+<button class="custom-button" onclick="addCharacter('♔')">♔</button>
+<button class="custom-button" onclick="addCharacter('♕')">♕</button>
+<button class="custom-button" onclick="addCharacter('♖')">♖</button>
+<button class="custom-button" onclick="addCharacter('♗')">♗</button>
+<button class="custom-button" onclick="addCharacter('♘')">♘</button>
+<button class="custom-button" onclick="addCharacter('♙')">♙</button>
+<button class="custom-button" onclick="addCharacter('♚')">♚</button>
+<button class="custom-button" onclick="addCharacter('♛')">♛</button>
+<button class="custom-button" onclick="addCharacter('♜')">♜</button>
+<button class="custom-button" onclick="addCharacter('♝')">♝</button>
+<button class="custom-button" onclick="addCharacter('♞')">♞</button>
+<button class="custom-button" onclick="addCharacter('♟')">♟</button>
+<button class="custom-button" onclick="addCharacter('⚿')">⚿</button>
+<button class="custom-button" onclick="addCharacter('⛀')">⛀</button>
+<button class="custom-button" onclick="addCharacter('⛁')">⛁</button>
+<button class="custom-button" onclick="addCharacter('⛂')">⛂</button>
+<button class="custom-button" onclick="addCharacter('⛃')">⛃</button>
+<button class="custom-button" onclick="addCharacter('⛉')">⛉</button>
+<button class="custom-button" onclick="addCharacter('⛊')">⛊</button>
+<button class="custom-button" onclick="addCharacter('⛨')">⛨</button>
+<button class="custom-button" onclick="addCharacter('⛛')">⛛</button>
+<button class="custom-button" onclick="addCharacter('⛰')">⛰</button>
+<button class="custom-button" onclick="addCharacter('⛴')">⛴</button>
+<button class="custom-button" onclick="addCharacter('⛟')">⛟</button>
+<button class="custom-button" onclick="addCharacter('⛾')">⛾</button>
+<button class="custom-button" onclick="addCharacter('⛿')">⛿</button>
+<button class="custom-button" onclick="addCharacter('⛖')">⛖</button>
+<button class="custom-button" onclick="addCharacter('⛗')">⛗</button>
+<button class="custom-button" onclick="addCharacter('⛷')">⛷</button>
+<button class="custom-button" onclick="addCharacter('⛸')">⛸</button>
+<button class="custom-button" onclick="addCharacter('✆')">✆</button>
+<button class="custom-button" onclick="addCharacter('✇')">✇</button>
+<button class="custom-button" onclick="addCharacter('⛡')">⛡</button>
+<button class="custom-button" onclick="addCharacter('⛶')">⛶</button>
+<button class="custom-button" onclick="addCharacter('⛬')">⛬</button>
+<button class="custom-button" onclick="addCharacter('⛱')">⛱</button>
+<button class="custom-button" onclick="addCharacter('❡')">❡</button>
+<button class="custom-button" onclick="addCharacter('❝')">❝</button>
+<button class="custom-button" onclick="addCharacter('❞')">❞</button>
 
 
         </div>
@@ -2099,158 +2409,214 @@ section.page .note-box button {
         <h2>Number</h2>
         <div id="note4" class="note-box">
           <!-- Baris Karakter -->
-<button onclick="addToMemo('➀')">➀</button>
-<button onclick="addToMemo('➁')">➁</button>
-<button onclick="addToMemo('➂')">➂</button>
-<button onclick="addToMemo('➃')">➃</button>
-<button onclick="addToMemo('➄')">➄</button>
-<button onclick="addToMemo('➅')">➅</button>
-<button onclick="addToMemo('➆')">➆</button>
-<button onclick="addToMemo('➇')">➇</button>
-<button onclick="addToMemo('➈')">➈</button>
-<button onclick="addToMemo('➉')">➉</button>
-
-<!-- Baris Karakter -->
-<button onclick="addToMemo('➊')">➊</button>
-<button onclick="addToMemo('➋')">➋</button>
-<button onclick="addToMemo('➌')">➌</button>
-<button onclick="addToMemo('➍')">➍</button>
-<button onclick="addToMemo('➎')">➎</button>
-<button onclick="addToMemo('➏')">➏</button>
-<button onclick="addToMemo('➐')">➐</button>
-<button onclick="addToMemo('➑')">➑</button>
-<button onclick="addToMemo('➒')">➒</button>
-<button onclick="addToMemo('➓')">➓</button>
-
-<!-- Baris Karakter -->
-<button onclick="addToMemo('⓵')">⓵</button>
-<button onclick="addToMemo('⓶')">⓶</button>
-<button onclick="addToMemo('⓷')">⓷</button>
-<button onclick="addToMemo('⓸')">⓸</button>
-<button onclick="addToMemo('⓹')">⓹</button>
-<button onclick="addToMemo('⓺')">⓺</button>
-<button onclick="addToMemo('⓻')">⓻</button>
-<button onclick="addToMemo('⓼')">⓼</button>
-<button onclick="addToMemo('⓽')">⓽</button>
-<button onclick="addToMemo('⓾')">⓾</button>
-
-<!-- Baris Karakter -->
-<button onclick="addToMemo('㉈')">㉈</button>
-<button onclick="addToMemo('㉉')">㉉</button>
-<button onclick="addToMemo('㉊')">㉊</button>
-<button onclick="addToMemo('㉋')">㉋</button>
-<button onclick="addToMemo('㉌')">㉌</button>
-<button onclick="addToMemo('㉍')">㉍</button>
-<button onclick="addToMemo('㉎')">㉎</button>
-<button onclick="addToMemo('㉏')">㉏</button>
-<!-- Simbol Angka dalam Lingkaran -->
-<button onclick="addToMemo('⓫')">⓫</button>
-<button onclick="addToMemo('⓬')">⓬</button>
-<button onclick="addToMemo('⓭')">⓭</button>
-<button onclick="addToMemo('⓮')">⓮</button>
-<button onclick="addToMemo('⓯')">⓯</button>
-<button onclick="addToMemo('⓰')">⓰</button>
-<button onclick="addToMemo('⓱')">⓱</button>
-<button onclick="addToMemo('⓲')">⓲</button>
-<button onclick="addToMemo('⓳')">⓳</button>
-<button onclick="addToMemo('⓴')">⓴</button>
-
-<!-- Angka Bold dalam Unicode -->
-<button onclick="addToMemo('𝟷')">𝟷</button>
-<button onclick="addToMemo('𝟸')">𝟸</button>
-<button onclick="addToMemo('𝟹')">𝟹</button>
-<button onclick="addToMemo('𝟺')">𝟺</button>
-<button onclick="addToMemo('𝟻')">𝟻</button>
-<button onclick="addToMemo('𝟼')">𝟼</button>
-<button onclick="addToMemo('𝟽')">𝟽</button>
-<button onclick="addToMemo('𝟾')">𝟾</button>
-<button onclick="addToMemo('𝟿')">𝟿</button>
-<button onclick="addToMemo('𝟶')">𝟶</button>
-
-<!-- Angka Italic Unicode -->
-<button onclick="addToMemo('𝟎')">𝟎</button>
-<button onclick="addToMemo('𝟏')">𝟏</button>
-<button onclick="addToMemo('𝟐')">𝟐</button>
-<button onclick="addToMemo('𝟑')">𝟑</button>
-<button onclick="addToMemo('𝟒')">𝟒</button>
-<button onclick="addToMemo('𝟓')">𝟓</button>
-<button onclick="addToMemo('𝟔')">𝟔</button>
-<button onclick="addToMemo('𝟕')">𝟕</button>
-<button onclick="addToMemo('𝟖')">𝟖</button>
-<button onclick="addToMemo('𝟗')">𝟗</button>
-
-<!-- Angka tebal miring (bold italic) -->
-<button onclick="addToMemo('𝟬')">𝟬</button>
-<button onclick="addToMemo('𝟭')">𝟭</button>
-<button onclick="addToMemo('𝟮')">𝟮</button>
-<button onclick="addToMemo('𝟯')">𝟯</button>
-<button onclick="addToMemo('𝟰')">𝟰</button>
-<button onclick="addToMemo('𝟱')">𝟱</button>
-<button onclick="addToMemo('𝟲')">𝟲</button>
-<button onclick="addToMemo('𝟳')">𝟳</button>
-<button onclick="addToMemo('𝟴')">𝟴</button>
-<button onclick="addToMemo('𝟵')">𝟵</button>
-
-<!-- Angka gaya script -->
-<button onclick="addToMemo('𝟘')">𝟘</button>
-<button onclick="addToMemo('𝟙')">𝟙</button>
-<button onclick="addToMemo('𝟚')">𝟚</button>
-<button onclick="addToMemo('𝟛')">𝟛</button>
-<button onclick="addToMemo('𝟜')">𝟜</button>
-<button onclick="addToMemo('𝟝')">𝟝</button>
-<button onclick="addToMemo('𝟞')">𝟞</button>
-<button onclick="addToMemo('𝟟')">𝟟</button>
-<button onclick="addToMemo('𝟠')">𝟠</button>
-<button onclick="addToMemo('𝟡')">𝟡</button>
-
-<!-- Simbol daur ulang dan simbol numerik -->
-<button onclick="addToMemo('♸')">♸</button>
-<button onclick="addToMemo('♴')">♴</button>
-<button onclick="addToMemo('♵')">♵</button>
-<button onclick="addToMemo('♶')">♶</button>
-<button onclick="addToMemo('♷')">♷</button>
-<button onclick="addToMemo('♸')">♸</button>
-<button onclick="addToMemo('♹')">♹</button>
-<button onclick="addToMemo('♺')">♺</button>
-<button onclick="addToMemo('♺')">♺</button>
-
-<!-- Angka dalam format subscript -->
-<button onclick="addToMemo('₀')">₀</button>
-<button onclick="addToMemo('₁')">₁</button>
-<button onclick="addToMemo('₂')">₂</button>
-<button onclick="addToMemo('₃')">₃</button>
-<button onclick="addToMemo('₄')">₄</button>
-<button onclick="addToMemo('₅')">₅</button>
-<button onclick="addToMemo('₆')">₆</button>
-<button onclick="addToMemo('₇')">₇</button>
-<button onclick="addToMemo('₈')">₈</button>
-<button onclick="addToMemo('₉')">₉</button>
-
-<!-- Angka dalam format superscript -->
-<button onclick="addToMemo('⁰')">⁰</button>
-<button onclick="addToMemo('¹')">¹</button>
-<button onclick="addToMemo('²')">²</button>
-<button onclick="addToMemo('³')">³</button>
-<button onclick="addToMemo('⁴')">⁴</button>
-<button onclick="addToMemo('⁵')">⁵</button>
-<button onclick="addToMemo('⁶')">⁶</button>
-<button onclick="addToMemo('⁷')">⁷</button>
-<button onclick="addToMemo('⁸')">⁸</button>
-<button onclick="addToMemo('⁹')">⁹</button>
+<button class="custom-button" onclick="addCharacter('➀')">➀</button>
+<button class="custom-button" onclick="addCharacter('➁')">➁</button>
+<button class="custom-button" onclick="addCharacter('➂')">➂</button>
+<button class="custom-button" onclick="addCharacter('➃')">➃</button>
+<button class="custom-button" onclick="addCharacter('➄')">➄</button>
+<button class="custom-button" onclick="addCharacter('➅')">➅</button>
+<button class="custom-button" onclick="addCharacter('➆')">➆</button>
+<button class="custom-button" onclick="addCharacter('➇')">➇</button>
+<button class="custom-button" onclick="addCharacter('➈')">➈</button>
+<button class="custom-button" onclick="addCharacter('➉')">➉</button>
+<button class="custom-button" onclick="addCharacter('➊')">➊</button>
+<button class="custom-button" onclick="addCharacter('➋')">➋</button>
+<button class="custom-button" onclick="addCharacter('➌')">➌</button>
+<button class="custom-button" onclick="addCharacter('➍')">➍</button>
+<button class="custom-button" onclick="addCharacter('➎')">➎</button>
+<button class="custom-button" onclick="addCharacter('➏')">➏</button>
+<button class="custom-button" onclick="addCharacter('➐')">➐</button>
+<button class="custom-button" onclick="addCharacter('➑')">➑</button>
+<button class="custom-button" onclick="addCharacter('➒')">➒</button>
+<button class="custom-button" onclick="addCharacter('➓')">➓</button>
+<button class="custom-button" onclick="addCharacter('⓵')">⓵</button>
+<button class="custom-button" onclick="addCharacter('⓶')">⓶</button>
+<button class="custom-button" onclick="addCharacter('⓷')">⓷</button>
+<button class="custom-button" onclick="addCharacter('⓸')">⓸</button>
+<button class="custom-button" onclick="addCharacter('⓹')">⓹</button>
+<button class="custom-button" onclick="addCharacter('⓺')">⓺</button>
+<button class="custom-button" onclick="addCharacter('⓻')">⓻</button>
+<button class="custom-button" onclick="addCharacter('⓼')">⓼</button>
+<button class="custom-button" onclick="addCharacter('⓽')">⓽</button>
+<button class="custom-button" onclick="addCharacter('⓾')">⓾</button>
+<button class="custom-button" onclick="addCharacter('㉈')">㉈</button>
+<button class="custom-button" onclick="addCharacter('㉉')">㉉</button>
+<button class="custom-button" onclick="addCharacter('㉊')">㉊</button>
+<button class="custom-button" onclick="addCharacter('㉋')">㉋</button>
+<button class="custom-button" onclick="addCharacter('㉌')">㉌</button>
+<button class="custom-button" onclick="addCharacter('㉍')">㉍</button>
+<button class="custom-button" onclick="addCharacter('㉎')">㉎</button>
+<button class="custom-button" onclick="addCharacter('㉏')">㉏</button>
+<button class="custom-button" onclick="addCharacter('⓫')">⓫</button>
+<button class="custom-button" onclick="addCharacter('⓬')">⓬</button>
+<button class="custom-button" onclick="addCharacter('⓭')">⓭</button>
+<button class="custom-button" onclick="addCharacter('⓮')">⓮</button>
+<button class="custom-button" onclick="addCharacter('⓯')">⓯</button>
+<button class="custom-button" onclick="addCharacter('⓰')">⓰</button>
+<button class="custom-button" onclick="addCharacter('⓱')">⓱</button>
+<button class="custom-button" onclick="addCharacter('⓲')">⓲</button>
+<button class="custom-button" onclick="addCharacter('⓳')">⓳</button>
+<button class="custom-button" onclick="addCharacter('⓴')">⓴</button>
+<button class="custom-button" onclick="addCharacter('𝟷')">𝟷</button>
+<button class="custom-button" onclick="addCharacter('𝟸')">𝟸</button>
+<button class="custom-button" onclick="addCharacter('𝟹')">𝟹</button>
+<button class="custom-button" onclick="addCharacter('𝟺')">𝟺</button>
+<button class="custom-button" onclick="addCharacter('𝟻')">𝟻</button>
+<button class="custom-button" onclick="addCharacter('𝟼')">𝟼</button>
+<button class="custom-button" onclick="addCharacter('𝟽')">𝟽</button>
+<button class="custom-button" onclick="addCharacter('𝟾')">𝟾</button>
+<button class="custom-button" onclick="addCharacter('𝟿')">𝟿</button>
+<button class="custom-button" onclick="addCharacter('𝟶')">𝟶</button>
+<button class="custom-button" onclick="addCharacter('𝟎')">𝟎</button>
+<button class="custom-button" onclick="addCharacter('𝟏')">𝟏</button>
+<button class="custom-button" onclick="addCharacter('𝟐')">𝟐</button>
+<button class="custom-button" onclick="addCharacter('𝟑')">𝟑</button>
+<button class="custom-button" onclick="addCharacter('𝟒')">𝟒</button>
+<button class="custom-button" onclick="addCharacter('𝟓')">𝟓</button>
+<button class="custom-button" onclick="addCharacter('𝟖')">𝟖</button>
+<button class="custom-button" onclick="addCharacter('𝟗')">𝟗</button>
+<button class="custom-button" onclick="addCharacter('𝟬')">𝟬</button>
+<button class="custom-button" onclick="addCharacter('𝟭')">𝟭</button>
+<button class="custom-button" onclick="addCharacter('𝟮')">𝟮</button>
+<button class="custom-button" onclick="addCharacter('𝟯')">𝟯</button>
+<button class="custom-button" onclick="addCharacter('𝟰')">𝟰</button>
+<button class="custom-button" onclick="addCharacter('𝟱')">𝟱</button>
+<button class="custom-button" onclick="addCharacter('𝟲')">𝟲</button>
+<button class="custom-button" onclick="addCharacter('𝟴')">𝟴</button>
+<button class="custom-button" onclick="addCharacter('𝟵')">𝟵</button>
+<button class="custom-button" onclick="addCharacter('𝟮')">𝟮</button>
 
 
-<button class="custom-button" onclick="addCharacter('０')">０</button>
-<button class="custom-button" onclick="addCharacter('１')">１</button>
-<button class="custom-button" onclick="addCharacter('２')">２</button>
-<button class="custom-button" onclick="addCharacter('３')">３</button>
-<button class="custom-button" onclick="addCharacter('４')">４</button>
-<button class="custom-button" onclick="addCharacter('５')">５</button>
-<button class="custom-button" onclick="addCharacter('６')">６</button>
-<button class="custom-button" onclick="addCharacter('７')">７</button>
-<button class="custom-button" onclick="addCharacter('８')">８</button>
-<button class="custom-button" onclick="addCharacter('９')">９</button>
+<button class="custom-button" onclick="addCharacter('𝟘')">𝟘</button>
+<button class="custom-button" onclick="addCharacter('𝟙')">𝟙</button>
+<button class="custom-button" onclick="addCharacter('𝟚')">𝟚</button>
+<button class="custom-button" onclick="addCharacter('𝟛')">𝟛</button>
+<button class="custom-button" onclick="addCharacter('𝟜')">𝟜</button>
+<button class="custom-button" onclick="addCharacter('𝟝')">𝟝</button>
+<button class="custom-button" onclick="addCharacter('𝟞')">𝟞</button>
+<button class="custom-button" onclick="addCharacter('𝟟')">𝟟</button>
+<button class="custom-button" onclick="addCharacter('𝟠')">𝟠</button>
+<button class="custom-button" onclick="addCharacter('𝟡')">𝟡</button>
 
-          
+<button class="custom-button" onclick="addCharacter('♸')">♸</button>
+<button class="custom-button" onclick="addCharacter('♴')">♴</button>
+<button class="custom-button" onclick="addCharacter('♵')">♵</button>
+<button class="custom-button" onclick="addCharacter('♶')">♶</button>
+<button class="custom-button" onclick="addCharacter('♷')">♷</button>
+<button class="custom-button" onclick="addCharacter('♸')">♸</button>
+<button class="custom-button" onclick="addCharacter('♹')">♹</button>
+<button class="custom-button" onclick="addCharacter('♺')">♺</button>
+<button class="custom-button" onclick="addCharacter('♺')">♺</button>
+
+<button class="custom-button" onclick="addCharacter('₀')">₀</button>
+<button class="custom-button" onclick="addCharacter('₁')">₁</button>
+<button class="custom-button" onclick="addCharacter('₂')">₂</button>
+<button class="custom-button" onclick="addCharacter('₃')">₃</button>
+<button class="custom-button" onclick="addCharacter('₄')">₄</button>
+<button class="custom-button" onclick="addCharacter('₅')">₅</button>
+<button class="custom-button" onclick="addCharacter('₆')">₆</button>
+<button class="custom-button" onclick="addCharacter('₇')">₇</button>
+<button class="custom-button" onclick="addCharacter('₈')">₈</button>
+<button class="custom-button" onclick="addCharacter('₉')">₉</button>
+
+<button class="custom-button" onclick="addCharacter('⁰')">⁰</button>
+<button class="custom-button" onclick="addCharacter('¹')">¹</button>
+<button class="custom-button" onclick="addCharacter('²')">²</button>
+<button class="custom-button" onclick="addCharacter('³')">³</button>
+<button class="custom-button" onclick="addCharacter('⁴')">⁴</button>
+<button class="custom-button" onclick="addCharacter('⁵')">⁵</button>
+<button class="custom-button" onclick="addCharacter('⁶')">⁶</button>
+<button class="custom-button" onclick="addCharacter('⁷')">⁷</button>
+<button class="custom-button" onclick="addCharacter('⁸')">⁸</button>
+<button class="custom-button" onclick="addCharacter('⁹')">⁹</button>
+
+<button class="custom-button" onclick="addCharacter('⑪')">⑪</button>
+<button class="custom-button" onclick="addCharacter('⑫')">⑫</button>
+<button class="custom-button" onclick="addCharacter('⑬')">⑬</button>
+<button class="custom-button" onclick="addCharacter('⑭')">⑭</button>
+<button class="custom-button" onclick="addCharacter('⑮')">⑮</button>
+<button class="custom-button" onclick="addCharacter('⑯')">⑯</button>
+<button class="custom-button" onclick="addCharacter('⑰')">⑰</button>
+<button class="custom-button" onclick="addCharacter('⑱')">⑱</button>
+<button class="custom-button" onclick="addCharacter('⑲')">⑲</button>
+<button class="custom-button" onclick="addCharacter('⑳')">⑳</button>
+<button class="custom-button" onclick="addCharacter('㉑')">㉑</button>
+<button class="custom-button" onclick="addCharacter('㉒')">㉒</button>
+<button class="custom-button" onclick="addCharacter('㉓')">㉓</button>
+<button class="custom-button" onclick="addCharacter('㉔')">㉔</button>
+<button class="custom-button" onclick="addCharacter('㉕')">㉕</button>
+<button class="custom-button" onclick="addCharacter('㉖')">㉖</button>
+<button class="custom-button" onclick="addCharacter('㉗')">㉗</button>
+<button class="custom-button" onclick="addCharacter('㉘')">㉘</button>
+<button class="custom-button" onclick="addCharacter('㉙')">㉙</button>
+<button class="custom-button" onclick="addCharacter('㉚')">㉚</button>
+<button class="custom-button" onclick="addCharacter('㉛')">㉛</button>
+<button class="custom-button" onclick="addCharacter('㉜')">㉜</button>
+<button class="custom-button" onclick="addCharacter('㉝')">㉝</button>
+<button class="custom-button" onclick="addCharacter('㉞')">㉞</button>
+<button class="custom-button" onclick="addCharacter('㉟')">㉟</button>
+<button class="custom-button" onclick="addCharacter('㊱')">㊱</button>
+<button class="custom-button" onclick="addCharacter('㊲')">㊲</button>
+<button class="custom-button" onclick="addCharacter('㊳')">㊳</button>
+<button class="custom-button" onclick="addCharacter('㊴')">㊴</button>
+<button class="custom-button" onclick="addCharacter('㊵')">㊵</button>
+<button class="custom-button" onclick="addCharacter('㊶')">㊶</button>
+<button class="custom-button" onclick="addCharacter('㊷')">㊷</button>
+<button class="custom-button" onclick="addCharacter('㊸')">㊸</button>
+<button class="custom-button" onclick="addCharacter('㊹')">㊹</button>
+<button class="custom-button" onclick="addCharacter('㊺')">㊺</button>
+<button class="custom-button" onclick="addCharacter('㊻')">㊻</button>
+<button class="custom-button" onclick="addCharacter('㊼')">㊼</button>
+<button class="custom-button" onclick="addCharacter('㊽')">㊽</button>
+
+<button class="custom-button" onclick="addCharacter('ↀ')">ↀ</button>
+<button class="custom-button" onclick="addCharacter('ↁ')">ↁ</button>
+<button class="custom-button" onclick="addCharacter('ↂ')">ↂ</button>
+<button class="custom-button" onclick="addCharacter('ↇ')">ↇ</button>
+<button class="custom-button" onclick="addCharacter('ↈ')">ↈ</button>
+<button class="custom-button" onclick="addCharacter('㋛')">㋛</button>
+<button class="custom-button" onclick="addCharacter('㋡')">㋡</button>
+
+<button class="custom-button" onclick="addCharacter('㊚')">㊚</button>
+<button class="custom-button" onclick="addCharacter('㊛')">㊛</button>
+<button class="custom-button" onclick="addCharacter('㊜')">㊜</button>
+<button class="custom-button" onclick="addCharacter('㊝')">㊝</button>
+<button class="custom-button" onclick="addCharacter('㊞')">㊞</button>
+<button class="custom-button" onclick="addCharacter('㊣')">㊣</button>
+<button class="custom-button" onclick="addCharacter('㊢')">㊢</button>
+<button class="custom-button" onclick="addCharacter('㊡')">㊡</button>
+<button class="custom-button" onclick="addCharacter('㊠')">㊠</button>
+<button class="custom-button" onclick="addCharacter('㊟')">㊟</button>
+<button class="custom-button" onclick="addCharacter('㊤')">㊤</button>
+<button class="custom-button" onclick="addCharacter('㊥')">㊥</button>
+<button class="custom-button" onclick="addCharacter('㊦')">㊦</button>
+<button class="custom-button" onclick="addCharacter('㊧')">㊧</button>
+<button class="custom-button" onclick="addCharacter('㊨')">㊨</button>
+<button class="custom-button" onclick="addCharacter('㊭')">㊭</button>
+<button class="custom-button" onclick="addCharacter('㊬')">㊬</button>
+<button class="custom-button" onclick="addCharacter('㊫')">㊫</button>
+<button class="custom-button" onclick="addCharacter('㊪')">㊪</button>
+<button class="custom-button" onclick="addCharacter('㊩')">㊩</button>
+<button class="custom-button" onclick="addCharacter('㊮')">㊮</button>
+<button class="custom-button" onclick="addCharacter('㊯')">㊯</button>
+<button class="custom-button" onclick="addCharacter('㊰')">㊰</button>
+<button class="custom-button" onclick="addCharacter('㊊')">㊊</button>
+<button class="custom-button" onclick="addCharacter('㊋')">㊋</button>
+<button class="custom-button" onclick="addCharacter('㊐')">㊐</button>
+<button class="custom-button" onclick="addCharacter('㊏')">㊏</button>
+<button class="custom-button" onclick="addCharacter('㊎')">㊎</button>
+<button class="custom-button" onclick="addCharacter('㊍')">㊍</button>
+<button class="custom-button" onclick="addCharacter('㊌')">㊌</button>
+<button class="custom-button" onclick="addCharacter('㊑')">㊑</button>
+<button class="custom-button" onclick="addCharacter('㊒')">㊒</button>
+<button class="custom-button" onclick="addCharacter('㊓')">㊓</button>
+<button class="custom-button" onclick="addCharacter('㊔')">㊔</button>
+<button class="custom-button" onclick="addCharacter('㊕')">㊕</button>
+<button class="custom-button" onclick="addCharacter('㊙')">㊙</button>
+<button class="custom-button" onclick="addCharacter('㊘')">㊘</button>
+<button class="custom-button" onclick="addCharacter('㊗')">㊗</button>
+<button class="custom-button" onclick="addCharacter('㊖')">㊖</button>
+
           
         </div>
     </section>
@@ -2428,7 +2794,8 @@ Bɑɖbꔮyʂ㉗-ꛃᵉᵇ〽ꛕ᜵ʂiteく᜵ꛨ9<br>
 
 
 </script>
-    
+    <h2>aplikasi masih dalam pengembangan</h2>
+    <hr>
   </body>
 </html>
 
