@@ -14,7 +14,6 @@
 
         }
 
-
    /* Gaya untuk profile-name */
         .profile-name {
             font-size: 15px;
@@ -325,9 +324,8 @@
 .page .note-box {
   max-height: 128px; /* Tinggi maksimal untuk konten yang akan di-scroll */
   border: 1px solid gray;
-  overflow-y: auto; /* Tambahkan scrollbar vertikal jika konten terlalu banyak */
-  padding: 0; /* Pastikan padding tidak mengganggu layout */
-}
+  overflow-y: auto; 
+        }
 
 section.page h2 {
   color: black !important;
@@ -336,70 +334,44 @@ section.page h2 {
 }
 
 section.page .note-box button {
-  padding: 1px 1px !important;
+  padding: 0px 0px !important;
   font-size: 18px !important;
   color: black !important;
   background-color: white;
   border: 0px;
   border-radius: 100px !important;
-  margin-left: 1px !important;
+  margin-left: 12px !important;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* Bayangan tombol */
+  line-height: normal; /* Menjaga jarak antar baris tetap */
   transition: box-shadow 0.3s ease, transform 0.2s ease; /* Menambahkan transisi halus pada bayangan dan transformasi */
-  position: relative; /* Menambahkan posisi relative agar bayangan konsisten */
-  z-index: 1; /* Pastikan tombol tetap di atas elemen lain */
-}
+        }
+
+      section.page .note-box button:active {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Bayangan lebih kecil saat diklik */
+      transform: translateY(2px); /* Menambahkan efek tombol sedikit tertekan */
+          }
+
 
 /* Tombol dengan Flexbox untuk sejajarkan teks dan border */
 #page2 .note-box .custom-button {
   display: inline-flex; /* Menggunakan Flexbox */
+    font-size: 18px !important;
+    color: black !important;
+    margin-left: 12px !important;
   align-items: center; /* Vertikal sejajar */
   justify-content: center; /* Horizontal sejajar */
-  padding: 0.5rem 5rem;
-  font-size: 1.325rem;
-  color: black;
   background-color: white;
-  border: 0px solid black; /* Border tombol */
-  border-radius: 20px;
-  margin-left: 2.375rem;
+  border-radius: 50px;
   box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, transform 0.2s ease;
   position: relative;
-  z-index: 1;
   height: auto; /* Pastikan ketinggian tombol sesuai konten */
   line-height: normal; /* Menjaga jarak antar baris tetap */
 }
 
-/* Efek hover dan active untuk tombol */
-#page2 .note-box .custom-button:hover {
-  background-color: red;
-  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.2);
-}
-
-#page2 .note-box .custom-button:active {
-  box-shadow: 0 0.15rem 0.25rem rgba(0, 0, 0, 0.3);
-  transform: translateY(2px);
-}
-
-/* Fokus tombol */
-#page2 .note-box .custom-button:focus {
-  outline: none;
-}
-
-
-
-
 section.page .note-box button:hover {
   background-color: red !important;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bayangan lebih kuat saat hover */
-}
-
-section.page .note-box button:active {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Bayangan lebih kecil saat diklik */
-  transform: translateY(2px); /* Menambahkan efek tombol sedikit tertekan */
-}
-
-.page .note-box button:focus {
-  outline: none; /* Menghapus outline agar bayangan tetap terlihat */
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.2); /* Bayangan lebih kuat saat hover */
 }
 
 
@@ -1579,312 +1551,100 @@ section.page .note-box button:active {
         <h2>Emoji</h2>
         <div id="note1" class="note-box">
           
-<button onclick="addToMemo('♈')">♈</button>
-<button onclick="addToMemo('♉')">♉</button>
-<button onclick="addToMemo('♊')">♊</button>
-<button onclick="addToMemo('♋')">♋</button>
-<button onclick="addToMemo('♌')">♌</button>
-<button onclick="addToMemo('♑')">♑</button>
-<button onclick="addToMemo('♐')">♐</button>
-<button onclick="addToMemo('♏')">♏</button>
-<button onclick="addToMemo('♎')">♎</button>
-<button onclick="addToMemo('♍')">♍</button>
-<button onclick="addToMemo('♓')">♓</button>
-<button onclick="addToMemo('♒')">♒</button>
+    <!-- Semua emoji di dalam tombol -->
+    <button class="custom-button" onclick="addCharacter('😀')">😀</button>
+    <button class="custom-button" onclick="addCharacter('😃')">😃</button>
+    <button class="custom-button" onclick="addCharacter('😄')">😄</button>
+    <button class="custom-button" onclick="addCharacter('😁')">😁</button>
+    <button class="custom-button" onclick="addCharacter('😆')">😆</button>
+    <button class="custom-button" onclick="addCharacter('😅')">😅</button>
+    <button class="custom-button" onclick="addCharacter('🤣')">🤣</button>
+    <button class="custom-button" onclick="addCharacter('😂')">😂</button>
+    <button class="custom-button" onclick="addCharacter('🙂')">🙂</button>
+    <button class="custom-button" onclick="addCharacter('🙃')">🙃</button>
+    <button class="custom-button" onclick="addCharacter('😉')">😉</button>
+    <button class="custom-button" onclick="addCharacter('😊')">😊</button>
+    <button class="custom-button" onclick="addCharacter('😇')">😇</button>
+    <button class="custom-button" onclick="addCharacter('🥰')">🥰</button>
+    <button class="custom-button" onclick="addCharacter('😍')">😍</button>
+    <button class="custom-button" onclick="addCharacter('🤩')">🤩</button>
+    <button class="custom-button" onclick="addCharacter('😘')">😘</button>
+    <button class="custom-button" onclick="addCharacter('😗')">😗</button>
+    <button class="custom-button" onclick="addCharacter('☺️')">☺️</button>
+    <button class="custom-button" onclick="addCharacter('😚')">😚</button>
+    <button class="custom-button" onclick="addCharacter('😙')">😙</button>
+    <button class="custom-button" onclick="addCharacter('😋')">😋</button>
+    <button class="custom-button" onclick="addCharacter('😛')">😛</button>
+    <button class="custom-button" onclick="addCharacter('😜')">😜</button>
+    <button class="custom-button" onclick="addCharacter('🤪')">🤪</button>
+    <button class="custom-button" onclick="addCharacter('😝')">😝</button>
+    <button class="custom-button" onclick="addCharacter('🤑')">🤑</button>
+    <button class="custom-button" onclick="addCharacter('🤗')">🤗</button>
+    <button class="custom-button" onclick="addCharacter('🤭')">🤭</button>
+    <button class="custom-button" onclick="addCharacter('🤫')">🤫</button>
+    <button class="custom-button" onclick="addCharacter('🤔')">🤔</button>
+    <button class="custom-button" onclick="addCharacter('🤐')">🤐</button>
+    <button class="custom-button" onclick="addCharacter('🤨')">🤨</button>
+    <button class="custom-button" onclick="addCharacter('😐')">😐</button>
+    <button class="custom-button" onclick="addCharacter('😑')">😑</button>
+    <button class="custom-button" onclick="addCharacter('😶')">😶</button>
+    <button class="custom-button" onclick="addCharacter('😏')">😏</button>
+    <button class="custom-button" onclick="addCharacter('😒')">😒</button>
+    <button class="custom-button" onclick="addCharacter('🙄')">🙄</button>
+    <button class="custom-button" onclick="addCharacter('😬')">😬</button>
+    <button class="custom-button" onclick="addCharacter('🤥')">🤥</button>
+    <button class="custom-button" onclick="addCharacter('😌')">😌</button>
+    <button class="custom-button" onclick="addCharacter('😔')">😔</button>
+    <button class="custom-button" onclick="addCharacter('😪')">😪</button>
+    <button class="custom-button" onclick="addCharacter('🤤')">🤤</button>
+    <button class="custom-button" onclick="addCharacter('😴')">😴</button>
+    <button class="custom-button" onclick="addCharacter('😷')">😷</button>
+    <button class="custom-button" onclick="addCharacter('🤒')">🤒</button>
+    <button class="custom-button" onclick="addCharacter('🤕')">🤕</button>
+    <button class="custom-button" onclick="addCharacter('🤢')">🤢</button>
+    <button class="custom-button" onclick="addCharacter('🤮')">🤮</button>
+    <button class="custom-button" onclick="addCharacter('🤧')">🤧</button>
+    <button class="custom-button" onclick="addCharacter('🥵')">🥵</button>
+    <button class="custom-button" onclick="addCharacter('🥶')">🥶</button>
+    <button class="custom-button" onclick="addCharacter('🥴')">🥴</button>
+    <button class="custom-button" onclick="addCharacter('😵')">😵</button>
+    <button class="custom-button" onclick="addCharacter('🤯')">🤯</button>
+    <button class="custom-button" onclick="addCharacter('🤠')">🤠</button>
+    <button class="custom-button" onclick="addCharacter('🥳')">🥳</button>
+    <button class="custom-button" onclick="addCharacter('😎')">😎</button>
+    <button class="custom-button" onclick="addCharacter('🤓')">🤓</button>
+    <button class="custom-button" onclick="addCharacter('🧐')">🧐</button>
+    <button class="custom-button" onclick="addCharacter('😕')">😕</button>
+    <button class="custom-button" onclick="addCharacter('😟')">😟</button>
+    <button class="custom-button" onclick="addCharacter('🙁')">🙁</button>
+    <button class="custom-button" onclick="addCharacter('☹️')">☹️</button>
+    <button class="custom-button" onclick="addCharacter('😮')">😮</button>
+    <button class="custom-button" onclick="addCharacter('😯')">😯</button>
+    <button class="custom-button" onclick="addCharacter('😲')">😲</button>
+    <button class="custom-button" onclick="addCharacter('😳')">😳</button>
+    <button class="custom-button" onclick="addCharacter('🥺')">🥺</button>
+    <button class="custom-button" onclick="addCharacter('😦')">😦</button>
+    <button class="custom-button" onclick="addCharacter('😧')">😧</button>
+    <button class="custom-button" onclick="addCharacter('😨')">😨</button>
+    <button class="custom-button" onclick="addCharacter('😰')">😰</button>
+    <button class="custom-button" onclick="addCharacter('😥')">😥</button>
+    <button class="custom-button" onclick="addCharacter('😢')">😢</button>
+    <button class="custom-button" onclick="addCharacter('😭')">😭</button>
+    <button class="custom-button" onclick="addCharacter('😱')">😱</button>
+    <button class="custom-button" onclick="addCharacter('😖')">😖</button>
+    <button class="custom-button" onclick="addCharacter('😣')">😣</button>
+    <button class="custom-button" onclick="addCharacter('😞')">😞</button>
+    <button class="custom-button" onclick="addCharacter('😓')">😓</button>
+    <button class="custom-button" onclick="addCharacter('😩')">😩</button>
+    <button class="custom-button" onclick="addCharacter('😫')">😫</button>
+    <button class="custom-button" onclick="addCharacter('🥱')">🥱</button>
+    <button class="custom-button" onclick="addCharacter('😤')">😤</button>
+    <button class="custom-button" onclick="addCharacter('😡')">😡</button>
+    <button class="custom-button" onclick="addCharacter('😠')">😠</button>
+    <button class="custom-button" onclick="addCharacter('🤬')">🤬</button>
+  </div>
+</section>
 
-<button onclick="addToMemo('😀')">😀</button>
-<button onclick="addToMemo('😃')">😃</button>
-<button onclick="addToMemo('😄')">😄</button>
-<button onclick="addToMemo('😁')">😁</button>
-<button onclick="addToMemo('😆')">😆</button>
-<button onclick="addToMemo('😅')">😅</button>
-<button onclick="addToMemo('🤣')">🤣</button>
-<button onclick="addToMemo('😂')">😂</button>
-<button onclick="addToMemo('🙂')">🙂</button>
-<button onclick="addToMemo('🙃')">🙃</button>
-<button onclick="addToMemo('😉')">😉</button>
-<button onclick="addToMemo('😊')">😊</button>
-<button onclick="addToMemo('😇')">😇</button>
-<button onclick="addToMemo('🥰')">🥰</button>
-<button onclick="addToMemo('😍')">😍</button>
-<button onclick="addToMemo('🤩')">🤩</button>
-<button onclick="addToMemo('😘')">😘</button>
-<button onclick="addToMemo('😗')">😗</button>
-<button onclick="addToMemo('☺️')">☺️</button>
-<button onclick="addToMemo('😚')">😚</button>
-<button onclick="addToMemo('😙')">😙</button>
-<button onclick="addToMemo('😋')">😋</button>
-<button onclick="addToMemo('😛')">😛</button>
-<button onclick="addToMemo('😜')">😜</button>
-<button onclick="addToMemo('🤪')">🤪</button>
-<button onclick="addToMemo('😝')">😝</button>
-<button onclick="addToMemo('🤑')">🤑</button>
-<button onclick="addToMemo('🤗')">🤗</button>
-<button onclick="addToMemo('🤭')">🤭</button>
-<button onclick="addToMemo('🤫')">🤫</button>
-<button onclick="addToMemo('🤔')">🤔</button>
-<button onclick="addToMemo('🤐')">🤐</button>
-<button onclick="addToMemo('🤨')">🤨</button>
-<button onclick="addToMemo('😐')">😐</button>
-<button onclick="addToMemo('😑')">😑</button>
-<button onclick="addToMemo('😶')">😶</button>
-<button onclick="addToMemo('😏')">😏</button>
-<button onclick="addToMemo('😒')">😒</button>
-<button onclick="addToMemo('🙄')">🙄</button>
-<button onclick="addToMemo('😬')">😬</button>
-<button onclick="addToMemo('🤥')">🤥</button>
-<button onclick="addToMemo('😌')">😌</button>
-<button onclick="addToMemo('😔')">😔</button>
-<button onclick="addToMemo('😪')">😪</button>
-<button onclick="addToMemo('🤤')">🤤</button>
-<button onclick="addToMemo('😴')">😴</button>
-<button onclick="addToMemo('😷')">😷</button>
-<button onclick="addToMemo('🤒')">🤒</button>
-<button onclick="addToMemo('🤕')">🤕</button>
-<button onclick="addToMemo('🤢')">🤢</button>
-<button onclick="addToMemo('🤮')">🤮</button>
-<button onclick="addToMemo('🤧')">🤧</button>
-<button onclick="addToMemo('🥵')">🥵</button>
-<button onclick="addToMemo('🥶')">🥶</button>
-<button onclick="addToMemo('🥴')">🥴</button>
-<button onclick="addToMemo('😵')">😵</button>
-<button onclick="addToMemo('🤯')">🤯</button>
-<button onclick="addToMemo('🤠')">🤠</button>
-<button onclick="addToMemo('🥳')">🥳</button>
-<button onclick="addToMemo('😎')">😎</button>
-<button onclick="addToMemo('🤓')">🤓</button>
-<button onclick="addToMemo('🧐')">🧐</button>
-<button onclick="addToMemo('😕')">😕</button>
-<button onclick="addToMemo('😟')">😟</button>
-<button onclick="addToMemo('🙁')">🙁</button>
-<button onclick="addToMemo('☹️')">☹️</button>
-<button onclick="addToMemo('😮')">😮</button>
-<button onclick="addToMemo('😯')">😯</button>
-<button onclick="addToMemo('😲')">😲</button>
-<button onclick="addToMemo('😳')">😳</button>
-<button onclick="addToMemo('🥺')">🥺</button>
-<button onclick="addToMemo('😦')">😦</button>
-<button onclick="addToMemo('😧')">😧</button>
-<button onclick="addToMemo('😨')">😨</button>
-<button onclick="addToMemo('😰')">😰</button>
-<button onclick="addToMemo('😥')">😥</button>
-<button onclick="addToMemo('😢')">😢</button>
-<button onclick="addToMemo('😭')">😭</button>
-<button onclick="addToMemo('😱')">😱</button>
-<button onclick="addToMemo('😖')">😖</button>
-<button onclick="addToMemo('😣')">😣</button>
-<button onclick="addToMemo('😞')">😞</button>
-<button onclick="addToMemo('😓')">😓</button>
-<button onclick="addToMemo('😩')">😩</button>
-<button onclick="addToMemo('😫')">😫</button>
-<button onclick="addToMemo('🥱')">🥱</button>
-<button onclick="addToMemo('😤')">😤</button>
-<button onclick="addToMemo('😡')">😡</button>
-<button onclick="addToMemo('😠')">😠</button>
-<button onclick="addToMemo('🤬')">🤬</button>
-<button onclick="addToMemo('🦸')">🦸</button>
-<button onclick="addToMemo('🦸‍♂️')">🦸‍♂️</button>
-<button onclick="addToMemo('🦸‍♀️')">🦸‍♀️</button>
-<button onclick="addToMemo('🦹')">🦹</button>
-<button onclick="addToMemo('🦹‍♂️')">🦹‍♂️</button>
-<button onclick="addToMemo('🦹‍♀️')">🦹‍♀️</button>
-<button onclick="addToMemo('🧚‍♂️')">🧚‍♂️</button>
-<button onclick="addToMemo('🧚‍♀️')">🧚‍♀️</button>
-<button onclick="addToMemo('🧛‍♂️')">🧛‍♂️</button>
-<button onclick="addToMemo('🧛‍♀️')">🧛‍♀️</button>
-<button onclick="addToMemo('🧞‍♀️')">🧞‍♀️</button>
-<button onclick="addToMemo('🧞‍♂️')">🧞‍♂️</button>
-<button onclick="addToMemo('🧟‍♂️')">🧟‍♂️</button>
-<button onclick="addToMemo('🧟‍♀️')">🧟‍♀️</button>
-<button onclick="addToMemo('🧜‍♀️')">🧜‍♀️</button>
-<button onclick="addToMemo('🧜‍♂️')">🧜‍♂️</button>
-<button onclick="addToMemo('🧝‍♂️')">🧝‍♂️</button>
-<button onclick="addToMemo('🧝‍♀️')">🧝‍♀️</button>
-<button onclick="addToMemo('👯‍♂️')">👯‍♂️</button>
-<button onclick="addToMemo('🕴️')">🕴️</button>
-<button onclick="addToMemo('👯‍♀️')">👯‍♀️</button>
-<button onclick="addToMemo('🧘‍♀️')">🧘‍♀️</button>
-<button onclick="addToMemo('🧘‍♂️')">🧘‍♂️</button>
-<button onclick="addToMemo('🧑‍🤝‍🧑')">🧑‍🤝‍🧑</button>
-<button onclick="addToMemo('🤾‍♀️')">🤾‍♀️</button>
-<button onclick="addToMemo('🦅')">🦅</button>
-<button onclick="addToMemo('🕊️')">🕊️</button>
-<button onclick="addToMemo('🐧')">🐧</button>
-<button onclick="addToMemo('🦉')">🦉</button>
-<button onclick="addToMemo('🦇')">🦇</button>
-<button onclick="addToMemo('🐭')">🐭</button>
-<button onclick="addToMemo('🐰')">🐰</button>
-<button onclick="addToMemo('🐹')">🐹</button>
-<button onclick="addToMemo('🐿️')">🐿️</button>
-<button onclick="addToMemo('🐳')">🐳</button>
-<button onclick="addToMemo('🐬')">🐬</button>
-<button onclick="addToMemo('🐟')">🐟</button>
-<button onclick="addToMemo('🦈')">🦈</button>
-<button onclick="addToMemo('🐠')">🐠</button>
-<button onclick="addToMemo('🐙')">🐙</button>
-<button onclick="addToMemo('🦚')">🦚</button>
-<button onclick="addToMemo('🐲')">🐲</button>
-<button onclick="addToMemo('🦂')">🦂</button>
-<button onclick="addToMemo('🕷️')">🕷️</button>
-<button onclick="addToMemo('🐝')">🐝</button>
-<button onclick="addToMemo('🦟')">🦟</button>
-<button onclick="addToMemo('🐞')">🐞</button>
-<button onclick="addToMemo('🦗')">🦗</button>
-<button onclick="addToMemo('🐜')">🐜</button>
-<button onclick="addToMemo('🐡')">🐡</button>
-<button onclick="addToMemo('🌺')">🌺</button>
-<button onclick="addToMemo('🏵️')">🏵️</button>
-<button onclick="addToMemo('🌹')">🌹</button>
-<button onclick="addToMemo('🌸')">🌸</button>
-<button onclick="addToMemo('🌴')">🌴</button>
-<button onclick="addToMemo('🌿')">🌿</button>
-<button onclick="addToMemo('🌾')">🌾</button>
-<button onclick="addToMemo('🍁')">🍁</button>
-<button onclick="addToMemo('🍂')">🍂</button>
-<button onclick="addToMemo('🌷')">🌷</button>
-<button onclick="addToMemo('🍎')">🍎</button>
-<button onclick="addToMemo('🍏')">🍏</button>
-<button onclick="addToMemo('🍅')">🍅</button>
-<button onclick="addToMemo('🍄')">🍄</button>
-<button onclick="addToMemo('🦀')">🦀</button>
-<button onclick="addToMemo('🦞')">🦞</button>
-<button onclick="addToMemo('🎃')">🎃</button>
-<button onclick="addToMemo('🎎')">🎎</button>
-<button onclick="addToMemo('🏆')">🏆</button>
-<button onclick="addToMemo('🏅')">🏅</button>
-<button onclick="addToMemo('⚽')">⚽</button>
-<button onclick="addToMemo('🏀')">🏀</button>
-<button onclick="addToMemo('🥊')">🥊</button>
-<button onclick="addToMemo('🎱')">🎱</button>
-<button onclick="addToMemo('🎲')">🎲</button>
-<button onclick="addToMemo('🤿')">🤿</button>
-<button onclick="addToMemo('🎣')">🎣</button>
-<button onclick="addToMemo('🪁')">🪁</button>
-<button onclick="addToMemo('🎮')">🎮</button>
-<button onclick="addToMemo('♣️')">♣️</button>
-<button onclick="addToMemo('♦️')">♦️</button>
-<button onclick="addToMemo('♥️')">♥️</button>
-<button onclick="addToMemo('♠️')">♠️</button>
-<button onclick="addToMemo('♟️')">♟️</button>
-<button onclick="addToMemo('🃏')">🃏</button>
-<button onclick="addToMemo('🎭')">🎭</button>
-<button onclick="addToMemo('🌍')">🌍</button>
-<button onclick="addToMemo('🗽')">🗽</button>
-<button onclick="addToMemo('🚇')">🚇</button>
-<button onclick="addToMemo('🚦')">🚦</button>
-<button onclick="addToMemo('✈️')">✈️</button>
-<button onclick="addToMemo('🚀')">🚀</button>
-<button onclick="addToMemo('🛸')">🛸</button>
-<button onclick="addToMemo('⏰')">⏰</button>
-<button onclick="addToMemo('⭐')">⭐</button>
-<button onclick="addToMemo('🌝')">🌝</button>
-<button onclick="addToMemo('☀️')">☀️</button>
-<button onclick="addToMemo('🌀')">🌀</button>
-<button onclick="addToMemo('☂️')">☂️</button>
-<button onclick="addToMemo('🌈')">🌈</button>
-<button onclick="addToMemo('🌊')">🌊</button>
-<button onclick="addToMemo('💧')">💧</button>
-<button onclick="addToMemo('🔥')">🔥</button>
-<button onclick="addToMemo('☄️')">☄️</button>
-<button onclick="addToMemo('⛄')">⛄</button>
-<button onclick="addToMemo('👓')">👓</button>
-<button onclick="addToMemo('🕶️')">🕶️</button>
-<button onclick="addToMemo('👒')">👒</button>
-<button onclick="addToMemo('🎩')">🎩</button>
-<button onclick="addToMemo('🧢')">🧢</button>
-<button onclick="addToMemo('🔕')">🔕</button>
-<button onclick="addToMemo('🔇')">🔇</button>
-<button onclick="addToMemo('💎')">💎</button>
-<button onclick="addToMemo('🎧')">🎧</button>
-<button onclick="addToMemo('📟')">📟</button>
-<button onclick="addToMemo('☎️')">☎️</button>
-<button onclick="addToMemo('📠')">📠</button>
-<button onclick="addToMemo('🖲️')">🖲️</button>
-<button onclick="addToMemo('📔')">📔</button>
-<button onclick="addToMemo('📕')">📕</button>
-<button onclick="addToMemo('📗')">📗</button>
-<button onclick="addToMemo('📘')">📘</button>
-<button onclick="addToMemo('📙')">📙</button>
-<button onclick="addToMemo('📓')">📓</button>
-<button onclick="addToMemo('📒')">📒</button>
-<button onclick="addToMemo('📔')">📔</button>
-<button onclick="addToMemo('💰')">💰</button>
-<button onclick="addToMemo('💴')">💴</button>
-<button onclick="addToMemo('🖋️')">🖋️</button>
-<button onclick="addToMemo('🖊️')">🖊️</button>
-<button onclick="addToMemo('🖌️')">🖌️</button>
-<button onclick="addToMemo('🔐')">🔐</button>
-<button onclick="addToMemo('🔓')">🔓</button>
-<button onclick="addToMemo('⚙️')">⚙️</button>
-<button onclick="addToMemo('🔗')">🔗</button>
-<button onclick="addToMemo('🧬')">🧬</button>
-<button onclick="addToMemo('🩸')">🩸</button>
-<button onclick="addToMemo('🗿')">🗿</button>
-<button onclick="addToMemo('🚹')">🚹</button>
-<button onclick="addToMemo('🚺')">🚺</button>
-<button onclick="addToMemo('🛂')">🛂</button>
-<button onclick="addToMemo('☢️')">☢️</button>
-<button onclick="addToMemo('☣️')">☣️</button>
-<button onclick="addToMemo('🚭')">🚭</button>
-<button onclick="addToMemo('🚷')">🚷</button>
-<button onclick="addToMemo('🔞')">🔞</button>
-<button onclick="addToMemo('📵')">📵</button>
-<button onclick="addToMemo('✡️')">✡️</button>
-<button onclick="addToMemo('♾️')">♾️</button>
-<button onclick="addToMemo('⚛️')">⚛️</button>
-<button onclick="addToMemo('☯️')">☯️</button>
-<button onclick="addToMemo('☪️')">☪️</button>
-<button onclick="addToMemo('☮️')">☮️</button>
-<button onclick="addToMemo('⚜️')">⚜️</button>
-<button onclick="addToMemo('🔱')">🔱</button>
-<button onclick="addToMemo('✅')">✅</button>
-<button onclick="addToMemo('☑️')">☑️</button>
-<button onclick="addToMemo('❎')">❎</button>
-<button onclick="addToMemo('✔️')">✔️</button>
-<button onclick="addToMemo('❌')">❌</button>
-<button onclick="addToMemo('©️')">©️</button>
-<button onclick="addToMemo('®️')">®️</button>
-<button onclick="addToMemo('1️⃣')">1️⃣</button>
-<button onclick="addToMemo('2️⃣')">2️⃣</button>
-<button onclick="addToMemo('3️⃣')">3️⃣</button>
-<button onclick="addToMemo('4️⃣')">4️⃣</button>
-<button onclick="addToMemo('5️⃣')">5️⃣</button>
-<button onclick="addToMemo('6️⃣')">6️⃣</button>
-<button onclick="addToMemo('7️⃣')">7️⃣</button>
-<button onclick="addToMemo('8️⃣')">8️⃣</button>
-<button onclick="addToMemo('9️⃣')">9️⃣</button>
-<button onclick="addToMemo('🔟')">🔟</button>
-<button onclick="addToMemo('🆔')">🆔</button>
-<button onclick="addToMemo('Ⓜ️')">Ⓜ️</button>
-<button onclick="addToMemo('🆘')">🆘</button>
-<button onclick="addToMemo('🆎')">🆎</button>
-<button onclick="addToMemo('🅰️')">🅰️</button>
-<button onclick="addToMemo('㊗️')">㊗️</button>
-<button onclick="addToMemo('㊙️')">㊙️</button>
-<button onclick="addToMemo('🈴')">🈴</button>
-<button onclick="addToMemo('🔴')">🔴</button>
-<button onclick="addToMemo('🟡')">🟡</button>
-<button onclick="addToMemo('🟢')">🟢</button>
-<button onclick="addToMemo('🟠')">🟠</button>
-<button onclick="addToMemo('🔵')">🔵</button>
-<button onclick="addToMemo('🟣')">🟣</button>
-<button onclick="addToMemo('🟤')">🟤</button>
-<button onclick="addToMemo('⚫')">⚫</button>
-<button onclick="addToMemo('⚪')">⚪</button>
-<button onclick="addToMemo('🟥')">🟥</button>
-<button onclick="addToMemo('🟧')">🟧</button>
-<button onclick="addToMemo('🟨')">🟨</button>
-<button onclick="addToMemo('🟩')">🟩</button>
-<button onclick="addToMemo('🟦')">🟦</button>
-<button onclick="addToMemo('🟪')">🟪</button>
-<button onclick="addToMemo('🟫')">🟫</button>
-<button onclick="addToMemo('⬛')">⬛</button>
-<button onclick="addToMemo('⬜')">⬜</button>
-<button onclick="addToMemo('🔺')">🔺</button>
-<button onclick="addToMemo('🔻')">🔻</button>
-<button onclick="addToMemo('🔷')">🔷</button>
-<button onclick="addToMemo('🔶')">🔶</button>
-<button onclick="addToMemo('💠')">💠</button>
 
         </div>
     </section>
