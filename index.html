@@ -11,14 +11,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            justify-content: center;
-            height: 95vh;
-            background-color: white;
-            color: #333;
-             padding: 5px 0px;
 
-            box-shadow: 0 0px 5px rgb(119, 136, 153);
-            border-radius: 5px
         }
 
 
@@ -40,10 +33,9 @@
         }
 
     #memo {
-        border: 1px solid #007bff; /* Garis border biru */
-        border-radius: 0px; /* Menambahkan sudut melengkung untuk lingkaran */
-        padding: 10px;
-        width: 94%; /* Lebar penuh */
+        box-shadow: 0 0px 5px rgb(119, 136, 153);
+        border-radius: 5px;
+        width: 98%; /* Lebar penuh */
         min-height: 125px; /* Tinggi minimum untuk kenyamanan mengetik */
           margin-bottom: 0px;
           font-size: 14px;
@@ -54,7 +46,7 @@
       /* Gaya saat area teks aktif (fokus) */
         #memo:focus {
         outline: none; /* Menghapus outline default */
-        border-color: darkblue; /* Ubah warna border saat fokus */
+        border-color: gray; /* Ubah warna border saat fokus */
     }
 
 
@@ -79,15 +71,15 @@
         @keyframes blink {
         0% {
         background-color: #ffc107;
-        box-shadow: 0 0 0px #fff;
+        box-shadow: 0 0 1px #fff;
               }
           50% {
         background-color: #ffdf70;  /* Warna lebih terang saat kedip */
-        box-shadow: 0 0 10px #fff;
+        box-shadow: 0 0 1px #fff;
               }
         100% {
         background-color: #ffc107;
-        box-shadow: 0 0 0px #fff;
+        box-shadow: 0 0 1px #fff;
                 }
           }
 
@@ -148,37 +140,25 @@
 
 /* tombol 1*/
     div button {
-        padding: 5px 4px;
-         margin-top: 2px;
-         margin-bottom: 2px;
-        background-color: #007bff;
-        color: #ffffff;
-        border-radius: 6px;
-        font-size: 12px;
-        margin-bottom: 1px; 
-            margin-left: 6px;
+        margin-bottom: 0px; 
+            margin-left: 4px;
           /* Jarak antar tombol secara vertikal */
-          
         }
 
-   /* Efek klik tombol 1 */
+   /* Efek klik tombol */
      div button:hover {
      background-color: red; /* Mengubah latar belakang saat hover */
      border-color: #3a3a3a; /* Mengubah
      warna border saat hover */
       }
-  /* tombol 1*/
-    /* Gaya untuk container tombol 1*/
+
+    /* Gaya container tombol */
       .button-container {
-       max-height: 70px;
-     border: 1px solid #007bff;
        overflow-y: auto;
     /* Warna biru saat diklik 1*/
       div button:hover {
       background-color: red;
-    /* Mengubah warna latar belakang saat hover */
-      color: white; /* Mengubah warna teks menjadi kuning saat hover */
-      box-shadow: 0 1px 1px rgba(0, 0, 255, 0.6); /* Menambahkan bayangan biru saat hover */
+      color: white; 
           }
           
        display: flex;
@@ -191,10 +171,10 @@
          margin-top: 2px;
          margin-bottom: 2px;
          font-family: Arial, sans-serif;
-         background-color: #007bff; 
-         color: wite; 
+         background-color: white; 
+         color: black; 
       /* Mengubah warna latar belakang saat hover */
-         color: white; 
+         color: black; 
               }
          input, textarea {
          background-color: white;
@@ -207,18 +187,12 @@
         flex-wrap: wrap;
         overflow: auto; /* Menambahkan scrollbar jika konten terlalu banyak */
         max-width: 101%; /* Agar container tidak melebihi layar */
-        border: 1px solid #007bff;
-        max-height: 124px; /* Membatasi tinggi container */
+        border: 1px solid gray;
+        max-height: 84px; /* Membatasi tinggi container */
         width: auto; /* Lebar awal yang disesuaikan */
         height: auto; /* Tinggi awal yang disesuaikan */
         }
-     div button:hover {
-     background-color: #FF0000; /* Mengubah latar belakang saat hover */
-     color: white;
-     border-color: #3a3a3a; /* Mengubah
-     warna border saat hover */
-      }
-        
+
        .custom-button {
         width: 26px;
         height: 35px;
@@ -227,23 +201,21 @@
      border: 2px solid #3a3a3a;
         border-radius: 5px;
         color: white;
-        background: #007bff;
-        margin: 0; /* Menghilangkan margin auto untuk pemusatan */
+        background: #3a3a3a;
         margin-left: 5px;
              margin-top: 2px;
         margin-bottom: 2px;
          }
 
-
 /* icons dan emoji-keyboard */
 .header-emoji-container {
     display: flex;
-         border: 1px solid #007bff;
-    justify-content: space-between; /* Mengatur spasi antar elemen */
+         border: 1px solid gray;
+    justify-content: space-between;
     align-items: center;
     margin-top: 0px;
     padding: 0px;
-    gap: 0px; /* Jarak antar elemen */
+
 }
 
 /* icon hider */
@@ -252,8 +224,8 @@
     justify-content: space-around;
     margin-top: 1px;
     padding: 10px;
-
     border-radius: 0px;
+    
 }
 
 .header-icons button {
@@ -261,11 +233,11 @@
     justify-content: center;
     align-items: center;
     width: 30px;
+    color: white;
     height: 30px;
     background-color: #007bff;
     border-color: #3a3a3a;
     border-radius: 50%;
-
     cursor: pointer;
 }
 
@@ -277,38 +249,49 @@
 /* Keyboard Emoji */
 .emoji-keyboard {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(6, 0fr);
     gap: 1px;
     justify-items: center;
-    margin-top: 2px;
-            max-height: 119px; /* Tinggi maksimal untuk konten yang akan di-scroll */
-             border: 1px solid #007bff;
-       overflow-y: auto; /* Tambahkan scrollbar vertikal jika konten terlalu banyak */
+    margin-top: 0px;
+    max-height: 110px; /* Tinggi maksimal untuk konten yang akan di-scroll */
+    border: 1px solid gray;
+    overflow-y: auto; /* Tambahkan scrollbar vertikal jika konten terlalu banyak */
     
-}
+            }
 
 .emoji-keyboard button {
-    font-size: 15px;
-    
-    
+    font-size: 50px;
+    padding: 0;
+    margin: 2px;
+    width: 52px;
+    height: 50px;
+    color: red;
+    line-height: 1;
+    text-align: center;
+    background-color: #f0f0f0; /* Warna latar belakang */
+    border: 1px solid #ccc; /* Border halus */
+    border-radius: 4px; /* Membulatkan sedikit pojok */
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Efek bayangan lembut */
 }
+      div button:hover {
+      background-color: red;
+      color: white; 
+          }
 
 /* Button untuk menampilkan emoji keyboard */
-#toggle-emoji {
-    padding: 5px 10px;
+    #toggle-emoji {
+    padding: 0px 12px;
     margin-top: 3px;
     background-color: #45a049;
-        border-color: #3a3a3a;
+    border-color: #3a3a3a;
     color: white;
-
     border-radius: 5px;
     cursor: pointer;
-}
+        }
 
-#toggle-emoji:hover {
+    #toggle-emoji:hover {
     background-color: red;
-}
-
+        }
 
     /* Gaya untuk mode gelap */
            .dark-mode .profile-name,
@@ -337,67 +320,55 @@
            background: none; /* Tidak ada latar belakang untuk mode gelap */
             }
 
-
-/* CSS khusus kelas .page */
-
+  /* CSS khusus kelas page */
       .page .note-box {
         max-height: 128px; /* Tinggi maksimal untuk konten yang akan di-scroll */
-             border: 1px solid #007bff;
+             border: 1px solid gray;
        overflow-y: auto; /* Tambahkan scrollbar vertikal jika konten terlalu banyak */
 
                }
 
-      section.page h2 {
-    color: white !important;
-    font-size: 5px;
+    section.page h2 {
+    color: black !important;
+    font-size: 11px;
     margin-top: 0 !important;
-}
-
-section.page .note-box {
-    margin-top: -3px !important;
-    padding: 0px !important;
-    background-color: white !important;
-    border-left: 3px solid #007bff !important;
-    border-radius: 0px !important;
 }
 
 section.page .note-box button {
     padding: 2px 2px !important;
     font-size: 20px !important;
-
     color: black !important;
-    background-color: white !important;
-    border: none !important;
-    border-radius: 0px !important;
+    background-color: white;
+    border: 0px;
+    border-radius: 100px !important;
     cursor: pointer;
-    margin-right: 0px !important;
+    margin-left: 5px !important;
+          }
+
+   section.page .note-box button:hover {
+   background-color: red !important;
+          }
+
+/* Membuat latar belakang biru muda untuk seluruh section */
+#page5 {
+    border-radius: 5px; /* Opsional, untuk memberikan sudut membulat pada section */
 }
 
-section.page .note-box button:hover {
-    background-color: #007bff !important;
+/* Mengatur gaya untuk elemen h2 */
+#page5 h2 {
+    font-size: 10px; /* Ukuran font untuk h2 */
+    color: black; /* Warna teks hitam */
 }
 
-/* Gaya khusus untuk setiap halaman berdasarkan ID */
-#page1.page {
-    background-color: gray !important; /* Biru muda */
-    border: 1px solid gray; /*
+.note-box {
+    font-size: 15px; /* Ukuran font untuk note-box */
+    color: black; /* Warna teks hitam */
+;
+    background-color: white; /* Latar belakang putih untuk note-box */
+
 }
 
-#page2.page {
-    background-color: #fce4ec !important; /* Merah muda */
-}
 
-#page3.page {
-    background-color: #f3e5f5 !important; /* Ungu muda */
-}
-
-#page4.page {
-    background-color: #e8f5e9 !important; /* Hijau muda */
-}
-
-#page5.page {
-    background-color: #fff3e0 !important; /* Jingga muda */
-}
 
     </style>
  </head>
@@ -420,60 +391,690 @@ section.page .note-box button:hover {
 
 
     <h2>Tambah Huruf　</h2>
-    <div class="button-container">
-<div id="character-buttons">
-    <button onclick="addCharacter('Ａ')">Ａ</button>
-    <button onclick="addCharacter('Ｂ')">Ｂ</button>
-    <button onclick="addCharacter('Ｃ')">Ｃ</button>
-    <button onclick="addCharacter('Ｄ')">Ｄ</button>
-    <button onclick="addCharacter('Ｅ')">Ｅ</button>
-    <button onclick="addCharacter('Ｆ')">Ｆ</button>
-    <button onclick="addCharacter('Ｇ')">Ｇ</button>
-    <button onclick="addCharacter('Ｈ')">Ｈ</button>
-    <button onclick="addCharacter('Ｉ')">Ｉ</button>
-    <button onclick="addCharacter('Ｊ')">Ｊ</button>
-    <button onclick="addCharacter('Ｋ')">Ｋ</button>
-    <button onclick="addCharacter('Ｌ')">Ｌ</button>
-    <button onclick="addCharacter('Ｍ')">Ｍ</button>
-    <button onclick="addCharacter('Ｎ')">Ｎ</button>
-    <button onclick="addCharacter('Ｏ')">Ｏ</button>
-    <button onclick="addCharacter('Ｐ')">Ｐ</button>
-    <button onclick="addCharacter('Ｑ')">Ｑ</button>
-    <button onclick="addCharacter('Ｒ')">Ｒ</button>
-    <button onclick="addCharacter('Ｓ')">Ｓ</button>
-    <button onclick="addCharacter('Ｔ')">Ｔ</button>
-    <button onclick="addCharacter('Ｕ')">Ｕ</button>
-    <button onclick="addCharacter('Ｖ')">Ｖ</button>
-    <button onclick="addCharacter('Ｗ')">Ｗ</button>
-    <button onclick="addCharacter('Ｘ')">Ｘ</button>
-    <button onclick="addCharacter('Ｙ')">Ｙ</button>
-    <button onclick="addCharacter('Ｚ')">Ｚ</button>
-    <button onclick="addCharacter('ａ')">ａ</button>
-    <button onclick="addCharacter('ｂ')">ｂ</button>
-    <button onclick="addCharacter('ｃ')">ｃ</button>
-    <button onclick="addCharacter('ｄ')">ｄ</button>
-    <button onclick="addCharacter('ｅ')">ｅ</button>
-    <button onclick="addCharacter('ｆ')">ｆ</button>
-    <button onclick="addCharacter('ｇ')">ｇ</button>
-    <button onclick="addCharacter('ｈ')">ｈ</button>
-    <button onclick="addCharacter('ｉ')">ｉ</button>
-    <button onclick="addCharacter('ｊ')">ｊ</button>
-    <button onclick="addCharacter('ｋ')">ｋ</button>
-    <button onclick="addCharacter('ｌ')">ｌ</button>
-    <button onclick="addCharacter('ｍ')">ｍ</button>
-    <button onclick="addCharacter('ｎ')">ｎ</button>
-    <button onclick="addCharacter('ｏ')">ｏ</button>
-    <button onclick="addCharacter('ｐ')">ｐ</button>
-    <button onclick="addCharacter('ｑ')">ｑ</button>
-    <button onclick="addCharacter('ｒ')">ｒ</button>
-    <button onclick="addCharacter('ｓ')">ｓ</button>
-    <button onclick="addCharacter('ｔ')">ｔ</button>
-    <button onclick="addCharacter('ｕ')">ｕ</button>
-    <button onclick="addCharacter('ｖ')">ｖ</button>
-    <button onclick="addCharacter('ｗ')">ｗ</button>
-    <button onclick="addCharacter('ｘ')">ｘ</button>
-    <button onclick="addCharacter('ｙ')">ｙ</button>
-    <button onclick="addCharacter('ｚ')">ｚ</button>
+    <div class="custom-container">
+    
+<button class="custom-button" onclick="addCharacter('Ａ')">Ａ</button>
+<button class="custom-button" onclick="addCharacter('Ｂ')">Ｂ</button>
+<button class="custom-button" onclick="addCharacter('Ｃ')">Ｃ</button>
+<button class="custom-button" onclick="addCharacter('Ｄ')">Ｄ</button>
+<button class="custom-button" onclick="addCharacter('Ｅ')">Ｅ</button>
+<button class="custom-button" onclick="addCharacter('Ｆ')">Ｆ</button>
+<button class="custom-button" onclick="addCharacter('Ｇ')">Ｇ</button>
+<button class="custom-button" onclick="addCharacter('Ｈ')">Ｈ</button>
+<button class="custom-button" onclick="addCharacter('Ｉ')">Ｉ</button>
+<button class="custom-button" onclick="addCharacter('Ｊ')">Ｊ</button>
+<button class="custom-button" onclick="addCharacter('Ｋ')">Ｋ</button>
+<button class="custom-button" onclick="addCharacter('Ｌ')">Ｌ</button>
+<button class="custom-button" onclick="addCharacter('Ｍ')">Ｍ</button>
+<button class="custom-button" onclick="addCharacter('Ｎ')">Ｎ</button>
+<button class="custom-button" onclick="addCharacter('Ｏ')">Ｏ</button>
+<button class="custom-button" onclick="addCharacter('Ｐ')">Ｐ</button>
+<button class="custom-button" onclick="addCharacter('Ｑ')">Ｑ</button>
+<button class="custom-button" onclick="addCharacter('Ｒ')">Ｒ</button>
+<button class="custom-button" onclick="addCharacter('Ｓ')">Ｓ</button>
+<button class="custom-button" onclick="addCharacter('Ｔ')">Ｔ</button>
+<button class="custom-button" onclick="addCharacter('Ｕ')">Ｕ</button>
+<button class="custom-button" onclick="addCharacter('Ｖ')">Ｖ</button>
+<button class="custom-button" onclick="addCharacter('Ｗ')">Ｗ</button>
+<button class="custom-button" onclick="addCharacter('Ｘ')">Ｘ</button>
+<button class="custom-button" onclick="addCharacter('Ｙ')">Ｙ</button>
+<button class="custom-button" onclick="addCharacter('Ｚ')">Ｚ</button>
+
+<button class="custom-button" onclick="addCharacter('ａ')">ａ</button>
+<button class="custom-button" onclick="addCharacter('ｂ')">ｂ</button>
+<button class="custom-button" onclick="addCharacter('ｃ')">ｃ</button>
+<button class="custom-button" onclick="addCharacter('ｄ')">ｄ</button>
+<button class="custom-button" onclick="addCharacter('ｅ')">ｅ</button>
+<button class="custom-button" onclick="addCharacter('ｆ')">ｆ</button>
+<button class="custom-button" onclick="addCharacter('ｇ')">ｇ</button>
+<button class="custom-button" onclick="addCharacter('ｈ')">ｈ</button>
+<button class="custom-button" onclick="addCharacter('ｉ')">ｉ</button>
+<button class="custom-button" onclick="addCharacter('ｊ')">ｊ</button>
+<button class="custom-button" onclick="addCharacter('ｋ')">ｋ</button>
+<button class="custom-button" onclick="addCharacter('ｌ')">ｌ</button>
+<button class="custom-button" onclick="addCharacter('ｍ')">ｍ</button>
+<button class="custom-button" onclick="addCharacter('ｎ')">ｎ</button>
+<button class="custom-button" onclick="addCharacter('ｏ')">ｏ</button>
+<button class="custom-button" onclick="addCharacter('ｐ')">ｐ</button>
+<button class="custom-button" onclick="addCharacter('ｑ')">ｑ</button>
+<button class="custom-button" onclick="addCharacter('ｒ')">ｒ</button>
+<button class="custom-button" onclick="addCharacter('ｓ')">ｓ</button>
+<button class="custom-button" onclick="addCharacter('ｔ')">ｔ</button>
+<button class="custom-button" onclick="addCharacter('ｕ')">ｕ</button>
+<button class="custom-button" onclick="addCharacter('ｖ')">ｖ</button>
+<button class="custom-button" onclick="addCharacter('ｗ')">ｗ</button>
+<button class="custom-button" onclick="addCharacter('ｘ')">ｘ</button>
+<button class="custom-button" onclick="addCharacter('ｙ')">ｙ</button>
+<button class="custom-button" onclick="addCharacter('ｚ')">ｚ</button>
+<!-- Set 1 -->
+<button class="custom-button" onclick="addCharacter('ƛ')">ƛ</button>
+<button class="custom-button" onclick="addCharacter('Ɓ')">Ɓ</button>
+<button class="custom-button" onclick="addCharacter('Ƈ')">Ƈ</button>
+<button class="custom-button" onclick="addCharacter('Ɗ')">Ɗ</button>
+<button class="custom-button" onclick="addCharacter('Є')">Є</button>
+<button class="custom-button" onclick="addCharacter('Ƒ')">Ƒ</button>
+<button class="custom-button" onclick="addCharacter('Ɠ')">Ɠ</button>
+<button class="custom-button" onclick="addCharacter('Ӈ')">Ӈ</button>
+<button class="custom-button" onclick="addCharacter('Ɩ')">Ɩ</button>
+<button class="custom-button" onclick="addCharacter('ʆ')">ʆ</button>
+<button class="custom-button" onclick="addCharacter('Ƙ')">Ƙ</button>
+<button class="custom-button" onclick="addCharacter('Լ')">Լ</button>
+<button class="custom-button" onclick="addCharacter('M')">M</button>
+<button class="custom-button" onclick="addCharacter('Ɲ')">Ɲ</button>
+<button class="custom-button" onclick="addCharacter('Ơ')">Ơ</button>
+<button class="custom-button" onclick="addCharacter('Ƥ')">Ƥ</button>
+<button class="custom-button" onclick="addCharacter('1')">1</button>
+<button class="custom-button" onclick="addCharacter('Ʀ')">Ʀ</button>
+<button class="custom-button" onclick="addCharacter('Ƨ')">Ƨ</button>
+<button class="custom-button" onclick="addCharacter('Ƭ')">Ƭ</button>
+<button class="custom-button" onclick="addCharacter('Ʋ')">Ʋ</button>
+<button class="custom-button" onclick="addCharacter('Ɣ')">Ɣ</button>
+<button class="custom-button" onclick="addCharacter('Ɯ')">Ɯ</button>
+<button class="custom-button" onclick="addCharacter('Ҳ')">Ҳ</button>
+<button class="custom-button" onclick="addCharacter('Ƴ')">Ƴ</button>
+<button class="custom-button" onclick="addCharacter('Ȥ')">Ȥ</button>
+
+<!-- Set 2 -->
+<button class="custom-button" onclick="addCharacter('𝐀')">𝐀</button>
+<button class="custom-button" onclick="addCharacter('𝐁')">𝐁</button>
+<button class="custom-button" onclick="addCharacter('𝐂')">𝐂</button>
+<button class="custom-button" onclick="addCharacter('𝐃')">𝐃</button>
+<button class="custom-button" onclick="addCharacter('𝐄')">𝐄</button>
+<button class="custom-button" onclick="addCharacter('𝐅')">𝐅</button>
+<button class="custom-button" onclick="addCharacter('𝐆')">𝐆</button>
+<button class="custom-button" onclick="addCharacter('𝐇')">𝐇</button>
+<button class="custom-button" onclick="addCharacter('𝐈')">𝐈</button>
+<button class="custom-button" onclick="addCharacter('𝐉')">𝐉</button>
+<button class="custom-button" onclick="addCharacter('𝐊')">𝐊</button>
+<button class="custom-button" onclick="addCharacter('𝐋')">𝐋</button>
+<button class="custom-button" onclick="addCharacter('𝐌')">𝐌</button>
+<button class="custom-button" onclick="addCharacter('𝐍')">𝐍</button>
+<button class="custom-button" onclick="addCharacter('𝐎')">𝐎</button>
+<button class="custom-button" onclick="addCharacter('𝐏')">𝐏</button>
+<button class="custom-button" onclick="addCharacter('𝐐')">𝐐</button>
+<button class="custom-button" onclick="addCharacter('𝐑')">𝐑</button>
+<button class="custom-button" onclick="addCharacter('𝐒')">𝐒</button>
+<button class="custom-button" onclick="addCharacter('𝐓')">𝐓</button>
+<button class="custom-button" onclick="addCharacter('𝐔')">𝐔</button>
+<button class="custom-button" onclick="addCharacter('𝐕')">𝐕</button>
+<button class="custom-button" onclick="addCharacter('𝐖')">𝐖</button>
+<button class="custom-button" onclick="addCharacter('𝐗')">𝐗</button>
+<button class="custom-button" onclick="addCharacter('𝐘')">𝐘</button>
+<button class="custom-button" onclick="addCharacter('𝐙')">𝐙</button>
+<button class="custom-button" onclick="addCharacter('𝐚')">𝐚</button>
+<button class="custom-button" onclick="addCharacter('𝐛')">𝐛</button>
+<button class="custom-button" onclick="addCharacter('𝐜')">𝐜</button>
+<button class="custom-button" onclick="addCharacter('𝐝')">𝐝</button>
+<button class="custom-button" onclick="addCharacter('𝐞')">𝐞</button>
+<button class="custom-button" onclick="addCharacter('𝐟')">𝐟</button>
+<button class="custom-button" onclick="addCharacter('𝐠')">𝐠</button>
+<button class="custom-button" onclick="addCharacter('𝐡')">𝐡</button>
+<button class="custom-button" onclick="addCharacter('𝐢')">𝐢</button>
+<button class="custom-button" onclick="addCharacter('𝐣')">𝐣</button>
+<button class="custom-button" onclick="addCharacter('𝐤')">𝐤</button>
+<button class="custom-button" onclick="addCharacter('𝐥')">𝐥</button>
+<button class="custom-button" onclick="addCharacter('𝐦')">𝐦</button>
+<button class="custom-button" onclick="addCharacter('𝐧')">𝐧</button>
+<button class="custom-button" onclick="addCharacter('𝐨')">𝐨</button>
+<button class="custom-button" onclick="addCharacter('𝐩')">𝐩</button>
+<button class="custom-button" onclick="addCharacter('𝐪')">𝐪</button>
+<button class="custom-button" onclick="addCharacter('𝐫')">𝐫</button>
+<button class="custom-button" onclick="addCharacter('𝐬')">𝐬</button>
+<button class="custom-button" onclick="addCharacter('𝐭')">𝐭</button>
+<button class="custom-button" onclick="addCharacter('𝐮')">𝐮</button>
+<button class="custom-button" onclick="addCharacter('𝐯')">𝐯</button>
+<button class="custom-button" onclick="addCharacter('𝐰')">𝐰</button>
+<button class="custom-button" onclick="addCharacter('𝐱')">𝐱</button>
+<button class="custom-button" onclick="addCharacter('𝐲')">𝐲</button>
+<button class="custom-button" onclick="addCharacter('𝐳')">𝐳</button>
+
+<!-- Set 3 -->
+<button class="custom-button" onclick="addCharacter('𝘼')">𝘼</button>
+<button class="custom-button" onclick="addCharacter('𝘽')">𝘽</button>
+<button class="custom-button" onclick="addCharacter('𝘾')">𝘾</button>
+<button class="custom-button" onclick="addCharacter('𝘿')">𝘿</button>
+<button class="custom-button" onclick="addCharacter('𝙀')">𝙀</button>
+<button class="custom-button" onclick="addCharacter('𝙁')">𝙁</button>
+<button class="custom-button" onclick="addCharacter('𝙂')">𝙂</button>
+<button class="custom-button" onclick="addCharacter('𝙃')">𝙃</button>
+<button class="custom-button" onclick="addCharacter('𝙄')">𝙄</button>
+<button class="custom-button" onclick="addCharacter('𝙅')">𝙅</button>
+<button class="custom-button" onclick="addCharacter('𝙆')">𝙆</button>
+<button class="custom-button" onclick="addCharacter('𝙇')">𝙇</button>
+<button class="custom-button" onclick="addCharacter('𝙈')">𝙈</button>
+<button class="custom-button" onclick="addCharacter('𝙉')">𝙉</button>
+<button class="custom-button" onclick="addCharacter('𝙊')">𝙊</button>
+<button class="custom-button" onclick="addCharacter('𝙋')">𝙋</button>
+<button class="custom-button" onclick="addCharacter('𝙌')">𝙌</button>
+<button class="custom-button" onclick="addCharacter('𝙍')">𝙍</button>
+<button class="custom-button" onclick="addCharacter('𝙎')">𝙎</button>
+<button class="custom-button" onclick="addCharacter('𝙏')">𝙏</button>
+<button class="custom-button" onclick="addCharacter('𝙐')">𝙐</button>
+<button class="custom-button" onclick="addCharacter('𝙑')">𝙑</button>
+<button class="custom-button" onclick="addCharacter('𝙒')">𝙒</button>
+<button class="custom-button" onclick="addCharacter('𝙓')">𝙓</button>
+<button class="custom-button" onclick="addCharacter('𝙔')">𝙔</button>
+<button class="custom-button" onclick="addCharacter('𝙕')">𝙕</button>
+<button class="custom-button" onclick="addCharacter('𝙖')">𝙖</button>
+<button class="custom-button" onclick="addCharacter('𝙗')">𝙗</button>
+<button class="custom-button" onclick="addCharacter('𝙘')">𝙘</button>
+<button class="custom-button" onclick="addCharacter('𝙙')">𝙙</button>
+<button class="custom-button" onclick="addCharacter('𝙚')">𝙚</button>
+<button class="custom-button" onclick="addCharacter('𝙛')">𝙛</button>
+<button class="custom-button" onclick="addCharacter('𝙜')">𝙜</button>
+<button class="custom-button" onclick="addCharacter('𝙝')">𝙝</button>
+<button class="custom-button" onclick="addCharacter('𝙞')">𝙞</button>
+<button class="custom-button" onclick="addCharacter('𝙟')">𝙟</button>
+<button class="custom-button" onclick="addCharacter('𝙠')">𝙠</button>
+<button class="custom-button" onclick="addCharacter('𝙡')">𝙡</button>
+<button class="custom-button" onclick="addCharacter('𝙢')">𝙢</button>
+<button class="custom-button" onclick="addCharacter('𝙣')">𝙣</button>
+<button class="custom-button" onclick="addCharacter('𝙤')">𝙤</button>
+<button class="custom-button" onclick="addCharacter('𝙥')">𝙥</button>
+<button class="custom-button" onclick="addCharacter('𝙦')">𝙦</button>
+<button class="custom-button" onclick="addCharacter('𝙧')">𝙧</button>
+<button class="custom-button" onclick="addCharacter('𝙨')">𝙨</button>
+<button class="custom-button" onclick="addCharacter('𝙩')">𝙩</button>
+<button class="custom-button" onclick="addCharacter('𝙪')">𝙪</button>
+<button class="custom-button" onclick="addCharacter('𝙫')">𝙫</button>
+<button class="custom-button" onclick="addCharacter('𝙬')">𝙬</button>
+<button class="custom-button" onclick="addCharacter('𝙭')">𝙭</button>
+<button class="custom-button" onclick="addCharacter('𝙮')">𝙮</button>
+<button class="custom-button" onclick="addCharacter('𝙯')">𝙯</button>
+<!-- Set 1 -->
+<button class="custom-button" onclick="addCharacter('𝗔')">𝗔</button>
+<button class="custom-button" onclick="addCharacter('𝗕')">𝗕</button>
+<button class="custom-button" onclick="addCharacter('𝗖')">𝗖</button>
+<button class="custom-button" onclick="addCharacter('𝗗')">𝗗</button>
+<button class="custom-button" onclick="addCharacter('𝗘')">𝗘</button>
+<button class="custom-button" onclick="addCharacter('𝗙')">𝗙</button>
+<button class="custom-button" onclick="addCharacter('𝗚')">𝗚</button>
+<button class="custom-button" onclick="addCharacter('𝗛')">𝗛</button>
+<button class="custom-button" onclick="addCharacter('𝗜')">𝗜</button>
+<button class="custom-button" onclick="addCharacter('𝗝')">𝗝</button>
+<button class="custom-button" onclick="addCharacter('𝗞')">𝗞</button>
+<button class="custom-button" onclick="addCharacter('𝗟')">𝗟</button>
+<button class="custom-button" onclick="addCharacter('𝗠')">𝗠</button>
+<button class="custom-button" onclick="addCharacter('𝗡')">𝗡</button>
+<button class="custom-button" onclick="addCharacter('𝗢')">𝗢</button>
+<button class="custom-button" onclick="addCharacter('𝗣')">𝗣</button>
+<button class="custom-button" onclick="addCharacter('𝗤')">𝗤</button>
+<button class="custom-button" onclick="addCharacter('𝗥')">𝗥</button>
+<button class="custom-button" onclick="addCharacter('𝗦')">𝗦</button>
+<button class="custom-button" onclick="addCharacter('𝗧')">𝗧</button>
+<button class="custom-button" onclick="addCharacter('𝗨')">𝗨</button>
+<button class="custom-button" onclick="addCharacter('𝗩')">𝗩</button>
+<button class="custom-button" onclick="addCharacter('𝗪')">𝗪</button>
+<button class="custom-button" onclick="addCharacter('𝗫')">𝗫</button>
+<button class="custom-button" onclick="addCharacter('𝗬')">𝗬</button>
+<button class="custom-button" onclick="addCharacter('𝗭')">𝗭</button>
+<button class="custom-button" onclick="addCharacter('𝗮')">𝗮</button>
+<button class="custom-button" onclick="addCharacter('𝗯')">𝗯</button>
+<button class="custom-button" onclick="addCharacter('𝗰')">𝗰</button>
+<button class="custom-button" onclick="addCharacter('𝗱')">𝗱</button>
+<button class="custom-button" onclick="addCharacter('𝗲')">𝗲</button>
+<button class="custom-button" onclick="addCharacter('𝗳')">𝗳</button>
+<button class="custom-button" onclick="addCharacter('𝗴')">𝗴</button>
+<button class="custom-button" onclick="addCharacter('𝗵')">𝗵</button>
+<button class="custom-button" onclick="addCharacter('𝗶')">𝗶</button>
+<button class="custom-button" onclick="addCharacter('𝗷')">𝗷</button>
+<button class="custom-button" onclick="addCharacter('𝗸')">𝗸</button>
+<button class="custom-button" onclick="addCharacter('𝗹')">𝗹</button>
+<button class="custom-button" onclick="addCharacter('𝗺')">𝗺</button>
+<button class="custom-button" onclick="addCharacter('𝗻')">𝗻</button>
+<button class="custom-button" onclick="addCharacter('𝗼')">𝗼</button>
+<button class="custom-button" onclick="addCharacter('𝗽')">𝗽</button>
+<button class="custom-button" onclick="addCharacter('𝗾')">𝗾</button>
+<button class="custom-button" onclick="addCharacter('𝗿')">𝗿</button>
+<button class="custom-button" onclick="addCharacter('𝘀')">𝘀</button>
+<button class="custom-button" onclick="addCharacter('𝘁')">𝘁</button>
+<button class="custom-button" onclick="addCharacter('𝘂')">𝘂</button>
+<button class="custom-button" onclick="addCharacter('𝘃')">𝘃</button>
+<button class="custom-button" onclick="addCharacter('𝘄')">𝘄</button>
+<button class="custom-button" onclick="addCharacter('𝘅')">𝘅</button>
+<button class="custom-button" onclick="addCharacter('𝘆')">𝘆</button>
+<button class="custom-button" onclick="addCharacter('𝘇')">𝘇</button>
+
+<!-- Set 2 -->
+<button class="custom-button" onclick="addCharacter('𝔸')">𝔸</button>
+<button class="custom-button" onclick="addCharacter('𝔹')">𝔹</button>
+<button class="custom-button" onclick="addCharacter('ℂ')">ℂ</button>
+<button class="custom-button" onclick="addCharacter('𝔻')">𝔻</button>
+<button class="custom-button" onclick="addCharacter('𝔼')">𝔼</button>
+<button class="custom-button" onclick="addCharacter('𝔽')">𝔽</button>
+<button class="custom-button" onclick="addCharacter('𝔾')">𝔾</button>
+<button class="custom-button" onclick="addCharacter('ℍ')">ℍ</button>
+<button class="custom-button" onclick="addCharacter('𝕀')">𝕀</button>
+<button class="custom-button" onclick="addCharacter('𝕁')">𝕁</button>
+<button class="custom-button" onclick="addCharacter('𝕂')">𝕂</button>
+<button class="custom-button" onclick="addCharacter('𝕃')">𝕃</button>
+<button class="custom-button" onclick="addCharacter('𝕄')">𝕄</button>
+<button class="custom-button" onclick="addCharacter('ℕ')">ℕ</button>
+<button class="custom-button" onclick="addCharacter('𝕆')">𝕆</button>
+<button class="custom-button" onclick="addCharacter('ℙ')">ℙ</button>
+<button class="custom-button" onclick="addCharacter('ℚ')">ℚ</button>
+<button class="custom-button" onclick="addCharacter('ℝ')">ℝ</button>
+<button class="custom-button" onclick="addCharacter('𝕊')">𝕊</button>
+<button class="custom-button" onclick="addCharacter('𝕋')">𝕋</button>
+<button class="custom-button" onclick="addCharacter('𝕌')">𝕌</button>
+<button class="custom-button" onclick="addCharacter('𝕍')">𝕍</button>
+<button class="custom-button" onclick="addCharacter('𝕎')">𝕎</button>
+<button class="custom-button" onclick="addCharacter('𝕏')">𝕏</button>
+<button class="custom-button" onclick="addCharacter('𝕐')">𝕐</button>
+<button class="custom-button" onclick="addCharacter('ℤ')">ℤ</button>
+<button class="custom-button" onclick="addCharacter('𝕒')">𝕒</button>
+<button class="custom-button" onclick="addCharacter('𝕓')">𝕓</button>
+<button class="custom-button" onclick="addCharacter('𝕔')">𝕔</button>
+<button class="custom-button" onclick="addCharacter('𝕕')">𝕕</button>
+<button class="custom-button" onclick="addCharacter('𝕖')">𝕖</button>
+<button class="custom-button" onclick="addCharacter('𝕗')">𝕗</button>
+<button class="custom-button" onclick="addCharacter('𝕘')">𝕘</button>
+<button class="custom-button" onclick="addCharacter('𝕙')">𝕙</button>
+<button class="custom-button" onclick="addCharacter('𝕚')">𝕚</button>
+<button class="custom-button" onclick="addCharacter('𝕛')">𝕛</button>
+<button class="custom-button" onclick="addCharacter('𝕜')">𝕜</button>
+<button class="custom-button" onclick="addCharacter('𝕝')">𝕝</button>
+<button class="custom-button" onclick="addCharacter('𝕞')">𝕞</button>
+<button class="custom-button" onclick="addCharacter('𝕟')">𝕟</button>
+<button class="custom-button" onclick="addCharacter('𝕠')">𝕠</button>
+<button class="custom-button" onclick="addCharacter('𝕡')">𝕡</button>
+<button class="custom-button" onclick="addCharacter('𝕢')">𝕢</button>
+<button class="custom-button" onclick="addCharacter('𝕣')">𝕣</button>
+<button class="custom-button" onclick="addCharacter('𝕤')">𝕤</button>
+<button class="custom-button" onclick="addCharacter('𝕥')">𝕥</button>
+<button class="custom-button" onclick="addCharacter('𝕦')">𝕦</button>
+<button class="custom-button" onclick="addCharacter('𝕧')">𝕧</button>
+<button class="custom-button" onclick="addCharacter('𝕨')">𝕨</button>
+<button class="custom-button" onclick="addCharacter('𝕩')">𝕩</button>
+<button class="custom-button" onclick="addCharacter('𝕪')">𝕪</button>
+<button class="custom-button" onclick="addCharacter('𝕫')">𝕫</button>
+<!-- Set 1 -->
+<button class="custom-button" onclick="addCharacter('𝙰')">𝙰</button>
+<button class="custom-button" onclick="addCharacter('𝙱')">𝙱</button>
+<button class="custom-button" onclick="addCharacter('𝙲')">𝙲</button>
+<button class="custom-button" onclick="addCharacter('𝙳')">𝙳</button>
+<button class="custom-button" onclick="addCharacter('𝙴')">𝙴</button>
+<button class="custom-button" onclick="addCharacter('𝙵')">𝙵</button>
+<button class="custom-button" onclick="addCharacter('𝙶')">𝙶</button>
+<button class="custom-button" onclick="addCharacter('𝙷')">𝙷</button>
+<button class="custom-button" onclick="addCharacter('𝙸')">𝙸</button>
+<button class="custom-button" onclick="addCharacter('𝙹')">𝙹</button>
+<button class="custom-button" onclick="addCharacter('𝙺')">𝙺</button>
+<button class="custom-button" onclick="addCharacter('𝙻')">𝙻</button>
+<button class="custom-button" onclick="addCharacter('𝙼')">𝙼</button>
+<button class="custom-button" onclick="addCharacter('𝙽')">𝙽</button>
+<button class="custom-button" onclick="addCharacter('𝙾')">𝙾</button>
+<button class="custom-button" onclick="addCharacter('𝙿')">𝙿</button>
+<button class="custom-button" onclick="addCharacter('𝚀')">𝚀</button>
+<button class="custom-button" onclick="addCharacter('𝚁')">𝚁</button>
+<button class="custom-button" onclick="addCharacter('𝚂')">𝚂</button>
+<button class="custom-button" onclick="addCharacter('𝚃')">𝚃</button>
+<button class="custom-button" onclick="addCharacter('𝚄')">𝚄</button>
+<button class="custom-button" onclick="addCharacter('𝚅')">𝚅</button>
+<button class="custom-button" onclick="addCharacter('𝚆')">𝚆</button>
+<button class="custom-button" onclick="addCharacter('𝚇')">𝚇</button>
+<button class="custom-button" onclick="addCharacter('𝚈')">𝚈</button>
+<button class="custom-button" onclick="addCharacter('𝚉')">𝚉</button>
+<button class="custom-button" onclick="addCharacter('𝚊')">𝚊</button>
+<button class="custom-button" onclick="addCharacter('𝚋')">𝚋</button>
+<button class="custom-button" onclick="addCharacter('𝚌')">𝚌</button>
+<button class="custom-button" onclick="addCharacter('𝚍')">𝚍</button>
+<button class="custom-button" onclick="addCharacter('𝚎')">𝚎</button>
+<button class="custom-button" onclick="addCharacter('𝚏')">𝚏</button>
+<button class="custom-button" onclick="addCharacter('𝚐')">𝚐</button>
+<button class="custom-button" onclick="addCharacter('𝚑')">𝚑</button>
+<button class="custom-button" onclick="addCharacter('𝚒')">𝚒</button>
+<button class="custom-button" onclick="addCharacter('𝚓')">𝚓</button>
+<button class="custom-button" onclick="addCharacter('𝚔')">𝚔</button>
+<button class="custom-button" onclick="addCharacter('𝚕')">𝚕</button>
+<button class="custom-button" onclick="addCharacter('𝚖')">𝚖</button>
+<button class="custom-button" onclick="addCharacter('𝚗')">𝚗</button>
+<button class="custom-button" onclick="addCharacter('𝚘')">𝚘</button>
+<button class="custom-button" onclick="addCharacter('𝚙')">𝚙</button>
+<button class="custom-button" onclick="addCharacter('𝚚')">𝚚</button>
+<button class="custom-button" onclick="addCharacter('𝚛')">𝚛</button>
+<button class="custom-button" onclick="addCharacter('𝚜')">𝚜</button>
+<button class="custom-button" onclick="addCharacter('𝚝')">𝚝</button>
+<button class="custom-button" onclick="addCharacter('𝚞')">𝚞</button>
+<button class="custom-button" onclick="addCharacter('𝚟')">𝚟</button>
+<button class="custom-button" onclick="addCharacter('𝟸')">𝟸</button>
+<button class="custom-button" onclick="addCharacter('𝚡')">𝚡</button>
+<button class="custom-button" onclick="addCharacter('𝚢')">𝚢</button>
+<button class="custom-button" onclick="addCharacter('𝚣')">𝚣</button>
+
+<!-- Set 2 -->
+<button class="custom-button" onclick="addCharacter('ᵃ')">ᵃ</button>
+<button class="custom-button" onclick="addCharacter('ᵇ')">ᵇ</button>
+<button class="custom-button" onclick="addCharacter('ᶜ')">ᶜ</button>
+<button class="custom-button" onclick="addCharacter('ᵈ')">ᵈ</button>
+<button class="custom-button" onclick="addCharacter('ᵉ')">ᵉ</button>
+<button class="custom-button" onclick="addCharacter('ᶠ')">ᶠ</button>
+<button class="custom-button" onclick="addCharacter('ᵍ')">ᵍ</button>
+<button class="custom-button" onclick="addCharacter('ʰ')">ʰ</button>
+<button class="custom-button" onclick="addCharacter('ⁱ')">ⁱ</button>
+<button class="custom-button" onclick="addCharacter('ʲ')">ʲ</button>
+<button class="custom-button" onclick="addCharacter('ᵏ')">ᵏ</button>
+<button class="custom-button" onclick="addCharacter('ˡ')">ˡ</button>
+<button class="custom-button" onclick="addCharacter('ᵐ')">ᵐ</button>
+<button class="custom-button" onclick="addCharacter('ⁿ')">ⁿ</button>
+<button class="custom-button" onclick="addCharacter('ᵒ')">ᵒ</button>
+<button class="custom-button" onclick="addCharacter('ᵖ')">ᵖ</button>
+<button class="custom-button" onclick="addCharacter('ᵠ')">ᵠ</button>
+<button class="custom-button" onclick="addCharacter('ʳ')">ʳ</button>
+<button class="custom-button" onclick="addCharacter('ˢ')">ˢ</button>
+<button class="custom-button" onclick="addCharacter('ᵗ')">ᵗ</button>
+<button class="custom-button" onclick="addCharacter('ᵘ')">ᵘ</button>
+<button class="custom-button" onclick="addCharacter('ᵛ')">ᵛ</button>
+<button class="custom-button" onclick="addCharacter('ʷ')">ʷ</button>
+<button class="custom-button" onclick="addCharacter('ˣ')">ˣ</button>
+<button class="custom-button" onclick="addCharacter('ʸ')">ʸ</button>
+<button class="custom-button" onclick="addCharacter('ᶻ')">ᶻ</button>
+<!-- Set 1 -->
+<button class="custom-button" onclick="addCharacter('ᴀ')">ᴀ</button>
+<button class="custom-button" onclick="addCharacter('ʙ')">ʙ</button>
+<button class="custom-button" onclick="addCharacter('ᴄ')">ᴄ</button>
+<button class="custom-button" onclick="addCharacter('ᴅ')">ᴅ</button>
+<button class="custom-button" onclick="addCharacter('ᴇ')">ᴇ</button>
+<button class="custom-button" onclick="addCharacter('ғ')">ғ</button>
+<button class="custom-button" onclick="addCharacter('ɢ')">ɢ</button>
+<button class="custom-button" onclick="addCharacter('ʜ')">ʜ</button>
+<button class="custom-button" onclick="addCharacter('ɪ')">ɪ</button>
+<button class="custom-button" onclick="addCharacter('ᴊ')">ᴊ</button>
+<button class="custom-button" onclick="addCharacter('ᴋ')">ᴋ</button>
+<button class="custom-button" onclick="addCharacter('ʟ')">ʟ</button>
+<button class="custom-button" onclick="addCharacter('ᴍ')">ᴍ</button>
+<button class="custom-button" onclick="addCharacter('ɴ')">ɴ</button>
+<button class="custom-button" onclick="addCharacter('ᴏ')">ᴏ</button>
+<button class="custom-button" onclick="addCharacter('ᴘ')">ᴘ</button>
+<button class="custom-button" onclick="addCharacter('ǫ')">ǫ</button>
+<button class="custom-button" onclick="addCharacter('ʀ')">ʀ</button>
+<button class="custom-button" onclick="addCharacter('s')">s</button>
+<button class="custom-button" onclick="addCharacter('ᴛ')">ᴛ</button>
+<button class="custom-button" onclick="addCharacter('ᴜ')">ᴜ</button>
+<button class="custom-button" onclick="addCharacter('ᴠ')">ᴠ</button>
+<button class="custom-button" onclick="addCharacter('ᴡ')">ᴡ</button>
+<button class="custom-button" onclick="addCharacter('x')">x</button>
+<button class="custom-button" onclick="addCharacter('ʏ')">ʏ</button>
+<button class="custom-button" onclick="addCharacter('ᴢ')">ᴢ</button>
+
+<!-- Set 2 -->
+<button class="custom-button" onclick="addCharacter('ɐ')">ɐ</button>
+<button class="custom-button" onclick="addCharacter('q')">q</button>
+<button class="custom-button" onclick="addCharacter('ɔ')">ɔ</button>
+<button class="custom-button" onclick="addCharacter('p')">p</button>
+<button class="custom-button" onclick="addCharacter('ǝ')">ǝ</button>
+<button class="custom-button" onclick="addCharacter('ɟ')">ɟ</button>
+<button class="custom-button" onclick="addCharacter('ƃ')">ƃ</button>
+<button class="custom-button" onclick="addCharacter('ɥ')">ɥ</button>
+<button class="custom-button" onclick="addCharacter('ᴉ')">ᴉ</button>
+<button class="custom-button" onclick="addCharacter('ɾ')">ɾ</button>
+<button class="custom-button" onclick="addCharacter('ʞ')">ʞ</button>
+<button class="custom-button" onclick="addCharacter('l')">l</button>
+<button class="custom-button" onclick="addCharacter('ɯ')">ɯ</button>
+<button class="custom-button" onclick="addCharacter('u')">u</button>
+<button class="custom-button" onclick="addCharacter('o')">o</button>
+<button class="custom-button" onclick="addCharacter('d')">d</button>
+<button class="custom-button" onclick="addCharacter('b')">b</button>
+<button class="custom-button" onclick="addCharacter('ɹ')">ɹ</button>
+<button class="custom-button" onclick="addCharacter('s')">s</button>
+<button class="custom-button" onclick="addCharacter('ʇ')">ʇ</button>
+<button class="custom-button" onclick="addCharacter('n')">n</button>
+<button class="custom-button" onclick="addCharacter('ʌ')">ʌ</button>
+<button class="custom-button" onclick="addCharacter('ʍ')">ʍ</button>
+<button class="custom-button" onclick="addCharacter('x')">x</button>
+<button class="custom-button" onclick="addCharacter('ʎ')">ʎ</button>
+<button class="custom-button" onclick="addCharacter('z')">z</button>
+<!-- Set 1 -->
+<button class="custom-button" onclick="addCharacter('𝐴')">𝐴</button>
+<button class="custom-button" onclick="addCharacter('𝐵')">𝐵</button>
+<button class="custom-button" onclick="addCharacter('𝐶')">𝐶</button>
+<button class="custom-button" onclick="addCharacter('𝐷')">𝐷</button>
+<button class="custom-button" onclick="addCharacter('𝐸')">𝐸</button>
+<button class="custom-button" onclick="addCharacter('𝐹')">𝐹</button>
+<button class="custom-button" onclick="addCharacter('𝐺')">𝐺</button>
+<button class="custom-button" onclick="addCharacter('𝐻')">𝐻</button>
+<button class="custom-button" onclick="addCharacter('𝐼')">𝐼</button>
+<button class="custom-button" onclick="addCharacter('𝐽')">𝐽</button>
+<button class="custom-button" onclick="addCharacter('𝐾')">𝐾</button>
+<button class="custom-button" onclick="addCharacter('𝐿')">𝐿</button>
+<button class="custom-button" onclick="addCharacter('𝑀')">𝑀</button>
+<button class="custom-button" onclick="addCharacter('𝑁')">𝑁</button>
+<button class="custom-button" onclick="addCharacter('𝑂')">𝑂</button>
+<button class="custom-button" onclick="addCharacter('𝑃')">𝑃</button>
+<button class="custom-button" onclick="addCharacter('𝑄')">𝑄</button>
+<button class="custom-button" onclick="addCharacter('𝑅')">𝑅</button>
+<button class="custom-button" onclick="addCharacter('𝑆')">𝑆</button>
+<button class="custom-button" onclick="addCharacter('𝑇')">𝑇</button>
+<button class="custom-button" onclick="addCharacter('𝑈')">𝑈</button>
+<button class="custom-button" onclick="addCharacter('𝑉')">𝑉</button>
+<button class="custom-button" onclick="addCharacter('𝑊')">𝑊</button>
+<button class="custom-button" onclick="addCharacter('𝑋')">𝑋</button>
+<button class="custom-button" onclick="addCharacter('𝑌')">𝑌</button>
+<button class="custom-button" onclick="addCharacter('𝑍')">𝑍</button>
+
+<!-- Set 2 -->
+<button class="custom-button" onclick="addCharacter('𝑎')">𝑎</button>
+<button class="custom-button" onclick="addCharacter('𝑏')">𝑏</button>
+<button class="custom-button" onclick="addCharacter('𝑐')">𝑐</button>
+<button class="custom-button" onclick="addCharacter('𝑑')">𝑑</button>
+<button class="custom-button" onclick="addCharacter('𝑒')">𝑒</button>
+<button class="custom-button" onclick="addCharacter('𝑓')">𝑓</button>
+<button class="custom-button" onclick="addCharacter('𝑔')">𝑔</button>
+<button class="custom-button" onclick="addCharacter('ℎ')">ℎ</button>
+<button class="custom-button" onclick="addCharacter('𝑖')">𝑖</button>
+<button class="custom-button" onclick="addCharacter('𝑗')">𝑗</button>
+<button class="custom-button" onclick="addCharacter('𝑘')">𝑘</button>
+<button class="custom-button" onclick="addCharacter('𝑙')">𝑙</button>
+<button class="custom-button" onclick="addCharacter('𝑚')">𝑚</button>
+<button class="custom-button" onclick="addCharacter('𝑛')">𝑛</button>
+<button class="custom-button" onclick="addCharacter('𝑜')">𝑜</button>
+<button class="custom-button" onclick="addCharacter('𝑝')">𝑝</button>
+<button class="custom-button" onclick="addCharacter('𝑞')">𝑞</button>
+<button class="custom-button" onclick="addCharacter('𝑟')">𝑟</button>
+<button class="custom-button" onclick="addCharacter('𝑠')">𝑠</button>
+<button class="custom-button" onclick="addCharacter('𝑡')">𝑡</button>
+<button class="custom-button" onclick="addCharacter('𝑢')">𝑢</button>
+<button class="custom-button" onclick="addCharacter('𝑣')">𝑣</button>
+<button class="custom-button" onclick="addCharacter('𝑤')">𝑤</button>
+<button class="custom-button" onclick="addCharacter('𝑥')">𝑥</button>
+<button class="custom-button" onclick="addCharacter('𝑦')">𝑦</button>
+<button class="custom-button" onclick="addCharacter('𝑧')">𝑧</button>
+<!-- Set 1 -->
+<button class="custom-button" onclick="addCharacter('𝓐')">𝓐</button>
+<button class="custom-button" onclick="addCharacter('𝓑')">𝓑</button>
+<button class="custom-button" onclick="addCharacter('𝓒')">𝓒</button>
+<button class="custom-button" onclick="addCharacter('𝓓')">𝓓</button>
+<button class="custom-button" onclick="addCharacter('𝓔')">𝓔</button>
+<button class="custom-button" onclick="addCharacter('𝓕')">𝓕</button>
+<button class="custom-button" onclick="addCharacter('𝓖')">𝓖</button>
+<button class="custom-button" onclick="addCharacter('𝓗')">𝓗</button>
+<button class="custom-button" onclick="addCharacter('𝓘')">𝓘</button>
+<button class="custom-button" onclick="addCharacter('𝓙')">𝓙</button>
+<button class="custom-button" onclick="addCharacter('𝓚')">𝓚</button>
+<button class="custom-button" onclick="addCharacter('𝓛')">𝓛</button>
+<button class="custom-button" onclick="addCharacter('𝓜')">𝓜</button>
+<button class="custom-button" onclick="addCharacter('𝓝')">𝓝</button>
+<button class="custom-button" onclick="addCharacter('𝓞')">𝓞</button>
+<button class="custom-button" onclick="addCharacter('𝓟')">𝓟</button>
+<button class="custom-button" onclick="addCharacter('𝓠')">𝓠</button>
+<button class="custom-button" onclick="addCharacter('𝓡')">𝓡</button>
+<button class="custom-button" onclick="addCharacter('𝓢')">𝓢</button>
+<button class="custom-button" onclick="addCharacter('𝓣')">𝓣</button>
+<button class="custom-button" onclick="addCharacter('𝓤')">𝓤</button>
+<button class="custom-button" onclick="addCharacter('𝓥')">𝓥</button>
+<button class="custom-button" onclick="addCharacter('𝓦')">𝓦</button>
+<button class="custom-button" onclick="addCharacter('𝓧')">𝓧</button>
+<button class="custom-button" onclick="addCharacter('𝓨')">𝓨</button>
+<button class="custom-button" onclick="addCharacter('𝓩')">𝓩</button>
+
+<!-- Set 2 -->
+<button class="custom-button" onclick="addCharacter('𝓪')">𝓪</button>
+<button class="custom-button" onclick="addCharacter('𝓫')">𝓫</button>
+<button class="custom-button" onclick="addCharacter('𝓬')">𝓬</button>
+<button class="custom-button" onclick="addCharacter('𝓭')">𝓭</button>
+<button class="custom-button" onclick="addCharacter('𝓮')">𝓮</button>
+<button class="custom-button" onclick="addCharacter('𝓯')">𝓯</button>
+<button class="custom-button" onclick="addCharacter('𝓰')">𝓰</button>
+<button class="custom-button" onclick="addCharacter('𝓱')">𝓱</button>
+<button class="custom-button" onclick="addCharacter('𝓲')">𝓲</button>
+<button class="custom-button" onclick="addCharacter('𝓳')">𝓳</button>
+<button class="custom-button" onclick="addCharacter('𝓴')">𝓴</button>
+<button class="custom-button" onclick="addCharacter('𝓵')">𝓵</button>
+<button class="custom-button" onclick="addCharacter('𝓶')">𝓶</button>
+<button class="custom-button" onclick="addCharacter('𝓷')">𝓷</button>
+<button class="custom-button" onclick="addCharacter('𝓸')">𝓸</button>
+<button class="custom-button" onclick="addCharacter('𝓹')">𝓹</button>
+<button class="custom-button" onclick="addCharacter('𝓺')">𝓺</button>
+<button class="custom-button" onclick="addCharacter('𝓻')">𝓻</button>
+<button class="custom-button" onclick="addCharacter('𝓼')">𝓼</button>
+<button class="custom-button" onclick="addCharacter('𝓽')">𝓽</button>
+<button class="custom-button" onclick="addCharacter('𝓾')">𝓾</button>
+<button class="custom-button" onclick="addCharacter('𝓿')">𝓿</button>
+<button class="custom-button" onclick="addCharacter('𝔀')">𝔀</button>
+<button class="custom-button" onclick="addCharacter('𝔁')">𝔁</button>
+<button class="custom-button" onclick="addCharacter('𝔂')">𝔂</button>
+<button class="custom-button" onclick="addCharacter('𝔃')">𝔃</button>
+<!-- Set 1 -->
+<button class="custom-button" onclick="addCharacter('𝑨')">𝑨</button>
+<button class="custom-button" onclick="addCharacter('𝑩')">𝑩</button>
+<button class="custom-button" onclick="addCharacter('𝑪')">𝑪</button>
+<button class="custom-button" onclick="addCharacter('𝑫')">𝑫</button>
+<button class="custom-button" onclick="addCharacter('𝑬')">𝑬</button>
+<button class="custom-button" onclick="addCharacter('𝑭')">𝑭</button>
+<button class="custom-button" onclick="addCharacter('𝑮')">𝑮</button>
+<button class="custom-button" onclick="addCharacter('𝑯')">𝑯</button>
+<button class="custom-button" onclick="addCharacter('𝑰')">𝑰</button>
+<button class="custom-button" onclick="addCharacter('𝑱')">𝑱</button>
+<button class="custom-button" onclick="addCharacter('𝑲')">𝑲</button>
+<button class="custom-button" onclick="addCharacter('𝑳')">𝑳</button>
+<button class="custom-button" onclick="addCharacter('𝑴')">𝑴</button>
+<button class="custom-button" onclick="addCharacter('𝑵')">𝑵</button>
+<button class="custom-button" onclick="addCharacter('𝑶')">𝑶</button>
+<button class="custom-button" onclick="addCharacter('𝑷')">𝑷</button>
+<button class="custom-button" onclick="addCharacter('𝑸')">𝑸</button>
+<button class="custom-button" onclick="addCharacter('𝑹')">𝑹</button>
+<button class="custom-button" onclick="addCharacter('𝑺')">𝑺</button>
+<button class="custom-button" onclick="addCharacter('𝑻')">𝑻</button>
+<button class="custom-button" onclick="addCharacter('𝑼')">𝑼</button>
+<button class="custom-button" onclick="addCharacter('𝑽')">𝑽</button>
+<button class="custom-button" onclick="addCharacter('𝑾')">𝑾</button>
+<button class="custom-button" onclick="addCharacter('𝑿')">𝑿</button>
+<button class="custom-button" onclick="addCharacter('𝒀')">𝒀</button>
+<button class="custom-button" onclick="addCharacter('𝒁')">𝒁</button>
+
+<!-- Set 2 -->
+<button class="custom-button" onclick="addCharacter('𝒂')">𝒂</button>
+<button class="custom-button" onclick="addCharacter('𝒃')">𝒃</button>
+<button class="custom-button" onclick="addCharacter('𝒄')">𝒄</button>
+<button class="custom-button" onclick="addCharacter('𝒅')">𝒅</button>
+<button class="custom-button" onclick="addCharacter('𝒆')">𝒆</button>
+<button class="custom-button" onclick="addCharacter('𝒇')">𝒇</button>
+<button class="custom-button" onclick="addCharacter('𝒈')">𝒈</button>
+<button class="custom-button" onclick="addCharacter('𝒉')">𝒉</button>
+<button class="custom-button" onclick="addCharacter('𝒊')">𝒊</button>
+<button class="custom-button" onclick="addCharacter('𝒋')">𝒋</button>
+<button class="custom-button" onclick="addCharacter('𝒌')">𝒌</button>
+<button class="custom-button" onclick="addCharacter('𝒍')">𝒍</button>
+<button class="custom-button" onclick="addCharacter('𝒎')">𝒎</button>
+<button class="custom-button" onclick="addCharacter('𝒏')">𝒏</button>
+<button class="custom-button" onclick="addCharacter('𝒐')">𝒐</button>
+<button class="custom-button" onclick="addCharacter('𝒑')">𝒑</button>
+<button class="custom-button" onclick="addCharacter('𝒒')">𝒒</button>
+<button class="custom-button" onclick="addCharacter('𝒓')">𝒓</button>
+<button class="custom-button" onclick="addCharacter('𝒔')">𝒔</button>
+<button class="custom-button" onclick="addCharacter('𝒕')">𝒕</button>
+<button class="custom-button" onclick="addCharacter('𝒖')">𝒖</button>
+<button class="custom-button" onclick="addCharacter('𝒗')">𝒗</button>
+<button class="custom-button" onclick="addCharacter('𝒘')">𝒘</button>
+<button class="custom-button" onclick="addCharacter('𝒙')">𝒙</button>
+<button class="custom-button" onclick="addCharacter('𝒚')">𝒚</button>
+<button class="custom-button" onclick="addCharacter('𝒛')">𝒛</button>
+<!-- Set 1 -->
+<button class="custom-button" onclick="addCharacter('𝕬')">𝕬</button>
+<button class="custom-button" onclick="addCharacter('𝕭')">𝕭</button>
+<button class="custom-button" onclick="addCharacter('𝕮')">𝕮</button>
+<button class="custom-button" onclick="addCharacter('𝕯')">𝕯</button>
+<button class="custom-button" onclick="addCharacter('𝕿')">𝕿</button>
+<button class="custom-button" onclick="addCharacter('𝕱')">𝕱</button>
+<button class="custom-button" onclick="addCharacter('𝕲')">𝕲</button>
+<button class="custom-button" onclick="addCharacter('𝕳')">𝕳</button>
+<button class="custom-button" onclick="addCharacter('𝕴')">𝕴</button>
+<button class="custom-button" onclick="addCharacter('𝕵')">𝕵</button>
+<button class="custom-button" onclick="addCharacter('𝕶')">𝕶</button>
+<button class="custom-button" onclick="addCharacter('𝕷')">𝕷</button>
+<button class="custom-button" onclick="addCharacter('𝕸')">𝕸</button>
+<button class="custom-button" onclick="addCharacter('𝕹')">𝕹</button>
+<button class="custom-button" onclick="addCharacter('𝕺')">𝕺</button>
+<button class="custom-button" onclick="addCharacter('𝕻')">𝕻</button>
+<button class="custom-button" onclick="addCharacter('𝕼')">𝕼</button>
+<button class="custom-button" onclick="addCharacter('𝕽')">𝕽</button>
+<button class="custom-button" onclick="addCharacter('𝕾')">𝕾</button>
+<button class="custom-button" onclick="addCharacter('𝕿')">𝕿</button>
+<button class="custom-button" onclick="addCharacter('𝖀')">𝖀</button>
+<button class="custom-button" onclick="addCharacter('𝖁')">𝖁</button>
+<button class="custom-button" onclick="addCharacter('𝖂')">𝖂</button>
+<button class="custom-button" onclick="addCharacter('𝖃')">𝖃</button>
+<button class="custom-button" onclick="addCharacter('𝖄')">𝖄</button>
+<button class="custom-button" onclick="addCharacter('𝖅')">𝖅</button>
+
+<!-- Set 2 -->
+<button class="custom-button" onclick="addCharacter('𝖆')">𝖆</button>
+<button class="custom-button" onclick="addCharacter('𝖇')">𝖇</button>
+<button class="custom-button" onclick="addCharacter('𝖈')">𝖈</button>
+<button class="custom-button" onclick="addCharacter('𝖉')">𝖉</button>
+<button class="custom-button" onclick="addCharacter('𝖊')">𝖊</button>
+<button class="custom-button" onclick="addCharacter('𝖋')">𝖋</button>
+<button class="custom-button" onclick="addCharacter('𝖌')">𝖌</button>
+<button class="custom-button" onclick="addCharacter('𝖍')">𝖍</button>
+<button class="custom-button" onclick="addCharacter('𝖎')">𝖎</button>
+<button class="custom-button" onclick="addCharacter('𝖏')">𝖏</button>
+<button class="custom-button" onclick="addCharacter('𝖐')">𝖐</button>
+<button class="custom-button" onclick="addCharacter('𝖑')">𝖑</button>
+<button class="custom-button" onclick="addCharacter('𝖒')">𝖒</button>
+<button class="custom-button" onclick="addCharacter('𝖓')">𝖓</button>
+<button class="custom-button" onclick="addCharacter('𝖔')">𝖔</button>
+<button class="custom-button" onclick="addCharacter('𝖕')">𝖕</button>
+<button class="custom-button" onclick="addCharacter('𝖖')">𝖖</button>
+<button class="custom-button" onclick="addCharacter('𝖗')">𝖗</button>
+<button class="custom-button" onclick="addCharacter('𝖘')">𝖘</button>
+<button class="custom-button" onclick="addCharacter('𝖙')">𝖙</button>
+<button class="custom-button" onclick="addCharacter('𝖚')">𝖚</button>
+<button class="custom-button" onclick="addCharacter('𝖛')">𝖛</button>
+<button class="custom-button" onclick="addCharacter('𝖜')">𝖜</button>
+<button class="custom-button" onclick="addCharacter('𝖝')">𝖝</button>
+<button class="custom-button" onclick="addCharacter('𝖞')">𝖞</button>
+<button class="custom-button" onclick="addCharacter('𝖟')">𝖟</button>
+
+<!-- Set 3 -->
+<button class="custom-button" onclick="addCharacter('𝔞')">𝔞</button>
+<button class="custom-button" onclick="addCharacter('𝔟')">𝔟</button>
+<button class="custom-button" onclick="addCharacter('𝔠')">𝔠</button>
+<button class="custom-button" onclick="addCharacter('𝔡')">𝔡</button>
+<button class="custom-button" onclick="addCharacter('𝔢')">𝔢</button>
+<button class="custom-button" onclick="addCharacter('𝔟')">𝔟</button>
+<button class="custom-button" onclick="addCharacter('𝔤')">𝔤</button>
+<button class="custom-button" onclick="addCharacter('𝔥')">𝔥</button>
+<button class="custom-button" onclick="addCharacter('𝔦')">𝔦</button>
+<button class="custom-button" onclick="addCharacter('𝔧')">𝔧</button>
+<button class="custom-button" onclick="addCharacter('𝔨')">𝔨</button>
+<button class="custom-button" onclick="addCharacter('𝔩')">𝔩</button>
+<button class="custom-button" onclick="addCharacter('𝔪')">𝔪</button>
+<button class="custom-button" onclick="addCharacter('𝔫')">𝔫</button>
+<button class="custom-button" onclick="addCharacter('𝔬')">𝔬</button>
+<button class="custom-button" onclick="addCharacter('𝔭')">𝔭</button>
+<button class="custom-button" onclick="addCharacter('𝔮')">𝔮</button>
+<button class="custom-button" onclick="addCharacter('𝔯')">𝔯</button>
+<button class="custom-button" onclick="addCharacter('𝔰')">𝔰</button>
+<button class="custom-button" onclick="addCharacter('𝔱')">𝔱</button>
+<button class="custom-button" onclick="addCharacter('𝔲')">𝔲</button>
+<button class="custom-button" onclick="addCharacter('𝔳')">𝔳</button>
+<button class="custom-button" onclick="addCharacter('𝔴')">𝔴</button>
+<button class="custom-button" onclick="addCharacter('𝔵')">𝔵</button>
+<button class="custom-button" onclick="addCharacter('𝔶')">𝔶</button>
+<button class="custom-button" onclick="addCharacter('𝔷')">𝔷</button>
+
+
+    
        </div>
        
     </div>
@@ -742,37 +1343,36 @@ section.page .note-box button:hover {
 <button class="custom-button" onclick="addCharacter('ꖀ')">ꖀ</button>
 <button class="custom-button" onclick="addCharacter('ꖩ')">ꖩ</button>
 <!-- Angka Arab -->
-<button onclick="addToMemo('١')">١</button>
-<button onclick="addToMemo('٢')">٢</button>
-<button onclick="addToMemo('٣')">٣</button>
-<button onclick="addToMemo('٤')">٤</button>
-<button onclick="addToMemo('٥')">٥</button>
-<button onclick="addToMemo('٦')">٦</button>
-<button onclick="addToMemo('٧')">٧</button>
-<button onclick="addToMemo('٨')">٨</button>
-<button onclick="addToMemo('٩')">٩</button>
+<button class="custom-button" onclick="addCharacter('١')">١</button>
+<button class="custom-button" onclick="addCharacter('٢')">٢</button>
+<button class="custom-button" onclick="addCharacter('٣')">٣</button>
+<button class="custom-button" onclick="addCharacter('٤')">٤</button>
+<button class="custom-button" onclick="addCharacter('٥')">٥</button>
+<button class="custom-button" onclick="addCharacter('٦')">٦</button>
+<button class="custom-button" onclick="addCharacter('٧')">٧</button>
+<button class="custom-button" onclick="addCharacter('٨')">٨</button>
+<button class="custom-button" onclick="addCharacter('٩')">٩</button>
 
-<!-- Angka Ge'ez (Ethiopia) -->
-<button onclick="addToMemo('፩')">፩</button>
-<button onclick="addToMemo('፪')">፪</button>
-<button onclick="addToMemo('፫')">፫</button>
-<button onclick="addToMemo('፬')">፬</button>
-<button onclick="addToMemo('፭')">፭</button>
-<button onclick="addToMemo('፮')">፮</button>
-<button onclick="addToMemo('፯')">፯</button>
-<button onclick="addToMemo('፰')">፰</button>
-<button onclick="addToMemo('፱')">፱</button>
-<button onclick="addToMemo('፲')">፲</button>
-<button onclick="addToMemo('፳')">፳</button>
-<button onclick="addToMemo('፴')">፴</button>
-<button onclick="addToMemo('፵')">፵</button>
-<button onclick="addToMemo('፶')">፶</button>
-<button onclick="addToMemo('፷')">፷</button>
-<button onclick="addToMemo('፸')">፸</button>
-<button onclick="addToMemo('፹')">፹</button>
-<button onclick="addToMemo('፺')">፺</button>
-<button onclick="addToMemo('፻')">፻</button>
-<button onclick="addToMemo('፼')">፼</button>
+<button class="custom-button" onclick="addCharacter('፩')">፩</button>
+<button class="custom-button" onclick="addCharacter('፪')">፪</button>
+<button class="custom-button" onclick="addCharacter('፫')">፫</button>
+<button class="custom-button" onclick="addCharacter('፬')">፬</button>
+<button class="custom-button" onclick="addCharacter('፭')">፭</button>
+<button class="custom-button" onclick="addCharacter('፮')">፮</button>
+<button class="custom-button" onclick="addCharacter('፯')">፯</button>
+<button class="custom-button" onclick="addCharacter('፰')">፰</button>
+<button class="custom-button" onclick="addCharacter('፱')">፱</button>
+<button class="custom-button" onclick="addCharacter('፲')">፲</button>
+<button class="custom-button" onclick="addCharacter('፳')">፳</button>
+<button class="custom-button" onclick="addCharacter('፴')">፴</button>
+<button class="custom-button" onclick="addCharacter('፵')">፵</button>
+<button class="custom-button" onclick="addCharacter('፶')">፶</button>
+<button class="custom-button" onclick="addCharacter('፷')">፷</button>
+<button class="custom-button" onclick="addCharacter('፸')">፸</button>
+<button class="custom-button" onclick="addCharacter('፹')">፹</button>
+<button class="custom-button" onclick="addCharacter('፺')">፺</button>
+<button class="custom-button" onclick="addCharacter('፻')">፻</button>
+<button class="custom-button" onclick="addCharacter('፼')">፼</button>
 
 
 </div>
@@ -792,11 +1392,11 @@ section.page .note-box button:hover {
         <button onclick="showPage('page5')"><span class="material-symbols-outlined">adb</span></button>
         </div>
             </div>
-        <!-- Keyboard Emoji akan muncul di bawah tombol "Pilih Emoji" -->
-        <div class="emoji-keyboard" id="emoji-keyboard" style="display: none;">
-           <button onclick="addToMemo('┕')">┕</button>
+            
+ <!-- Keyboard Emoji akan muncul di bawah tombol "Pilih Emoji" -->
+<div class="emoji-keyboard" id="emoji-keyboard" style="display: none;">
            
-           <button onclick="addToMemo('🂡')">🂡</button>
+<button onclick="addToMemo('🂡')">🂡</button>
 <button onclick="addToMemo('🂢')">🂢</button>
 <button onclick="addToMemo('🂣')">🂣</button>
 <button onclick="addToMemo('🂤')">🂤</button>
@@ -1202,7 +1802,7 @@ section.page .note-box button:hover {
     </section>
 
     <section id="page2" class="page">
-        <h2>𝖲𝗒𝗆𝖻𝗈𝗅　</h2>
+        <h2>Symbols</h2>
         <div id="note2" class="note-box">
           <!-- Baris Karakter -->
 <button onclick="addToMemo('★')">★</button>
@@ -1335,7 +1935,7 @@ section.page .note-box button:hover {
     </section>
 
     <section id="page3" class="page">
-        <h2>Bubble Text　</h2>
+        <h2>Bubble Text</h2>
         <div id="note3" class="note-box">
           
 <button onclick="addToMemo('Ⓐ')">Ⓐ</button>
@@ -1656,7 +2256,7 @@ section.page .note-box button:hover {
     </section>
 
 <section id="page5" class="page">
-    <h2 style="font: 15px;">𝖢𝗋𝖾𝖺𝗍𝗂𝗼𝗇 𝖳𝖾𝗑𝗍</h2>
+    <h2 style="font: 15px;">Creation </h2>
     <div id="note5" class="note-box">
         <style="font: 1000px; color: black; ">
 
@@ -1698,7 +2298,7 @@ Bɑɖbꔮyʂ㉗-ꛃᵉᵇ〽ꛕ᜵ʂiteく᜵ꛨ9<br>
 </section>
    </div>
     </section>
-    
+
 
 <script>
   
@@ -1736,8 +2336,6 @@ Bɑɖbꔮyʂ㉗-ꛃᵉᵇ〽ꛕ᜵ʂiteく᜵ꛨ9<br>
         <span id="toggle_icon" class="material-symbols-outlined">toggle_off</span>
     </button>
 
-
-
 <script>
     // Fungsi untuk mengalihkan mode gelap (dark mode)
     function toggleDarkMode() {
@@ -1756,7 +2354,6 @@ Bɑɖbꔮyʂ㉗-ꛃᵉᵇ〽ꛕ᜵ʂiteく᜵ꛨ9<br>
         }
     }
 </script>
-
 
 <script>
     // Menambahkan spasi pada posisi kursor
@@ -1828,6 +2425,10 @@ Bɑɖbꔮyʂ㉗-ꛃᵉᵇ〽ꛕ᜵ʂiteく᜵ꛨ9<br>
     memo.value += emoji;
 }
 
-    </script>
+
+
+</script>
+    
   </body>
 </html>
+
